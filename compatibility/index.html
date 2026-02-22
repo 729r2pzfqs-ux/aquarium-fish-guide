@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Compatibility Checker | Can These Fish Live Together? | AquariumFishGuide</title>
+    <meta name="description" content="Check if your aquarium fish can live together. Our compatibility checker warns you about aggressive pairings and recommends safe tankmates.">
+    <link rel="canonical" href="https://aquariumfishguide.com/compatibility/">
+    
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aquariumfishguide.com/compatibility/">
+    <meta property="og:title" content="Fish Compatibility Checker — Can These Fish Live Together?">
+    <meta property="og:description" content="Check if your aquarium fish are compatible before buying.">
+    <meta property="og:site_name" content="AquariumFishGuide">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-cyan-50 via-white to-teal-50 min-h-screen text-slate-800">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="../" class="flex items-center gap-2">
+                <svg class="w-8 h-8 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
+                    <path d="M18 12v.5"/>
+                    <path d="M16 10c1 0 2 1 2 2s-1 2-2 2"/>
+                    <path d="M2 12h3"/>
+                </svg>
+                <span class="text-xl font-bold bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">AquariumFishGuide</span>
+            </a>
+            <nav class="flex items-center gap-6 text-sm font-medium">
+                <a href="../search/" class="text-slate-600 hover:text-cyan-600 transition">Browse Fish</a>
+                <a href="../quiz/" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition">Find Your Fish</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100 text-sm text-slate-600 mb-6">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i>
+                <span>Compatibility Checker</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                Can These Fish
+                <span class="bg-gradient-to-r from-cyan-500 to-teal-600 bg-clip-text text-transparent">Live Together?</span>
+            </h1>
+            <p class="text-lg text-slate-600">Select the fish you want to keep and we'll check if they're compatible</p>
+        </div>
+
+        <!-- Fish Selection -->
+        <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8 mb-8">
+            <h2 class="text-xl font-bold mb-4">Select Your Fish</h2>
+            <p class="text-slate-500 mb-6">Click to add fish to your tank. Click again to remove.</p>
+            
+            <div id="fish-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                <!-- Fish buttons will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Selected Fish -->
+        <div id="selected-container" class="hidden mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-bold">Your Tank</h3>
+                    <button onclick="clearSelection()" class="text-sm text-slate-500 hover:text-slate-700">Clear All</button>
+                </div>
+                <div id="selected-fish" class="flex flex-wrap gap-2">
+                    <!-- Selected fish chips will appear here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Compatibility Results -->
+        <div id="results-container" class="hidden">
+            <div id="overall-result" class="rounded-2xl p-6 mb-6">
+                <!-- Overall result will appear here -->
+            </div>
+            
+            <div id="warnings" class="space-y-4 mb-6">
+                <!-- Warnings will appear here -->
+            </div>
+            
+            <div id="recommendations" class="bg-white rounded-2xl shadow-lg p-6">
+                <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="lightbulb" class="w-5 h-5 text-amber-500"></i>
+                    Recommendations
+                </h3>
+                <div id="recommendations-list" class="space-y-3">
+                    <!-- Recommendations will appear here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="text-center py-16">
+            <div class="text-6xl mb-4">🐠</div>
+            <h3 class="text-xl font-bold text-slate-700 mb-2">Select fish to check compatibility</h3>
+            <p class="text-slate-500">Click on fish above to add them to your tank</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-100 mt-16 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-slate-500 text-sm">
+            <p>© 2026 AquariumFishGuide. Made with 🐠 for fish lovers everywhere.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        let allFish = [];
+        let selectedFish = [];
+
+        // Load fish from JSON
+        fetch('../data/fish.json')
+            .then(r => r.json())
+            .then(data => {
+                allFish = data;
+                renderFishGrid();
+            })
+            .catch(e => console.error('Failed to load fish:', e));
+
+        function renderFishGrid() {
+            const grid = document.getElementById('fish-grid');
+            grid.innerHTML = allFish.map(f => `
+                <button onclick="toggleFish('${f.id}')" id="btn-${f.id}" 
+                    class="p-3 rounded-xl border-2 border-slate-200 hover:border-cyan-400 transition text-left">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl">🐟</span>
+                        <span class="font-medium text-sm text-slate-700">${f.name}</span>
+                    </div>
+                </button>
+            `).join('');
+        }
+
+        function toggleFish(id) {
+            const index = selectedFish.indexOf(id);
+            const btn = document.getElementById(`btn-${id}`);
+            
+            if (index === -1) {
+                selectedFish.push(id);
+                btn.classList.add('border-cyan-500', 'bg-cyan-50');
+                btn.classList.remove('border-slate-200');
+            } else {
+                selectedFish.splice(index, 1);
+                btn.classList.remove('border-cyan-500', 'bg-cyan-50');
+                btn.classList.add('border-slate-200');
+            }
+            
+            updateResults();
+        }
+
+        function clearSelection() {
+            selectedFish.forEach(id => {
+                const btn = document.getElementById(`btn-${id}`);
+                if (btn) {
+                    btn.classList.remove('border-cyan-500', 'bg-cyan-50');
+                    btn.classList.add('border-slate-200');
+                }
+            });
+            selectedFish = [];
+            updateResults();
+        }
+
+        function updateResults() {
+            const selectedContainer = document.getElementById('selected-container');
+            const resultsContainer = document.getElementById('results-container');
+            const emptyState = document.getElementById('empty-state');
+            
+            if (selectedFish.length === 0) {
+                selectedContainer.classList.add('hidden');
+                resultsContainer.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                return;
+            }
+            
+            // Show selected fish
+            selectedContainer.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+            
+            const selectedFishEl = document.getElementById('selected-fish');
+            selectedFishEl.innerHTML = selectedFish.map(id => {
+                const f = allFish.find(fish => fish.id === id);
+                return `
+                    <span class="inline-flex items-center gap-2 bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-medium">
+                        🐟 ${f.name}
+                        <button onclick="toggleFish('${id}')" class="hover:text-cyan-600">×</button>
+                    </span>
+                `;
+            }).join('');
+            
+            if (selectedFish.length < 2) {
+                resultsContainer.classList.add('hidden');
+                return;
+            }
+            
+            // Check compatibility
+            resultsContainer.classList.remove('hidden');
+            checkCompatibility();
+        }
+
+        function checkCompatibility() {
+            const selected = selectedFish.map(id => allFish.find(f => f.id === id));
+            const warnings = [];
+            const recommendations = [];
+            let overallCompatible = true;
+            
+            // Check each pair
+            for (let i = 0; i < selected.length; i++) {
+                for (let j = i + 1; j < selected.length; j++) {
+                    const fish1 = selected[i];
+                    const fish2 = selected[j];
+                    
+                    // Check if explicitly incompatible
+                    if (fish1.incompatible_with.includes(fish2.id) || fish2.incompatible_with.includes(fish1.id)) {
+                        overallCompatible = false;
+                        warnings.push({
+                            type: 'danger',
+                            fish: [fish1.name, fish2.name],
+                            message: `${fish1.name} and ${fish2.name} are NOT compatible and should not be kept together.`
+                        });
+                    }
+                    
+                    // Check temperament mismatches
+                    if (fish1.temperament === 'aggressive' && fish2.temperament === 'peaceful') {
+                        if (!warnings.find(w => w.fish.includes(fish1.name) && w.fish.includes(fish2.name))) {
+                            warnings.push({
+                                type: 'warning',
+                                fish: [fish1.name, fish2.name],
+                                message: `${fish1.name} is aggressive and may harm the peaceful ${fish2.name}.`
+                            });
+                        }
+                    }
+                    if (fish2.temperament === 'aggressive' && fish1.temperament === 'peaceful') {
+                        if (!warnings.find(w => w.fish.includes(fish1.name) && w.fish.includes(fish2.name))) {
+                            warnings.push({
+                                type: 'warning',
+                                fish: [fish1.name, fish2.name],
+                                message: `${fish2.name} is aggressive and may harm the peaceful ${fish1.name}.`
+                            });
+                        }
+                    }
+                    
+                    // Check temperature compatibility
+                    // (simplified - would need actual temp parsing in production)
+                }
+            }
+            
+            // Check tank size requirements
+            const tankOrder = { '5gal': 5, '10gal': 10, '20gal': 20, '30gal': 30, '75gal': 75 };
+            const largestTank = Math.max(...selected.map(f => tankOrder[f.tank_size] || 10));
+            recommendations.push(`Minimum tank size needed: ${largestTank} gallons`);
+            
+            // Check schooling requirements
+            const schoolingFish = selected.filter(f => f.schooling);
+            schoolingFish.forEach(f => {
+                recommendations.push(`${f.name} is a schooling fish - keep at least ${f.school_size} together`);
+            });
+            
+            // Add general tips
+            if (selected.every(f => f.temperament === 'peaceful')) {
+                recommendations.push('All selected fish are peaceful - great community tank choice!');
+            }
+            
+            // Render results
+            renderResults(overallCompatible, warnings, recommendations);
+        }
+
+        function renderResults(compatible, warnings, recommendations) {
+            // Overall result
+            const overallEl = document.getElementById('overall-result');
+            if (compatible && warnings.length === 0) {
+                overallEl.className = 'rounded-2xl p-6 mb-6 bg-emerald-50 border-2 border-emerald-200';
+                overallEl.innerHTML = `
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="check-circle" class="w-8 h-8 text-emerald-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-emerald-800">Compatible! ✓</h3>
+                            <p class="text-emerald-600">These fish can live together peacefully in the same tank.</p>
+                        </div>
+                    </div>
+                `;
+            } else if (compatible && warnings.length > 0) {
+                overallEl.className = 'rounded-2xl p-6 mb-6 bg-amber-50 border-2 border-amber-200';
+                overallEl.innerHTML = `
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="alert-triangle" class="w-8 h-8 text-amber-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-amber-800">Caution Needed</h3>
+                            <p class="text-amber-600">These fish may be compatible with some considerations.</p>
+                        </div>
+                    </div>
+                `;
+            } else {
+                overallEl.className = 'rounded-2xl p-6 mb-6 bg-red-50 border-2 border-red-200';
+                overallEl.innerHTML = `
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="x-circle" class="w-8 h-8 text-red-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-red-800">Not Compatible ✗</h3>
+                            <p class="text-red-600">Some of these fish should NOT be kept together.</p>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Warnings
+            const warningsEl = document.getElementById('warnings');
+            warningsEl.innerHTML = warnings.map(w => {
+                const colors = w.type === 'danger' 
+                    ? 'bg-red-50 border-red-200 text-red-800'
+                    : 'bg-amber-50 border-amber-200 text-amber-800';
+                const icon = w.type === 'danger' ? 'x-circle' : 'alert-triangle';
+                return `
+                    <div class="rounded-xl p-4 border-2 ${colors}">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="${icon}" class="w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                            <p>${w.message}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            // Recommendations
+            const recsEl = document.getElementById('recommendations-list');
+            recsEl.innerHTML = recommendations.map(r => `
+                <div class="flex items-center gap-3 text-slate-600">
+                    <i data-lucide="info" class="w-4 h-4 text-cyan-500 flex-shrink-0"></i>
+                    <span>${r}</span>
+                </div>
+            `).join('');
+            
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

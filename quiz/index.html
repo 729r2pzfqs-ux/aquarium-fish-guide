@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Fish Quiz — Discover Your Perfect Match | AquariumFishGuide</title>
+    <meta name="description" content="Take our quick quiz to find the perfect aquarium fish for your tank size, experience level, and preferences.">
+    <link rel="canonical" href="https://aquariumfishguide.com/quiz/">
+    
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aquariumfishguide.com/quiz/">
+    <meta property="og:title" content="Find Your Fish Quiz — Discover Your Perfect Match">
+    <meta property="og:description" content="Take our quick quiz to find the perfect aquarium fish for your setup.">
+    <meta property="og:site_name" content="AquariumFishGuide">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-cyan-50 via-white to-teal-50 min-h-screen text-slate-800">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="../" class="flex items-center gap-2">
+                <svg class="w-8 h-8 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
+                    <path d="M18 12v.5"/>
+                    <path d="M16 10c1 0 2 1 2 2s-1 2-2 2"/>
+                    <path d="M2 12h3"/>
+                </svg>
+                <span class="text-xl font-bold bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">AquariumFishGuide</span>
+            </a>
+            <nav class="flex items-center gap-6 text-sm font-medium">
+                <a href="../search/" class="text-slate-600 hover:text-cyan-600 transition">Browse Fish</a>
+                <a href="./" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg shadow-cyan-500/25">Take Quiz</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-4 py-12">
+        <!-- Quiz Container -->
+        <div id="quiz-container">
+            <!-- Intro -->
+            <div id="quiz-intro" class="text-center">
+                <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100 text-sm text-slate-600 mb-6">
+                    <span>🎯</span>
+                    <span>6 quick questions</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                    Find Your
+                    <span class="bg-gradient-to-r from-cyan-500 to-teal-600 bg-clip-text text-transparent">Perfect Fish</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8">Answer a few questions about your tank and preferences, and we'll match you with ideal fish species.</p>
+                <button onclick="startQuiz()" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-xl hover:shadow-cyan-500/25 transition transform hover:scale-105">
+                    Start Quiz →
+                </button>
+            </div>
+
+            <!-- Questions -->
+            <div id="quiz-questions" class="hidden">
+                <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8">
+                    <!-- Progress -->
+                    <div class="mb-8">
+                        <div class="flex justify-between text-sm text-slate-500 mb-2">
+                            <span>Question <span id="current-q">1</span> of 6</span>
+                            <span id="progress-pct">17%</span>
+                        </div>
+                        <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                            <div id="progress-bar" class="h-full bg-gradient-to-r from-cyan-500 to-teal-600 transition-all duration-300" style="width: 17%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Question -->
+                    <h2 id="question-text" class="text-2xl font-bold mb-6"></h2>
+                    
+                    <!-- Options -->
+                    <div id="options-container" class="space-y-3"></div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="quiz-results" class="hidden">
+                <div class="text-center mb-8">
+                    <span class="text-6xl mb-4 block">🐠</span>
+                    <h2 class="text-3xl font-bold mb-2">Your Perfect Fish Matches!</h2>
+                    <p class="text-slate-600">Based on your answers, these fish are ideal for you:</p>
+                </div>
+                <div id="results-container" class="space-y-4"></div>
+                <div class="text-center mt-8 space-y-4">
+                    <a href="../compatibility/" class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition">
+                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                        Check Compatibility
+                    </a>
+                    <div>
+                        <button onclick="restartQuiz()" class="text-cyan-600 font-semibold hover:text-cyan-700">← Take Quiz Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-100 mt-16 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-slate-500 text-sm">
+            <p>© 2026 AquariumFishGuide. Made with 🐠 for fish lovers everywhere.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        const questions = [
+            {
+                q: "What size is your tank?",
+                options: [
+                    { text: "🫧 5 gallons (nano tank)", criteria: { tank_size: "5gal" } },
+                    { text: "🐟 10 gallons (starter tank)", criteria: { tank_size: "10gal" } },
+                    { text: "🐠 20 gallons (community tank)", criteria: { tank_size: "20gal" } },
+                    { text: "🐡 30+ gallons (large tank)", criteria: { tank_size: "30gal" } },
+                    { text: "🦈 75+ gallons (extra large)", criteria: { tank_size: "75gal" } }
+                ]
+            },
+            {
+                q: "What's your experience level with fish keeping?",
+                options: [
+                    { text: "🌱 Complete beginner", criteria: { care_level: "beginner" } },
+                    { text: "📚 Some experience", criteria: { care_level: "intermediate" } },
+                    { text: "🎓 Experienced hobbyist", criteria: { care_level: "advanced" } }
+                ]
+            },
+            {
+                q: "How much time can you dedicate to tank maintenance?",
+                options: [
+                    { text: "⚡ Minimal — just basic care", criteria: { maintenance: "low" } },
+                    { text: "⏰ Moderate — weekly water changes", criteria: { maintenance: "medium" } },
+                    { text: "🔬 Lots — I enjoy the hobby", criteria: { maintenance: "high" } }
+                ]
+            },
+            {
+                q: "Do you want to keep multiple fish together?",
+                options: [
+                    { text: "👥 Yes, a community tank!", criteria: { community: true, temperament: "peaceful" } },
+                    { text: "🐟 Just one special fish", criteria: { community: false } },
+                    { text: "🏫 A school of the same species", criteria: { schooling: true } }
+                ]
+            },
+            {
+                q: "What's most important to you?",
+                options: [
+                    { text: "🎨 Bright, colorful fish", criteria: { priority: "colorful" } },
+                    { text: "🧹 Fish that help clean the tank", criteria: { priority: "cleanup" } },
+                    { text: "🌿 Fish for planted tanks", criteria: { priority: "planted" } },
+                    { text: "🤩 Unique or interesting behavior", criteria: { priority: "unique" } }
+                ]
+            },
+            {
+                q: "Any preference for fish activity level?",
+                options: [
+                    { text: "⚡ Active swimmers that dart around", criteria: { activity: "high" } },
+                    { text: "🧘 Calm, peaceful swimmers", criteria: { activity: "low" } },
+                    { text: "🤷 No preference", criteria: { activity: "any" } }
+                ]
+            }
+        ];
+
+        let fish = [];
+        let currentQuestion = 0;
+        let selectedCriteria = {};
+
+        // Load fish from JSON
+        fetch('../data/fish.json')
+            .then(r => r.json())
+            .then(data => {
+                fish = data;
+                console.log(`Loaded ${fish.length} fish species`);
+            })
+            .catch(e => console.error('Failed to load fish:', e));
+
+        function startQuiz() {
+            document.getElementById('quiz-intro').classList.add('hidden');
+            document.getElementById('quiz-questions').classList.remove('hidden');
+            showQuestion(0);
+        }
+
+        function showQuestion(index) {
+            const q = questions[index];
+            document.getElementById('question-text').textContent = q.q;
+            document.getElementById('current-q').textContent = index + 1;
+            const pct = Math.round(((index + 1) / questions.length) * 100);
+            document.getElementById('progress-pct').textContent = pct + '%';
+            document.getElementById('progress-bar').style.width = pct + '%';
+
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+            
+            q.options.forEach((opt, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full text-left p-4 rounded-xl border-2 border-slate-200 hover:border-cyan-400 hover:bg-cyan-50 transition font-medium';
+                btn.textContent = opt.text;
+                btn.onclick = () => selectOption(opt.criteria);
+                container.appendChild(btn);
+            });
+        }
+
+        function selectOption(criteria) {
+            // Merge criteria
+            Object.assign(selectedCriteria, criteria);
+            
+            currentQuestion++;
+            
+            if (currentQuestion < questions.length) {
+                showQuestion(currentQuestion);
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('quiz-questions').classList.add('hidden');
+            document.getElementById('quiz-results').classList.remove('hidden');
+
+            // Score fish based on criteria match
+            const scored = fish.map(f => {
+                let score = 0;
+                
+                // Tank size match
+                const tankOrder = { '5gal': 1, '10gal': 2, '20gal': 3, '30gal': 4, '75gal': 5 };
+                const selectedTank = tankOrder[selectedCriteria.tank_size] || 2;
+                const fishTank = tankOrder[f.tank_size] || 2;
+                if (fishTank <= selectedTank) score += 20;
+                
+                // Care level match
+                if (selectedCriteria.care_level === f.care_level) score += 25;
+                if (selectedCriteria.care_level === 'advanced') score += 10; // Can handle any
+                if (selectedCriteria.care_level === 'intermediate' && f.care_level === 'beginner') score += 15;
+                
+                // Community/temperament
+                if (selectedCriteria.temperament === 'peaceful' && f.temperament === 'peaceful') score += 20;
+                if (selectedCriteria.community === false && !f.schooling) score += 15;
+                if (selectedCriteria.schooling && f.schooling) score += 20;
+                
+                // Priority tags
+                if (selectedCriteria.priority === 'colorful' && f.tags.includes('colorful')) score += 15;
+                if (selectedCriteria.priority === 'cleanup' && f.tags.some(t => ['cleanup-crew', 'algae-eater'].includes(t))) score += 15;
+                if (selectedCriteria.priority === 'planted' && f.tags.includes('planted-tank')) score += 15;
+                if (selectedCriteria.priority === 'unique' && f.tags.some(t => ['unique', 'nocturnal', 'personality'].includes(t))) score += 15;
+                
+                // Beginner friendly bonus
+                if (f.beginner_friendly && selectedCriteria.care_level === 'beginner') score += 15;
+                
+                return { ...f, score };
+            });
+
+            // Sort and get top 5
+            scored.sort((a, b) => b.score - a.score);
+            const top5 = scored.slice(0, 5);
+
+            const container = document.getElementById('results-container');
+            container.innerHTML = '';
+
+            top5.forEach((f, i) => {
+                const match = Math.min(100, Math.round((f.score / 80) * 100));
+                const div = document.createElement('a');
+                div.href = '../fish/' + f.id + '/';
+                div.className = 'block bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/50 hover:shadow-xl transition';
+                div.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-100 to-teal-100 rounded-xl flex items-center justify-center text-2xl font-bold text-cyan-600">${i + 1}</div>
+                            <div>
+                                <h3 class="text-xl font-bold">${f.name}</h3>
+                                <p class="text-slate-500 text-sm">${f.tank_size} • ${f.temperament} • ${f.care_level}</p>
+                            </div>
+                        </div>
+                        <div class="text-cyan-600 font-semibold">${match}% match →</div>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+            
+            lucide.createIcons();
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            selectedCriteria = {};
+            document.getElementById('quiz-results').classList.add('hidden');
+            document.getElementById('quiz-intro').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
