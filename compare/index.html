@@ -11,17 +11,17 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compare Aquarium Fish Side by Side | AquariumFishGuide</title>
+    <title>Compare Aquarium Fish Side by Side | FishFinder</title>
     <meta name="description" content="Compare aquarium fish side by side. See tank requirements, temperament, care level, and more to find your perfect match.">
-    <link rel="canonical" href="https://aquariumfishguide.com/compare/">
+    <link rel="canonical" href="https://fishfinder.guide/compare/">
     
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aquariumfishguide.com/compare/">
+    <meta property="og:url" content="https://fishfinder.guide/compare/">
     <meta property="og:title" content="Compare Aquarium Fish Side by Side">
     <meta property="og:description" content="Compare aquarium fish to find your perfect match.">
-    <meta property="og:site_name" content="AquariumFishGuide">
+    <meta property="og:site_name" content="FishFinder">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -42,7 +42,7 @@
                     <path d="M16 10c1 0 2 1 2 2s-1 2-2 2"/>
                     <path d="M2 12h3"/>
                 </svg>
-                <span class="text-xl font-bold bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">AquariumFishGuide</span>
+                <span class="text-xl font-bold bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">FishFinder</span>
             </a>
             <nav class="flex items-center gap-6 text-sm font-medium">
                 <a href="../search/" class="text-slate-600 hover:text-cyan-600 transition">Browse Fish</a>
@@ -99,7 +99,7 @@
         <div id="empty-state" class="text-center py-20">
             <div class="text-6xl mb-4">🐠</div>
             <h3 class="text-xl font-bold text-slate-700 mb-2">Select fish to compare</h3>
-            <p class="text-slate-500">Choose at least 2 fish from the dropdowns above</p>
+            <p class="text-slate-300">Choose at least 2 fish from the dropdowns above</p>
         </div>
 
         <!-- Popular Comparisons -->
@@ -108,27 +108,27 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <button onclick="setFish('neon-tetra', 'cardinal-tetra')" class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-left">
                     <span class="font-semibold">Neon Tetra vs Cardinal Tetra</span>
-                    <p class="text-sm text-slate-500">The classic tetra showdown</p>
+                    <p class="text-sm text-slate-300">The classic tetra showdown</p>
                 </button>
                 <button onclick="setFish('betta', 'dwarf-gourami')" class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-left">
                     <span class="font-semibold">Betta vs Dwarf Gourami</span>
-                    <p class="text-sm text-slate-500">Solo centerpiece fish</p>
+                    <p class="text-sm text-slate-300">Solo centerpiece fish</p>
                 </button>
                 <button onclick="setFish('guppy', 'platy', 'molly')" class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-left">
                     <span class="font-semibold">Guppy vs Platy vs Molly</span>
-                    <p class="text-sm text-slate-500">Livebearer comparison</p>
+                    <p class="text-sm text-slate-300">Livebearer comparison</p>
                 </button>
                 <button onclick="setFish('corydoras-catfish', 'otocinclus')" class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-left">
                     <span class="font-semibold">Corydoras vs Otocinclus</span>
-                    <p class="text-sm text-slate-500">Bottom dweller options</p>
+                    <p class="text-sm text-slate-300">Bottom dweller options</p>
                 </button>
                 <button onclick="setFish('bristlenose-pleco', 'pleco')" class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-left">
                     <span class="font-semibold">Bristlenose vs Common Pleco</span>
-                    <p class="text-sm text-slate-500">Size matters!</p>
+                    <p class="text-sm text-slate-300">Size matters!</p>
                 </button>
                 <button onclick="setFish('cherry-shrimp', 'mystery-snail')" class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition text-left">
                     <span class="font-semibold">Cherry Shrimp vs Mystery Snail</span>
-                    <p class="text-sm text-slate-500">Cleanup crew options</p>
+                    <p class="text-sm text-slate-300">Cleanup crew options</p>
                 </button>
             </div>
         </div>
@@ -136,8 +136,8 @@
 
     <!-- Footer -->
     <footer class="border-t border-slate-100 mt-16 py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center text-slate-500 text-sm">
-            <p>© 2026 AquariumFishGuide. Made with 🐠 for fish lovers everywhere.</p>
+        <div class="max-w-6xl mx-auto px-4 text-center text-slate-300 text-sm">
+            <p>© 2026 FishFinder. Made with 🐠 for fish lovers everywhere.</p>
         </div>
     </footer>
 
@@ -200,7 +200,7 @@
             const header = document.getElementById('comparison-header');
             header.innerHTML = `
                 <tr class="border-b border-slate-100">
-                    <th class="p-4 text-left text-slate-500 font-medium w-1/4">Attribute</th>
+                    <th class="p-4 text-left text-slate-300 font-medium w-1/4">Attribute</th>
                     ${selectedFish.map(f => `
                         <th class="p-4 text-center">
                             <a href="../fish/${f.id}/" class="group">
@@ -228,7 +228,7 @@
             };
 
             const rows = [
-                { label: 'Scientific Name', render: f => `<em class="text-slate-500">${f.scientific_name}</em>` },
+                { label: 'Scientific Name', render: f => `<em class="text-slate-300">${f.scientific_name}</em>` },
                 { label: 'Tank Size', render: f => f.tank_size },
                 { label: 'Adult Size', render: f => `${f.size_inches}"` },
                 { label: 'Lifespan', render: f => `${f.lifespan_years} years` },
