@@ -113,12 +113,12 @@ def generate_html(fish):
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{name} Care Guide | AquariumFishGuide</title>
+    <title>{name} Care Guide | FishFinder</title>
     <meta name="description" content="{meta_desc}">
-    <link rel="canonical" href="https://aquariumfishguide.com/fish/{fish_id}/">
-    <meta property="og:title" content="{name} Care Guide | AquariumFishGuide">
+    <link rel="canonical" href="https://fishfinder.guide/fish/{fish_id}/">
+    <meta property="og:title" content="{name} Care Guide | FishFinder">
     <meta property="og:description" content="{meta_desc}">
-    <meta property="og:url" content="https://aquariumfishguide.com/fish/{fish_id}/">
+    <meta property="og:url" content="https://fishfinder.guide/fish/{fish_id}/">
     <meta property="og:type" content="article">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -137,20 +137,20 @@ def generate_html(fish):
       "@type": "Article",
       "mainEntityOfPage": {{
         "@type": "WebPage",
-        "@id": "https://aquariumfishguide.com/fish/{fish_id}/"
+        "@id": "https://fishfinder.guide/fish/{fish_id}/"
       }},
       "headline": "{name}: Care Guide, Tank Size & Compatibility",
       "description": "{fish['description']}",
       "author": {{
         "@type": "Organization",
-        "name": "AquariumFishGuide"
+        "name": "FishFinder"
       }},
       "publisher": {{
         "@type": "Organization",
-        "name": "AquariumFishGuide",
+        "name": "FishFinder",
         "logo": {{
           "@type": "ImageObject",
-          "url": "https://aquariumfishguide.com/favicon.svg"
+          "url": "https://fishfinder.guide/favicon.svg"
         }}
       }},
       "about": {{
@@ -168,8 +168,8 @@ def generate_html(fish):
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aquariumfishguide.com/"}},
-        {{"@type": "ListItem", "position": 2, "name": "Fish", "item": "https://aquariumfishguide.com/search/"}},
+        {{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fishfinder.guide/"}},
+        {{"@type": "ListItem", "position": 2, "name": "Fish", "item": "https://fishfinder.guide/search/"}},
         {{"@type": "ListItem", "position": 3, "name": "{name}"}}
       ]
     }}
@@ -186,7 +186,7 @@ def generate_html(fish):
                         <path d="M16 10c1 0 2 1 2 2s-1 2-2 2"/>
                         <path d="M2 12h3"/>
                     </svg>
-                    <span class="font-bold text-xl bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">AquariumFishGuide</span>
+                    <span class="font-bold text-xl bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">FishFinder</span>
                 </a>
                 <div class="flex items-center gap-6">
                     <a href="/search/" class="text-slate-600 hover:text-slate-900 font-medium hidden sm:block">Browse Fish</a>
@@ -212,12 +212,8 @@ def generate_html(fish):
         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden mb-8">
             <div class="md:flex">
                 <div class="md:w-2/5">
-                    <!-- Image placeholder -->
-                    <div class="w-full aspect-[4/5] bg-gradient-to-br from-cyan-100 via-teal-100 to-blue-100 flex items-center justify-center border-r border-slate-200">
-                        <div class="text-center">
-                            <span class="text-8xl block mb-4">🐟</span>
-                            <span class="text-slate-400 text-sm">{name} Image</span>
-                        </div>
+                    <div class="w-full aspect-[4/5] bg-gradient-to-br from-cyan-100 via-teal-100 to-blue-100 flex items-center justify-center border-r border-slate-200 p-6">
+                        <img src="/images/fish/{fish_id}.webp" alt="{name}" class="w-full h-full object-contain" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\\'text-8xl\\'>🐟</span>';">
                     </div>
                 </div>
                 <div class="md:w-3/5 p-6 md:p-8">
@@ -422,7 +418,7 @@ def generate_html(fish):
                         <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
                         <path d="M18 12v.5"/>
                     </svg>
-                    <span class="text-xl font-bold">AquariumFishGuide</span>
+                    <span class="text-xl font-bold">FishFinder</span>
                 </div>
                 <div class="flex gap-8 text-sm text-slate-400">
                     <a href="/quiz/" class="hover:text-white transition">Fish Quiz</a>
@@ -432,7 +428,7 @@ def generate_html(fish):
                 </div>
             </div>
             <div class="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-500">
-                <p>© 2026 AquariumFishGuide. Made with 🐠 for fish lovers everywhere.</p>
+                <p>© 2026 FishFinder. Made with 🐠 for fish lovers everywhere.</p>
             </div>
         </div>
     </footer>
@@ -449,39 +445,39 @@ def generate_sitemap(fish_list):
     sitemap = '''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aquariumfishguide.com/</loc>
+    <loc>https://fishfinder.guide/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aquariumfishguide.com/search/</loc>
+    <loc>https://fishfinder.guide/search/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://aquariumfishguide.com/quiz/</loc>
+    <loc>https://fishfinder.guide/quiz/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aquariumfishguide.com/compatibility/</loc>
+    <loc>https://fishfinder.guide/compatibility/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aquariumfishguide.com/compare/</loc>
+    <loc>https://fishfinder.guide/compare/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aquariumfishguide.com/faq/</loc>
+    <loc>https://fishfinder.guide/faq/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 '''
     for fish in fish_list:
         sitemap += f'''  <url>
-    <loc>https://aquariumfishguide.com/fish/{fish['id']}/</loc>
+    <loc>https://fishfinder.guide/fish/{fish['id']}/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
