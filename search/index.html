@@ -285,37 +285,36 @@
             };
 
             const careColors = {
-                beginner: 'bg-green-100 text-green-700',
-                intermediate: 'bg-yellow-100 text-yellow-700',
-                advanced: 'bg-purple-100 text-purple-700'
+                easy: 'bg-green-100 text-green-700',
+                moderate: 'bg-yellow-100 text-yellow-700',
+                hard: 'bg-purple-100 text-purple-700'
             };
-
-            const tags = fish.tags.slice(0, 3).map(t => 
-                `<span class="tag bg-slate-100 text-slate-600">${t}</span>`
-            ).join('');
+            
+            const careLabelMap = { easy: 'Beginner', moderate: 'Intermediate', hard: 'Advanced' };
+            const tankSize = fish.min_tank_gallons + ' gal';
 
             return `
                 <a href="/fish/${fish.id}/" class="fish-card bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden block">
-                    <div class="aspect-[4/3] bg-gradient-to-br from-cyan-100 to-teal-100 relative overflow-hidden flex items-center justify-center">
-                        <span class="text-6xl">🐟</span>
+                    <div class="aspect-[4/3] bg-slate-50 relative overflow-hidden flex items-center justify-center p-4">
+                        <img src="/images/fish/${fish.id}.webp" alt="${fish.name}" class="w-full h-full object-contain" onerror="this.outerHTML='<span class=\\'text-6xl\\'>🐟</span>'">
                         <span class="absolute top-2 right-2 tag ${temperamentColors[fish.temperament] || 'bg-slate-100 text-slate-600'}">
                             ${fish.temperament}
                         </span>
                     </div>
                     <div class="p-4">
                         <h3 class="font-semibold text-slate-800 text-lg mb-1">${fish.name}</h3>
-                        <p class="text-slate-300 text-sm mb-3 italic">${fish.scientific_name}</p>
+                        <p class="text-slate-400 text-sm mb-3 italic">${fish.scientific || ''}</p>
                         <div class="flex flex-wrap gap-1 mb-3">
-                            <span class="tag ${careColors[fish.care_level]}">${fish.care_level}</span>
-                            ${tags}
+                            <span class="tag ${careColors[fish.care_level]}">${careLabelMap[fish.care_level] || fish.care_level}</span>
+                            <span class="tag bg-slate-100 text-slate-600">${fish.category}</span>
                         </div>
                         <div class="grid grid-cols-2 gap-2 text-center text-xs">
                             <div class="bg-slate-50 rounded-lg py-2">
-                                <div class="text-slate-300">Tank Size</div>
-                                <div class="font-semibold text-slate-700">${fish.tank_size}</div>
+                                <div class="text-slate-400">Tank Size</div>
+                                <div class="font-semibold text-slate-700">${tankSize}</div>
                             </div>
                             <div class="bg-slate-50 rounded-lg py-2">
-                                <div class="text-slate-300">Size</div>
+                                <div class="text-slate-400">Size</div>
                                 <div class="font-semibold text-slate-700">${fish.size_inches}"</div>
                             </div>
                         </div>
@@ -341,11 +340,24 @@
                 ? fuse.search(searchQuery).map(r => r.item)
                 : [...allFish];
 
+            // Tank size filter helper
+            function matchesTankFilter(minGallons, filter) {
+                if (filter === '5gal') return minGallons <= 5;
+                if (filter === '10gal') return minGallons <= 10;
+                if (filter === '20gal') return minGallons <= 20;
+                if (filter === '30gal') return minGallons <= 30;
+                if (filter === '75gal') return minGallons <= 75;
+                return true;
+            }
+            
+            // Care level mapping
+            const careFilterMap = { 'beginner': 'easy', 'intermediate': 'moderate', 'advanced': 'hard' };
+
             // Apply filters
             results = results.filter(fish => {
-                if (selectedTanks.length > 0 && !selectedTanks.includes(fish.tank_size)) return false;
+                if (selectedTanks.length > 0 && !selectedTanks.some(t => matchesTankFilter(fish.min_tank_gallons, t))) return false;
                 if (selectedTemperaments.length > 0 && !selectedTemperaments.includes(fish.temperament)) return false;
-                if (selectedCare.length > 0 && !selectedCare.includes(fish.care_level)) return false;
+                if (selectedCare.length > 0 && !selectedCare.some(c => careFilterMap[c] === fish.care_level)) return false;
                 if (selectedCategories.length > 0 && !selectedCategories.includes(fish.category)) return false;
                 if (selectedSchooling.length > 0) {
                     const schoolingStr = fish.schooling.toString();
@@ -355,12 +367,11 @@
             });
 
             // Sort results
-            const tankOrder = { '5gal': 1, '10gal': 2, '20gal': 3, '30gal': 4, '75gal': 5 };
-            const careOrder = { 'beginner': 1, 'intermediate': 2, 'advanced': 3 };
+            const careOrder = { 'easy': 1, 'moderate': 2, 'hard': 3 };
             
             results.sort((a, b) => {
                 switch (sortBy) {
-                    case 'tank_size': return (tankOrder[a.tank_size] || 3) - (tankOrder[b.tank_size] || 3);
+                    case 'tank_size': return a.min_tank_gallons - b.min_tank_gallons;
                     case 'care_level': return (careOrder[a.care_level] || 2) - (careOrder[b.care_level] || 2);
                     default: return a.name.localeCompare(b.name);
                 }
