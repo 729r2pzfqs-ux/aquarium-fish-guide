@@ -228,19 +228,50 @@
             const recommendations = [];
             let overallCompatible = true;
             
+            // Helper to check if fish should be avoided
+            function shouldAvoid(fish1, fish2) {
+                const avoid1 = fish1.avoid_with || [];
+                const avoid2 = fish2.avoid_with || [];
+                const name1Lower = fish1.name.toLowerCase();
+                const name2Lower = fish2.name.toLowerCase();
+                const cat1 = fish1.category || '';
+                const cat2 = fish2.category || '';
+                
+                // Check if fish2 matches anything in fish1's avoid list
+                for (const item of avoid1) {
+                    const itemLower = item.toLowerCase();
+                    if (name2Lower.includes(itemLower) || itemLower.includes(name2Lower) ||
+                        cat2.includes(itemLower) || itemLower.includes(cat2) ||
+                        (itemLower === 'bettas' && fish2.id === 'betta-fish') ||
+                        (itemLower === 'cichlids' && cat2 === 'cichlid') ||
+                        (itemLower === 'aggressive fish' && fish2.temperament === 'aggressive') ||
+                        (itemLower === 'large fish' && fish2.size_inches >= 6) ||
+                        (itemLower === 'small fish' && fish2.size_inches <= 2) ||
+                        (itemLower === 'fin nippers' && (fish2.temperament === 'semi-aggressive' || fish2.category === 'barb')) ||
+                        (itemLower === 'long-finned fish' && (fish2.id === 'betta-fish' || fish2.id === 'angelfish' || fish2.id.includes('guppy')))) {
+                        return item;
+                    }
+                }
+                return null;
+            }
+            
             // Check each pair
             for (let i = 0; i < selected.length; i++) {
                 for (let j = i + 1; j < selected.length; j++) {
                     const fish1 = selected[i];
                     const fish2 = selected[j];
                     
-                    // Check if explicitly incompatible
-                    if (fish1.incompatible_with.includes(fish2.id) || fish2.incompatible_with.includes(fish1.id)) {
+                    // Check avoid_with conflicts
+                    const avoid1 = shouldAvoid(fish1, fish2);
+                    const avoid2 = shouldAvoid(fish2, fish1);
+                    
+                    if (avoid1 || avoid2) {
                         overallCompatible = false;
+                        const reason = avoid1 || avoid2;
                         warnings.push({
                             type: 'danger',
                             fish: [fish1.name, fish2.name],
-                            message: `${fish1.name} and ${fish2.name} are NOT compatible and should not be kept together.`
+                            message: `${fish1.name} and ${fish2.name} may not be compatible (${reason}).`
                         });
                     }
                     
@@ -265,19 +296,27 @@
                     }
                     
                     // Check temperature compatibility
-                    // (simplified - would need actual temp parsing in production)
+                    if (fish1.temp_min && fish2.temp_min) {
+                        const overlap = Math.min(fish1.temp_max, fish2.temp_max) - Math.max(fish1.temp_min, fish2.temp_min);
+                        if (overlap < 3) {
+                            warnings.push({
+                                type: 'warning',
+                                fish: [fish1.name, fish2.name],
+                                message: `Temperature mismatch: ${fish1.name} (${fish1.temp_min}-${fish1.temp_max}°F) and ${fish2.name} (${fish2.temp_min}-${fish2.temp_max}°F) have limited overlap.`
+                            });
+                        }
+                    }
                 }
             }
             
             // Check tank size requirements
-            const tankOrder = { '5gal': 5, '10gal': 10, '20gal': 20, '30gal': 30, '75gal': 75 };
-            const largestTank = Math.max(...selected.map(f => tankOrder[f.tank_size] || 10));
+            const largestTank = Math.max(...selected.map(f => f.min_tank_gallons || 10));
             recommendations.push(`Minimum tank size needed: ${largestTank} gallons`);
             
             // Check schooling requirements
             const schoolingFish = selected.filter(f => f.schooling);
             schoolingFish.forEach(f => {
-                recommendations.push(`${f.name} is a schooling fish - keep at least ${f.school_size} together`);
+                recommendations.push(`${f.name} is a schooling fish - keep at least ${f.school_size || 6} together`);
             });
             
             // Add general tips
