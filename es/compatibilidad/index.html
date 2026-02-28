@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#06b6d4">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWDX74LPLP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CWDX74LPLP');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Compatibilidad de Peces | ¿Pueden Vivir Juntos? | FishFinder</title>
+    <meta name="description" content="Verifica si tus peces de acuario pueden vivir juntos. Nuestro verificador de compatibilidad te advierte sobre parejas agresivas y recomienda compañeros seguros.">
+    <link rel="canonical" href="https://fishfinder.guide/es/compatibilidad/">
+    <link rel="alternate" hreflang="en" href="https://fishfinder.guide/compatibility/">
+    <link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/compatibilidad/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fishfinder.guide/es/compatibilidad/">
+    <meta property="og:title" content="Verificador de Compatibilidad — ¿Pueden Estos Peces Vivir Juntos?">
+    <meta property="og:description" content="Verifica si tus peces de acuario son compatibles antes de comprar.">
+    <meta property="og:site_name" content="FishFinder">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Verificador de Compatibilidad de Peces",
+      "description": "Verifica si tus peces de acuario pueden vivir juntos.",
+      "url": "https://fishfinder.guide/es/compatibilidad/",
+      "inLanguage": "es",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-cyan-50 via-white to-teal-50 min-h-screen text-slate-800">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="../" class="flex items-center gap-2">
+                <svg class="w-8 h-8 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
+                    <path d="M18 12v.5"/>
+                    <path d="M16 10c1 0 2 1 2 2s-1 2-2 2"/>
+                    <path d="M2 12h3"/>
+                    <path d="M5 12 Q2 8 3 5"/>
+                    <path d="M5 12 Q2 16 3 19"/>
+                </svg>
+                <span class="text-xl font-bold bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">FishFinder</span>
+            </a>
+            <nav class="flex items-center gap-6 text-sm font-medium">
+                <a href="../buscar/" class="text-slate-600 hover:text-cyan-600 transition">Explorar Peces</a>
+                <a href="../test/" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition">Encuentra Tu Pez</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100 text-sm text-slate-600 mb-6">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i>
+                <span>Verificador de Compatibilidad</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                ¿Pueden Estos Peces
+                <span class="bg-gradient-to-r from-cyan-500 to-teal-600 bg-clip-text text-transparent">Vivir Juntos?</span>
+            </h1>
+            <p class="text-lg text-slate-600">Selecciona los peces que quieres tener y verificaremos si son compatibles</p>
+            <div class="mt-4">
+                <a href="../configuraciones/" class="inline-flex items-center gap-2 text-cyan-600 font-semibold hover:text-cyan-700 transition">
+                    <i data-lucide="layout-grid" class="w-5 h-5"></i>
+                    O explora configuraciones listas
+                </a>
+            </div>
+        </div>
+
+        <!-- Fish Selection -->
+        <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8 mb-8">
+            <h2 class="text-xl font-bold mb-4">Selecciona Tus Peces</h2>
+            <p class="text-slate-300 mb-6">Haz clic para añadir peces a tu tanque. Haz clic de nuevo para quitar.</p>
+            
+            <div id="fish-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            </div>
+        </div>
+
+        <!-- Selected Fish -->
+        <div id="selected-container" class="hidden mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-bold">Tu Tanque</h3>
+                    <button onclick="clearSelection()" class="text-sm text-slate-300 hover:text-slate-700">Limpiar Todo</button>
+                </div>
+                <div id="selected-fish" class="flex flex-wrap gap-2">
+                </div>
+            </div>
+        </div>
+
+        <!-- Compatibility Results -->
+        <div id="results-container" class="hidden">
+            <div id="overall-result" class="rounded-2xl p-6 mb-6">
+            </div>
+            
+            <div id="warnings" class="space-y-4 mb-6">
+            </div>
+            
+            <div id="recommendations" class="bg-white rounded-2xl shadow-lg p-6">
+                <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="lightbulb" class="w-5 h-5 text-amber-500"></i>
+                    Recomendaciones
+                </h3>
+                <div id="recommendations-list" class="space-y-3">
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="text-center py-16">
+            <div class="text-6xl mb-4">🐠</div>
+            <h3 class="text-xl font-bold text-slate-700 mb-2">Selecciona peces para verificar compatibilidad</h3>
+            <p class="text-slate-300">Haz clic en los peces de arriba para añadirlos a tu tanque</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-100 mt-16 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-slate-300 text-sm">
+            <p>© 2026 FishFinder. Hecho con 🐠 para amantes de los peces en todas partes.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        let allFish = [];
+        let selectedFish = [];
+
+        fetch('/data/fish.json')
+            .then(r => r.json())
+            .then(data => {
+                allFish = data;
+                renderFishGrid();
+            })
+            .catch(e => console.error('Failed to load fish:', e));
+
+        function renderFishGrid() {
+            const grid = document.getElementById('fish-grid');
+            grid.innerHTML = allFish.map(f => `
+                <button onclick="toggleFish('${f.id}')" id="btn-${f.id}" 
+                    class="p-3 rounded-xl border-2 border-slate-200 hover:border-cyan-400 transition text-left">
+                    <div class="flex items-center gap-2">
+                        <img src="/images/fish/${f.id}.webp" alt="${f.name}" class="w-8 h-8 object-contain" onerror="this.outerHTML='🐟'">
+                        <span class="font-medium text-sm text-slate-700">${f.name}</span>
+                    </div>
+                </button>
+            `).join('');
+        }
+
+        function toggleFish(id) {
+            const index = selectedFish.indexOf(id);
+            const btn = document.getElementById(`btn-${id}`);
+            
+            if (index === -1) {
+                selectedFish.push(id);
+                btn.classList.add('border-cyan-500', 'bg-cyan-50');
+                btn.classList.remove('border-slate-200');
+            } else {
+                selectedFish.splice(index, 1);
+                btn.classList.remove('border-cyan-500', 'bg-cyan-50');
+                btn.classList.add('border-slate-200');
+            }
+            
+            updateResults();
+        }
+
+        function clearSelection() {
+            selectedFish.forEach(id => {
+                const btn = document.getElementById(`btn-${id}`);
+                if (btn) {
+                    btn.classList.remove('border-cyan-500', 'bg-cyan-50');
+                    btn.classList.add('border-slate-200');
+                }
+            });
+            selectedFish = [];
+            updateResults();
+        }
+
+        function updateResults() {
+            const selectedContainer = document.getElementById('selected-container');
+            const resultsContainer = document.getElementById('results-container');
+            const emptyState = document.getElementById('empty-state');
+            
+            if (selectedFish.length === 0) {
+                selectedContainer.classList.add('hidden');
+                resultsContainer.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                return;
+            }
+            
+            selectedContainer.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+            
+            const selectedFishEl = document.getElementById('selected-fish');
+            selectedFishEl.innerHTML = selectedFish.map(id => {
+                const f = allFish.find(fish => fish.id === id);
+                return `
+                    <span class="inline-flex items-center gap-2 bg-cyan-100 text-cyan-800 px-3 py-1.5 rounded-full text-sm font-medium">
+                        <img src="/images/fish/${f.id}.webp" alt="${f.name}" class="w-6 h-6 object-contain" onerror="this.outerHTML='🐟'">
+                        ${f.name}
+                        <button onclick="toggleFish('${id}')" class="hover:text-cyan-600">×</button>
+                    </span>
+                `;
+            }).join('');
+            
+            if (selectedFish.length < 2) {
+                resultsContainer.classList.add('hidden');
+                return;
+            }
+            
+            resultsContainer.classList.remove('hidden');
+            checkCompatibility();
+        }
+
+        function checkCompatibility() {
+            const selected = selectedFish.map(id => allFish.find(f => f.id === id));
+            const warnings = [];
+            const recommendations = [];
+            let overallCompatible = true;
+            
+            function shouldAvoid(fish1, fish2) {
+                const avoid1 = fish1.avoid_with || [];
+                const name2Lower = fish2.name.toLowerCase();
+                const cat2 = fish2.category || '';
+                
+                for (const item of avoid1) {
+                    const itemLower = item.toLowerCase();
+                    if (name2Lower.includes(itemLower) || itemLower.includes(name2Lower) ||
+                        cat2.includes(itemLower) || itemLower.includes(cat2) ||
+                        (itemLower === 'bettas' && fish2.id === 'betta-fish') ||
+                        (itemLower === 'cichlids' && cat2 === 'cichlid') ||
+                        (itemLower === 'aggressive fish' && fish2.temperament === 'aggressive') ||
+                        (itemLower === 'large fish' && fish2.size_inches >= 6) ||
+                        (itemLower === 'small fish' && fish2.size_inches <= 2) ||
+                        (itemLower === 'fin nippers' && (fish2.temperament === 'semi-aggressive' || fish2.category === 'barb')) ||
+                        (itemLower === 'long-finned fish' && (fish2.id === 'betta-fish' || fish2.id === 'angelfish' || fish2.id.includes('guppy')))) {
+                        return item;
+                    }
+                }
+                return null;
+            }
+            
+            for (let i = 0; i < selected.length; i++) {
+                for (let j = i + 1; j < selected.length; j++) {
+                    const fish1 = selected[i];
+                    const fish2 = selected[j];
+                    
+                    const avoid1 = shouldAvoid(fish1, fish2);
+                    const avoid2 = shouldAvoid(fish2, fish1);
+                    
+                    if (avoid1 || avoid2) {
+                        overallCompatible = false;
+                        const reason = avoid1 || avoid2;
+                        warnings.push({
+                            type: 'danger',
+                            fish: [fish1.name, fish2.name],
+                            message: `${fish1.name} y ${fish2.name} pueden no ser compatibles (${reason}).`
+                        });
+                    }
+                    
+                    if (fish1.temperament === 'aggressive' && fish2.temperament === 'peaceful') {
+                        if (!warnings.find(w => w.fish.includes(fish1.name) && w.fish.includes(fish2.name))) {
+                            warnings.push({
+                                type: 'warning',
+                                fish: [fish1.name, fish2.name],
+                                message: `${fish1.name} es agresivo y puede dañar al pacífico ${fish2.name}.`
+                            });
+                        }
+                    }
+                    if (fish2.temperament === 'aggressive' && fish1.temperament === 'peaceful') {
+                        if (!warnings.find(w => w.fish.includes(fish1.name) && w.fish.includes(fish2.name))) {
+                            warnings.push({
+                                type: 'warning',
+                                fish: [fish1.name, fish2.name],
+                                message: `${fish2.name} es agresivo y puede dañar al pacífico ${fish1.name}.`
+                            });
+                        }
+                    }
+                    
+                    if (fish1.temp_min && fish2.temp_min) {
+                        const overlap = Math.min(fish1.temp_max, fish2.temp_max) - Math.max(fish1.temp_min, fish2.temp_min);
+                        if (overlap < 3) {
+                            warnings.push({
+                                type: 'warning',
+                                fish: [fish1.name, fish2.name],
+                                message: `Diferencia de temperatura: ${fish1.name} (${fish1.temp_min}-${fish1.temp_max}°F) y ${fish2.name} (${fish2.temp_min}-${fish2.temp_max}°F) tienen poco solapamiento.`
+                            });
+                        }
+                    }
+                }
+            }
+            
+            const largestTank = Math.max(...selected.map(f => f.min_tank_gallons || 10));
+            const liters = Math.round(largestTank * 3.785);
+            recommendations.push(`Tamaño mínimo del tanque: ${liters}L (${largestTank} galones)`);
+            
+            const schoolingFish = selected.filter(f => f.schooling);
+            schoolingFish.forEach(f => {
+                recommendations.push(`${f.name} es un pez de cardumen — mantén al menos ${f.school_size || 6} juntos`);
+            });
+            
+            if (selected.every(f => f.temperament === 'peaceful')) {
+                recommendations.push('¡Todos los peces seleccionados son pacíficos — excelente elección para tanque comunitario!');
+            }
+            
+            renderResults(overallCompatible, warnings, recommendations);
+        }
+
+        function renderResults(compatible, warnings, recommendations) {
+            const overallEl = document.getElementById('overall-result');
+            if (compatible && warnings.length === 0) {
+                overallEl.className = 'rounded-2xl p-6 mb-6 bg-emerald-50 border-2 border-emerald-200';
+                overallEl.innerHTML = `
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="check-circle" class="w-8 h-8 text-emerald-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-emerald-800">¡Compatibles! ✓</h3>
+                            <p class="text-emerald-600">Estos peces pueden vivir juntos pacíficamente en el mismo tanque.</p>
+                        </div>
+                    </div>
+                `;
+            } else if (compatible && warnings.length > 0) {
+                overallEl.className = 'rounded-2xl p-6 mb-6 bg-amber-50 border-2 border-amber-200';
+                overallEl.innerHTML = `
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="alert-triangle" class="w-8 h-8 text-amber-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-amber-800">Precaución Necesaria</h3>
+                            <p class="text-amber-600">Estos peces pueden ser compatibles con algunas consideraciones.</p>
+                        </div>
+                    </div>
+                `;
+            } else {
+                overallEl.className = 'rounded-2xl p-6 mb-6 bg-red-50 border-2 border-red-200';
+                overallEl.innerHTML = `
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="x-circle" class="w-8 h-8 text-red-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-red-800">No Compatibles ✗</h3>
+                            <p class="text-red-600">Algunos de estos peces NO deben mantenerse juntos.</p>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            const warningsEl = document.getElementById('warnings');
+            warningsEl.innerHTML = warnings.map(w => {
+                const colors = w.type === 'danger' 
+                    ? 'bg-red-50 border-red-200 text-red-800'
+                    : 'bg-amber-50 border-amber-200 text-amber-800';
+                const icon = w.type === 'danger' ? 'x-circle' : 'alert-triangle';
+                return `
+                    <div class="rounded-xl p-4 border-2 ${colors}">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="${icon}" class="w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                            <p>${w.message}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            const recsEl = document.getElementById('recommendations-list');
+            recsEl.innerHTML = recommendations.map(r => `
+                <div class="flex items-center gap-3 text-slate-600">
+                    <i data-lucide="info" class="w-4 h-4 text-cyan-500 flex-shrink-0"></i>
+                    <span>${r}</span>
+                </div>
+            `).join('');
+            
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
