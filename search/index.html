@@ -95,23 +95,23 @@
                         <div class="space-y-2">
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" value="5gal" class="tank-filter rounded text-cyan-600">
-                                <span class="text-slate-600">5 Gallon (Nano)</span>
+                                <span class="text-slate-600">19L (5gal) Nano</span>
                             </label>
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" value="10gal" class="tank-filter rounded text-cyan-600">
-                                <span class="text-slate-600">10 Gallon</span>
+                                <span class="text-slate-600">38L (10gal)</span>
                             </label>
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" value="20gal" class="tank-filter rounded text-cyan-600">
-                                <span class="text-slate-600">20 Gallon</span>
+                                <span class="text-slate-600">75L (20gal)</span>
                             </label>
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" value="30gal" class="tank-filter rounded text-cyan-600">
-                                <span class="text-slate-600">30+ Gallon</span>
+                                <span class="text-slate-600">114L+ (30gal+)</span>
                             </label>
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" value="75gal" class="tank-filter rounded text-cyan-600">
-                                <span class="text-slate-600">75+ Gallon (Large)</span>
+                                <span class="text-slate-600">284L+ (75gal+) Large</span>
                             </label>
                         </div>
                     </div>
@@ -291,7 +291,10 @@
             };
             
             const careLabelMap = { easy: 'Beginner', moderate: 'Intermediate', hard: 'Advanced' };
-            const tankSize = fish.min_tank_gallons + ' gal';
+            const liters = Math.round(fish.min_tank_gallons * 3.785);
+            const tankSize = liters + 'L (' + fish.min_tank_gallons + 'gal)';
+            const sizeCm = Math.round(fish.size_inches * 2.54);
+            const sizeDisplay = sizeCm + 'cm (' + fish.size_inches + '")';
 
             return `
                 <a href="/fish/${fish.id}/" class="fish-card bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden block">
@@ -315,7 +318,7 @@
                             </div>
                             <div class="bg-slate-50 rounded-lg py-2">
                                 <div class="text-slate-400">Size</div>
-                                <div class="font-semibold text-slate-700">${fish.size_inches}"</div>
+                                <div class="font-semibold text-slate-700">${sizeDisplay}</div>
                             </div>
                         </div>
                     </div>
