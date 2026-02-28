@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Cute betta fish style -->
+  <defs>
+    <linearGradient id="bettaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="50%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <!-- Flowing tail -->
+  <path d="M6 32 Q0 20 6 10 Q10 20 8 32 Q10 44 6 54 Q0 44 6 32" fill="#8b5cf6" opacity="0.8"/>
+  <path d="M10 32 Q6 22 12 14 Q14 24 12 32 Q14 40 12 50 Q6 42 10 32" fill="#a78bfa" opacity="0.7"/>
+  <!-- Body -->
+  <ellipse cx="30" cy="32" rx="18" ry="12" fill="url(#bettaGrad)"/>
+  <!-- Dorsal fin flowing -->
+  <path d="M20 20 Q24 6 36 12 Q32 18 28 20" fill="#06b6d4"/>
+  <!-- Eye -->
+  <circle cx="40" cy="30" r="4" fill="white"/>
+  <circle cx="41" cy="29" r="2.5" fill="#1e293b"/>
+  <circle cx="42" cy="28" r="1" fill="white"/>
+  <!-- Cute mouth -->
+  <path d="M48 34 Q50 36 48 38" stroke="#0e7490" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>

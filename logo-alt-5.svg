@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Friendly clownfish inspired -->
+  <defs>
+    <linearGradient id="clownGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#fb923c"/>
+    </linearGradient>
+  </defs>
+  <!-- Body -->
+  <ellipse cx="32" cy="32" rx="22" ry="16" fill="url(#clownGrad)"/>
+  <!-- White stripes -->
+  <path d="M18 18 Q22 32 18 46" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M34 16 Q38 32 34 48" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Tail -->
+  <path d="M10 32 L2 22 Q6 32 2 42 Z" fill="#ea580c"/>
+  <!-- Dorsal fin -->
+  <ellipse cx="28" cy="16" rx="8" ry="4" fill="#fdba74"/>
+  <!-- Eye -->
+  <circle cx="44" cy="28" r="6" fill="white"/>
+  <circle cx="45" cy="27" r="3.5" fill="#1e293b"/>
+  <circle cx="46" cy="26" r="1.5" fill="white"/>
+  <!-- Smile -->
+  <path d="M42 36 Q46 40 50 36" stroke="#c2410c" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
