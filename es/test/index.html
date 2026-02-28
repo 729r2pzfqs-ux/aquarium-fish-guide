@@ -147,6 +147,7 @@
         </div>
     </footer>
 
+    <script src="/es/js/fish-es.js"></script>
     <script>
         lucide.createIcons();
         
@@ -204,10 +205,6 @@
             }
         ];
 
-        // Spanish labels for results
-        const temperamentLabels = { peaceful: 'pacífico', 'semi-aggressive': 'semi-agresivo', aggressive: 'agresivo' };
-        const careLevelLabels = { easy: 'fácil', moderate: 'moderado', hard: 'difícil' };
-
         let fish = [];
         let currentQuestion = 0;
         let selectedCriteria = {};
@@ -215,7 +212,11 @@
         fetch('/data/fish.json')
             .then(r => r.json())
             .then(data => {
-                fish = data;
+                // Add Spanish names to fish data
+                fish = data.map(f => ({
+                    ...f,
+                    nameES: getFishNameES(f.id, f.name)
+                }));
                 console.log(`Loaded ${fish.length} fish species`);
             })
             .catch(e => console.error('Failed to load fish:', e));
@@ -264,14 +265,17 @@
             const scored = fish.map(f => {
                 let score = 0;
                 
-                const tankOrder = { '5gal': 1, '10gal': 2, '20gal': 3, '30gal': 4, '75gal': 5 };
-                const selectedTank = tankOrder[selectedCriteria.tank_size] || 2;
-                const fishTank = tankOrder[f.tank_size] || 2;
-                if (fishTank <= selectedTank) score += 20;
+                // Convert tank size criteria to gallons for comparison
+                const tankGallons = { '5gal': 5, '10gal': 10, '20gal': 20, '30gal': 30, '75gal': 75 };
+                const selectedGallons = tankGallons[selectedCriteria.tank_size] || 10;
+                if (f.min_tank_gallons <= selectedGallons) score += 20;
                 
-                if (selectedCriteria.care_level === f.care_level) score += 25;
+                // Map quiz care levels to JSON care levels
+                const careMap = { 'beginner': 'easy', 'intermediate': 'moderate', 'advanced': 'hard' };
+                const selectedCare = careMap[selectedCriteria.care_level] || 'easy';
+                if (selectedCare === f.care_level) score += 25;
                 if (selectedCriteria.care_level === 'advanced') score += 10;
-                if (selectedCriteria.care_level === 'intermediate' && f.care_level === 'beginner') score += 15;
+                if (selectedCriteria.care_level === 'intermediate' && f.care_level === 'easy') score += 15;
                 
                 if (selectedCriteria.temperament === 'peaceful' && f.temperament === 'peaceful') score += 20;
                 if (selectedCriteria.community === false && !f.schooling) score += 15;
@@ -295,8 +299,10 @@
 
             top5.forEach((f, i) => {
                 const match = Math.min(100, Math.round((f.score / 80) * 100));
-                const tempLabel = temperamentLabels[f.temperament] || f.temperament;
-                const careLabel = careLevelLabels[f.care_level] || f.care_level;
+                const tempLabel = temperamentES[f.temperament] || f.temperament;
+                const careLabel = careLevelES[f.care_level] || f.care_level;
+                const tankLabel = tankSizeES(f.min_tank_gallons);
+                const fishName = f.nameES || getFishNameES(f.id, f.name);
                 const div = document.createElement('a');
                 div.href = '../peces/' + f.id + '/';
                 div.className = 'block bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/50 hover:shadow-xl transition';
@@ -305,8 +311,8 @@
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gradient-to-br from-cyan-100 to-teal-100 rounded-xl flex items-center justify-center text-2xl font-bold text-cyan-600">${i + 1}</div>
                             <div>
-                                <h3 class="text-xl font-bold">${f.name}</h3>
-                                <p class="text-slate-300 text-sm">${f.tank_size} • ${tempLabel} • ${careLabel}</p>
+                                <h3 class="text-xl font-bold">${fishName}</h3>
+                                <p class="text-slate-500 text-sm">${tankLabel} • ${tempLabel} • ${careLabel}</p>
                             </div>
                         </div>
                         <div class="text-cyan-600 font-semibold">${match}% coincide →</div>
