@@ -74,6 +74,9 @@
                 <button id="clearSearch" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-300 hover:text-slate-600 hidden">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
+                <!-- Autocomplete dropdown -->
+                <div id="search-dropdown" class="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-2xl shadow-xl z-50 hidden max-h-80 overflow-y-auto">
+                </div>
             </div>
         </div>
 
@@ -439,9 +442,56 @@
         }
 
         // Event listeners
-        document.getElementById('searchInput').addEventListener('input', applyFilters);
+        const searchInput = document.getElementById('searchInput');
+        const dropdown = document.getElementById('search-dropdown');
+        
+        searchInput.addEventListener('input', function() {
+            applyFilters();
+            
+            // Autocomplete dropdown
+            const query = this.value.trim().toLowerCase();
+            if (query.length < 1) {
+                dropdown.classList.add('hidden');
+                return;
+            }
+            
+            const matches = allFish.filter(f => 
+                f.name.toLowerCase().includes(query) || 
+                (f.scientific && f.scientific.toLowerCase().includes(query))
+            ).slice(0, 8);
+            
+            if (matches.length === 0) {
+                dropdown.classList.add('hidden');
+                return;
+            }
+            
+            dropdown.innerHTML = matches.map(f => `
+                <a href="/fish/${f.id}/" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition first:rounded-t-2xl last:rounded-b-2xl">
+                    <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <img src="/images/fish/${f.id}.webp" alt="${f.name}" class="w-full h-full object-contain" onerror="this.outerHTML='🐟'">
+                    </div>
+                    <div>
+                        <span class="font-medium text-slate-800">${f.name}</span>
+                        <span class="text-sm text-slate-400 block">${f.scientific || ''}</span>
+                    </div>
+                </a>
+            `).join('');
+            dropdown.classList.remove('hidden');
+        });
+        
+        searchInput.addEventListener('blur', function() {
+            setTimeout(() => dropdown.classList.add('hidden'), 200);
+        });
+        
+        searchInput.addEventListener('focus', function() {
+            if (this.value.trim().length >= 1) {
+                this.dispatchEvent(new Event('input'));
+            }
+        });
+        
         document.getElementById('clearSearch').addEventListener('click', () => {
-            document.getElementById('searchInput').value = '';
+            searchInput.value = '';
+            dropdown.classList.add('hidden');
             applyFilters();
         });
         document.getElementById('sortBy').addEventListener('change', applyFilters);
