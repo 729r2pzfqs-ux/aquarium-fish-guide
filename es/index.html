@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="google-site-verification" content="epvOfi_7ZAxkGTi2NCPZd-vKLRbFXVGdwGcZsMA8xwA">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#06b6d4">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWDX74LPLP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CWDX74LPLP');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishFinder | Encuentra el Pez Perfecto para Tu Acuario</title>
+    <meta name="description" content="Encuentra el pez de acuario perfecto para tu tanque. Compara más de 120 especies, haz nuestro test, verifica compatibilidad y obtén guías de cuidados.">
+    <meta name="keywords" content="peces de acuario, peces tropicales, peces de agua dulce, compatibilidad de peces, peces para principiantes, pecera, configuración de acuario">
+    <link rel="canonical" href="https://fishfinder.guide/es/">
+    <link rel="alternate" hreflang="en" href="https://fishfinder.guide/">
+    <link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fishfinder.guide/es/">
+    <meta property="og:title" content="FishFinder — Encuentra Tu Pez de Acuario Perfecto">
+    <meta property="og:description" content="Descubre el pez perfecto para tu acuario. Compara especies, verifica compatibilidad y encuentra tus compañeros acuáticos ideales.">
+    <meta property="og:site_name" content="FishFinder">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FishFinder — Encuentra Tu Pez de Acuario Perfecto">
+    <meta name="twitter:description" content="Descubre el pez perfecto para tu acuario. Compara especies y encuentra tus compañeros acuáticos ideales.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "FishFinder",
+      "url": "https://fishfinder.guide/es/",
+      "description": "Encuentra el pez de acuario perfecto. Compara más de 120 especies con guías de expertos.",
+      "inLanguage": "es"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuáles son los mejores peces para principiantes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los mejores peces para principiantes son resistentes y tolerantes a las fluctuaciones de calidad del agua. Las mejores opciones incluyen el pez Betta (para tanques pequeños), Guppies, Platies, Mollies y Danios Cebra. Estas especies son fáciles de cuidar y prosperan en diversas condiciones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos peces puedo poner en mi tanque?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una regla general es 2.5cm de pez por cada 4 litros de agua, pero esto varía según la especie. Peces pequeños como los neones necesitan menos espacio, mientras que los nadadores activos necesitan más. Siempre investiga las necesidades específicas de cada especie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué peces pueden vivir juntos en un acuario comunitario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los peces pacíficos como tetras, rasboras, corydoras y vivíparos (guppies, platies, mollies) generalmente conviven bien. Evita mezclar peces agresivos como bettas (machos) o cíclidos con especies pacíficas. Usa nuestro verificador de compatibilidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito un calentador para peces tropicales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, la mayoría de los peces tropicales necesitan temperaturas entre 22-28°C (72-82°F). Un calentador de acuario confiable es esencial a menos que tu habitación se mantenga constantemente cálida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo ciclo mi acuario antes de añadir peces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El ciclado establece bacterias beneficiosas que procesan los desechos de los peces. Añade una fuente de amoníaco a tu tanque y espera 4-6 semanas mientras las bacterias colonizan tu filtro. Cuando el amoníaco y nitrito lean 0 y haya nitrato presente, tu tanque está ciclado."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .card-shadow {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .card-shadow:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.05);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #ecfeff 0%, #f0fdfa 50%, #f0f9ff 100%);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-slate-800">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="./" class="flex items-center gap-2">
+                <svg class="w-8 h-8 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
+                    <path d="M18 12v.5"/>
+                    <path d="M16 10c1 0 2 1 2 2s-1 2-2 2"/>
+                    <path d="M2 12h3"/>
+                    <path d="M5 12 Q2 8 3 5"/>
+                    <path d="M5 12 Q2 16 3 19"/>
+                </svg>
+                <span class="text-xl font-bold bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">FishFinder</span>
+            </a>
+            <nav class="flex items-center gap-4 md:gap-6 text-sm font-medium">
+                <a href="buscar/" class="text-slate-600 hover:text-cyan-600 transition hidden md:block">Explorar Peces</a>
+                <a href="compatibilidad/" class="text-slate-600 hover:text-cyan-600 transition hidden md:block">Compatibilidad</a>
+                <a href="articulos/" class="text-slate-600 hover:text-cyan-600 transition hidden md:block">Artículos</a>
+                <a href="test/" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition">Encuentra Tu Pez</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero-gradient py-20 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-4 py-2 rounded-full text-sm font-medium text-slate-600 mb-6 border border-slate-200/50">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-cyan-500"></i>
+                    Más de 120 especies de peces de agua dulce
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
+                    Encuentra el Pez Perfecto<br>
+                    <span class="bg-gradient-to-r from-cyan-500 via-teal-500 to-emerald-500 bg-clip-text text-transparent">para Tu Acuario</span>
+                </h1>
+                
+                <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Descubre qué peces se adaptan a tu tamaño de tanque y nivel de experiencia. Compara especies, verifica compatibilidad y crea el acuario de tus sueños.
+                </p>
+                
+                <!-- Search -->
+                <div class="max-w-xl mx-auto mb-8">
+                    <div class="relative">
+                        <input type="text" id="home-search" placeholder="Buscar especies de peces..." autocomplete="off" class="w-full bg-white border border-slate-200 rounded-2xl px-6 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-400 shadow-sm">
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-100 hover:bg-slate-200 p-3 rounded-xl transition">
+                            <i data-lucide="search" class="w-5 h-5 text-slate-300"></i>
+                        </button>
+                        <div id="search-dropdown" class="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-2xl shadow-xl z-50 hidden max-h-80 overflow-y-auto">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="test/" class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-xl hover:shadow-cyan-500/25 transition transform hover:-translate-y-0.5">
+                        <i data-lucide="target" class="w-5 h-5"></i>
+                        Test Encuentra Tu Pez
+                    </a>
+                    <a href="compatibilidad/" class="inline-flex items-center gap-2 bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-2xl font-semibold text-lg hover:border-slate-300 hover:shadow-lg transition transform hover:-translate-y-0.5">
+                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                        Verificar Compatibilidad
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Fish -->
+        <section class="py-16 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">Peces Populares</h2>
+                <p class="text-slate-300 mb-8">Los peces de acuario más queridos por los aficionados</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                    <a href="peces/tetra-neon/" class="bg-white rounded-2xl p-5 card-shadow border border-slate-100 hover:border-cyan-200 transition group">
+                        <div class="w-20 h-20 mx-auto mb-3 flex items-center justify-center">
+                            <img src="/images/fish/neon-tetra.webp" alt="Tetra Neón" class="w-full h-full object-contain group-hover:scale-110 transition" loading="lazy">
+                        </div>
+                        <div class="font-semibold text-slate-800 text-center">Tetra Neón</div>
+                        <div class="text-xs text-slate-400 text-center mt-1">Pacífico • Cardumen</div>
+                    </a>
+                    <a href="peces/pez-betta/" class="bg-white rounded-2xl p-5 card-shadow border border-slate-100 hover:border-cyan-200 transition group">
+                        <div class="w-20 h-20 mx-auto mb-3 flex items-center justify-center">
+                            <img src="/images/fish/betta-fish.webp" alt="Pez Betta" class="w-full h-full object-contain group-hover:scale-110 transition" loading="lazy">
+                        </div>
+                        <div class="font-semibold text-slate-800 text-center">Pez Betta</div>
+                        <div class="text-xs text-slate-400 text-center mt-1">Colorido • Solitario</div>
+                    </a>
+                    <a href="peces/guppy/" class="bg-white rounded-2xl p-5 card-shadow border border-slate-100 hover:border-cyan-200 transition group">
+                        <div class="w-20 h-20 mx-auto mb-3 flex items-center justify-center">
+                            <img src="/images/fish/guppy.webp" alt="Guppy" class="w-full h-full object-contain group-hover:scale-110 transition" loading="lazy">
+                        </div>
+                        <div class="font-semibold text-slate-800 text-center">Guppy</div>
+                        <div class="text-xs text-slate-400 text-center mt-1">Colorido • Fácil</div>
+                    </a>
+                    <a href="peces/corydora/" class="bg-white rounded-2xl p-5 card-shadow border border-slate-100 hover:border-cyan-200 transition group">
+                        <div class="w-20 h-20 mx-auto mb-3 flex items-center justify-center">
+                            <img src="/images/fish/corydoras-catfish.webp" alt="Corydora" class="w-full h-full object-contain group-hover:scale-110 transition" loading="lazy">
+                        </div>
+                        <div class="font-semibold text-slate-800 text-center">Corydora</div>
+                        <div class="text-xs text-slate-400 text-center mt-1">Pacífico • Fondo</div>
+                    </a>
+                    <a href="peces/pez-angel/" class="bg-white rounded-2xl p-5 card-shadow border border-slate-100 hover:border-cyan-200 transition group">
+                        <div class="w-20 h-20 mx-auto mb-3 flex items-center justify-center">
+                            <img src="/images/fish/angelfish.webp" alt="Pez Ángel" class="w-full h-full object-contain group-hover:scale-110 transition" loading="lazy">
+                        </div>
+                        <div class="font-semibold text-slate-800 text-center">Pez Ángel</div>
+                        <div class="text-xs text-slate-400 text-center mt-1">Elegante • 114L+</div>
+                    </a>
+                    <a href="peces/platy/" class="bg-white rounded-2xl p-5 card-shadow border border-slate-100 hover:border-cyan-200 transition group">
+                        <div class="w-20 h-20 mx-auto mb-3 flex items-center justify-center">
+                            <img src="/images/fish/platy.webp" alt="Platy" class="w-full h-full object-contain group-hover:scale-110 transition" loading="lazy">
+                        </div>
+                        <div class="font-semibold text-slate-800 text-center">Platy</div>
+                        <div class="text-xs text-slate-400 text-center mt-1">Resistente • Comunitario</div>
+                    </a>
+                    <a href="peces/gamba-cereza/" class="bg-white rounded-2xl p-5 card-shadow border border-slate-100 hover:border-cyan-200 transition group">
+                        <div class="w-20 h-20 mx-auto mb-3 flex items-center justify-center">
+                            <img src="/images/fish/cherry-shrimp.webp" alt="Gamba Cereza" class="w-full h-full object-contain group-hover:scale-110 transition" loading="lazy">
+                        </div>
+                        <div class="font-semibold text-slate-800 text-center">Gamba Cereza</div>
+                        <div class="text-xs text-slate-400 text-center mt-1">Nano • Limpiador</div>
+                    </a>
+                    <a href="peces/pleco-bristlenose/" class="bg-white rounded-2xl p-5 card-shadow border border-slate-100 hover:border-cyan-200 transition group">
+                        <div class="w-20 h-20 mx-auto mb-3 flex items-center justify-center">
+                            <img src="/images/fish/pleco-bristlenose.webp" alt="Pleco Bristlenose" class="w-full h-full object-contain group-hover:scale-110 transition" loading="lazy">
+                        </div>
+                        <div class="font-semibold text-slate-800 text-center">Pleco Bristlenose</div>
+                        <div class="text-xs text-slate-400 text-center mt-1">Come Algas</div>
+                    </a>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="buscar/" class="inline-flex items-center gap-2 text-cyan-600 font-semibold hover:text-cyan-700 transition">
+                        Ver las más de 120 especies
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Browse by Tank Size -->
+        <section class="py-16 px-4 bg-slate-50">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">Explorar por Tamaño de Tanque</h2>
+                <p class="text-slate-300 mb-8">Encuentra peces que se adapten a tu acuario</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <a href="buscar/?tank_size=5gal" class="bg-gradient-to-br from-cyan-50 to-teal-50 hover:from-cyan-100 hover:to-teal-100 rounded-2xl p-6 text-center transition border border-cyan-100 group">
+                        <div class="w-12 h-12 bg-white rounded-xl mx-auto mb-3 flex items-center justify-center shadow-sm group-hover:scale-110 transition">
+                            <span class="text-2xl">🫧</span>
+                        </div>
+                        <div class="font-semibold text-slate-800">19L (5gal)</div>
+                        <div class="text-sm text-slate-300">Tanques nano</div>
+                    </a>
+                    <a href="buscar/?tank_size=10gal" class="bg-gradient-to-br from-teal-50 to-emerald-50 hover:from-teal-100 hover:to-emerald-100 rounded-2xl p-6 text-center transition border border-teal-100 group">
+                        <div class="w-12 h-12 bg-white rounded-xl mx-auto mb-3 flex items-center justify-center shadow-sm group-hover:scale-110 transition">
+                            <span class="text-2xl">🐟</span>
+                        </div>
+                        <div class="font-semibold text-slate-800">38L (10gal)</div>
+                        <div class="text-sm text-slate-300">Para empezar</div>
+                    </a>
+                    <a href="buscar/?tank_size=20gal" class="bg-gradient-to-br from-blue-50 to-cyan-50 hover:from-blue-100 hover:to-cyan-100 rounded-2xl p-6 text-center transition border border-blue-100 group">
+                        <div class="w-12 h-12 bg-white rounded-xl mx-auto mb-3 flex items-center justify-center shadow-sm group-hover:scale-110 transition">
+                            <span class="text-2xl">🐠</span>
+                        </div>
+                        <div class="font-semibold text-slate-800">75L (20gal)</div>
+                        <div class="text-sm text-slate-300">Comunitarios</div>
+                    </a>
+                    <a href="buscar/?tank_size=30gal" class="bg-gradient-to-br from-indigo-50 to-blue-50 hover:from-indigo-100 hover:to-blue-100 rounded-2xl p-6 text-center transition border border-indigo-100 group">
+                        <div class="w-12 h-12 bg-white rounded-xl mx-auto mb-3 flex items-center justify-center shadow-sm group-hover:scale-110 transition">
+                            <span class="text-2xl">🐡</span>
+                        </div>
+                        <div class="font-semibold text-slate-800">114L+ (30gal+)</div>
+                        <div class="text-sm text-slate-300">Tanques grandes</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Browse by Temperament -->
+        <section class="py-16 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">Explorar por Temperamento</h2>
+                <p class="text-slate-300 mb-8">Elige peces que se adapten a tus objetivos</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="buscar/?temperament=peaceful" class="bg-gradient-to-br from-emerald-50 to-green-50 hover:from-emerald-100 hover:to-green-100 rounded-2xl p-6 transition border border-emerald-100 group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:scale-110 transition">
+                                <i data-lucide="heart" class="w-6 h-6 text-emerald-500"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-slate-800">Pacífico</div>
+                                <div class="text-sm text-slate-300">Ideal para tanques comunitarios</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="buscar/?temperament=semi-aggressive" class="bg-gradient-to-br from-amber-50 to-yellow-50 hover:from-amber-100 hover:to-yellow-100 rounded-2xl p-6 transition border border-amber-100 group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:scale-110 transition">
+                                <i data-lucide="alert-triangle" class="w-6 h-6 text-amber-500"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-slate-800">Semi-Agresivo</div>
+                                <div class="text-sm text-slate-300">Elige compañeros con cuidado</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="buscar/?temperament=aggressive" class="bg-gradient-to-br from-red-50 to-rose-50 hover:from-red-100 hover:to-rose-100 rounded-2xl p-6 transition border border-red-100 group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:scale-110 transition">
+                                <i data-lucide="zap" class="w-6 h-6 text-red-500"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-slate-800">Agresivo</div>
+                                <div class="text-sm text-slate-300">Solo de su especie o solitario</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beginner Friendly -->
+        <section class="py-16 px-4 bg-slate-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">Para Principiantes</span>
+                </div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">Mejores Peces para Principiantes</h2>
+                <p class="text-slate-300 mb-8">Especies resistentes perfectas para tu primer acuario</p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="peces/pez-betta/" class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 hover:border-cyan-200 transition group">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 flex items-center justify-center">
+                                <img src="/images/fish/betta-fish.webp" alt="Pez Betta" class="w-full h-full object-contain group-hover:scale-110 transition">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800">Pez Betta</h3>
+                                <p class="text-sm text-slate-400">19L (5gal) mín</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm">Perfecto para tanques nano. Hermosas aletas y colores vibrantes. Fácil de cuidar pero necesita vivir solo.</p>
+                    </a>
+                    <a href="peces/guppy/" class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 hover:border-cyan-200 transition group">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 flex items-center justify-center">
+                                <img src="/images/fish/guppy.webp" alt="Guppy" class="w-full h-full object-contain group-hover:scale-110 transition">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800">Guppy</h3>
+                                <p class="text-sm text-slate-400">38L (10gal) mín</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm">Vivíparos coloridos que se reproducen fácilmente. Geniales para tanques comunitarios y muy tolerantes a errores de principiantes.</p>
+                    </a>
+                    <a href="peces/platy/" class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 hover:border-cyan-200 transition group">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 flex items-center justify-center">
+                                <img src="/images/fish/platy.webp" alt="Platy" class="w-full h-full object-contain group-hover:scale-110 transition">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800">Platy</h3>
+                                <p class="text-sm text-slate-400">38L (10gal) mín</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm">Vivíparos resistentes y pacíficos disponibles en muchos colores. Excelentes peces comunitarios para principiantes.</p>
+                    </a>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="buscar/?care_level=beginner" class="inline-flex items-center gap-2 text-cyan-600 font-semibold hover:text-cyan-700 transition">
+                        Ver todos los peces para principiantes
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="py-20 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Crea Tu Tanque Perfecto</h2>
+                    <p class="text-lg text-slate-300 max-w-2xl mx-auto">Todo lo que necesitas para poblar tu acuario con los peces correctos</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <a href="test/" class="text-center p-8 rounded-3xl bg-gradient-to-br from-cyan-50 to-cyan-100/50 border border-cyan-100 hover:shadow-lg hover:scale-105 transition block">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                            <i data-lucide="target" class="w-8 h-8 text-cyan-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Test Encuentra Tu Pez</h3>
+                        <p class="text-slate-600">Responde preguntas sobre tu tanque y experiencia, y te sugeriremos los peces perfectos para tu configuración.</p>
+                    </a>
+                    <a href="compatibilidad/" class="text-center p-8 rounded-3xl bg-gradient-to-br from-teal-50 to-teal-100/50 border border-teal-100 hover:shadow-lg hover:scale-105 transition block">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                            <i data-lucide="check-circle" class="w-8 h-8 text-teal-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Verificador de Compatibilidad</h3>
+                        <p class="text-slate-600">Selecciona varios peces y verifica si pueden vivir juntos pacíficamente en el mismo tanque.</p>
+                    </a>
+                    <a href="configuraciones/" class="text-center p-8 rounded-3xl bg-gradient-to-br from-emerald-50 to-emerald-100/50 border border-emerald-100 hover:shadow-lg hover:scale-105 transition block">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                            <i data-lucide="layout-grid" class="w-8 h-8 text-emerald-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Configuraciones Listas</h3>
+                        <p class="text-slate-600">Combinaciones de tanques pre-hechas que funcionan. Elige una configuración y comienza tu acuario hoy.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 px-4 bg-slate-50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Preguntas Frecuentes</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl p-6 card-shadow border border-slate-100">
+                        <h3 class="font-semibold text-slate-900 text-lg">¿Cuáles son los mejores peces para principiantes?</h3>
+                        <p class="text-slate-600 mt-2">Especies resistentes como el <a href="peces/pez-betta/" class="text-cyan-600 hover:underline">Pez Betta</a>, <a href="peces/guppy/" class="text-cyan-600 hover:underline">Guppies</a>, <a href="peces/platy/" class="text-cyan-600 hover:underline">Platies</a> y <a href="peces/danio-cebra/" class="text-cyan-600 hover:underline">Danios Cebra</a> son perfectos para principiantes. Son tolerantes a fluctuaciones de calidad del agua y fáciles de cuidar.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 card-shadow border border-slate-100">
+                        <h3 class="font-semibold text-slate-900 text-lg">¿Cuántos peces puedo poner en mi tanque?</h3>
+                        <p class="text-slate-600 mt-2">Una regla general es 2.5cm de pez por cada 4 litros, pero esto varía según la especie. Los nadadores activos necesitan más espacio. Siempre investiga las necesidades específicas de cada especie.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 card-shadow border border-slate-100">
+                        <h3 class="font-semibold text-slate-900 text-lg">¿Qué peces pueden vivir juntos en un acuario comunitario?</h3>
+                        <p class="text-slate-600 mt-2">Las especies pacíficas como tetras, rasboras, <a href="peces/corydora/" class="text-cyan-600 hover:underline">Corydoras</a> y vivíparos funcionan bien juntos. Usa nuestro <a href="compatibilidad/" class="text-cyan-600 hover:underline">Verificador de Compatibilidad</a> antes de comprar.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 card-shadow border border-slate-100">
+                        <h3 class="font-semibold text-slate-900 text-lg">¿Necesito un calentador para peces tropicales?</h3>
+                        <p class="text-slate-600 mt-2">Sí, la mayoría de los peces tropicales necesitan temperaturas entre 22-28°C (72-82°F). Un calentador de acuario confiable es esencial a menos que tu habitación se mantenga constantemente cálida.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 card-shadow border border-slate-100">
+                        <h3 class="font-semibold text-slate-900 text-lg">¿Cómo ciclo mi acuario antes de añadir peces?</h3>
+                        <p class="text-slate-600 mt-2">El ciclado establece bacterias beneficiosas que procesan los desechos de los peces. Añade una fuente de amoníaco a tu tanque y espera 4-6 semanas. Cuando el amoníaco y nitrito lean 0 ppm y haya nitrato presente, tu tanque está ciclado.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="preguntas-frecuentes/" class="inline-flex items-center gap-2 text-cyan-600 font-semibold hover:text-cyan-700 transition">
+                        Ver todas las preguntas frecuentes
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <svg class="w-8 h-8 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
+                        <path d="M18 12v.5"/>
+                        <path d="M16 10c1 0 2 1 2 2s-1 2-2 2"/>
+                        <path d="M2 12h3"/>
+                        <path d="M5 12 Q2 8 3 5"/>
+                        <path d="M5 12 Q2 16 3 19"/>
+                    </svg>
+                    <span class="text-xl font-bold">FishFinder</span>
+                </div>
+                <div class="flex gap-8 text-sm text-slate-300">
+                    <a href="test/" class="hover:text-white transition">Test de Peces</a>
+                    <a href="configuraciones/" class="hover:text-white transition">Configuraciones</a>
+                    <a href="compatibilidad/" class="hover:text-white transition">Compatibilidad</a>
+                    <a href="articulos/" class="hover:text-white transition">Artículos</a>
+                    <a href="preguntas-frecuentes/" class="hover:text-white transition">FAQ</a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-300">
+                <p>© 2026 FishFinder. Hecho con 🐠 para amantes de los peces en todas partes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Load all fish from JSON
+        let fish = [];
+        fetch('/data/fish.json')
+            .then(r => r.json())
+            .then(data => {
+                fish = data.map(f => ({name: f.name, slug: f.id}));
+                console.log(`Loaded ${fish.length} fish for autocomplete`);
+            })
+            .catch(e => console.error('Failed to load fish:', e));
+        
+        const homeSearch = document.getElementById('home-search');
+        const dropdown = document.getElementById('search-dropdown');
+        
+        if (homeSearch && dropdown) {
+            homeSearch.addEventListener('input', function() {
+                const query = this.value.trim().toLowerCase();
+                if (query.length < 1) {
+                    dropdown.classList.add('hidden');
+                    return;
+                }
+                
+                const matches = fish.filter(f => 
+                    f.name.toLowerCase().includes(query)
+                ).slice(0, 8);
+                
+                if (matches.length === 0) {
+                    dropdown.classList.add('hidden');
+                    return;
+                }
+                
+                dropdown.innerHTML = matches.map(f => `
+                    <a href="peces/${f.slug}/" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition first:rounded-t-2xl last:rounded-b-2xl">
+                        <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <img src="/images/fish/${f.slug}.webp" alt="${f.name}" class="w-full h-full object-contain" onerror="this.style.display='none';this.parentElement.innerHTML='🐟';">
+                        </div>
+                        <span class="font-medium text-slate-800">${f.name}</span>
+                    </a>
+                `).join('');
+                dropdown.classList.remove('hidden');
+            });
+            
+            homeSearch.addEventListener('blur', function() {
+                setTimeout(() => dropdown.classList.add('hidden'), 200);
+            });
+            
+            homeSearch.addEventListener('focus', function() {
+                if (this.value.trim().length >= 1) {
+                    this.dispatchEvent(new Event('input'));
+                }
+            });
+            
+            homeSearch.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && this.value.trim()) {
+                    window.location.href = 'buscar/?q=' + encodeURIComponent(this.value.trim());
+                }
+            });
+        }
+    </script>
+</body>
+</html>
