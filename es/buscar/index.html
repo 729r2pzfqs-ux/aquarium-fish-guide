@@ -250,7 +250,7 @@
                 <div id="noResults" class="hidden text-center py-16">
                     <i data-lucide="search" class="w-16 h-16 text-slate-300 mx-auto mb-4"></i>
                     <h3 class="text-xl font-semibold text-slate-700 mb-2">No se encontraron peces</h3>
-                    <p class="text-slate-300">Intenta ajustar los filtros o términos de búsqueda</p>
+                    <p class="text-slate-500">Intenta ajustar los filtros o términos de búsqueda</p>
                 </div>
             </div>
         </div>
@@ -278,20 +278,9 @@
         </div>
     </footer>
 
+    <script src="/es/js/fish-es.js"></script>
     <script>
         lucide.createIcons();
-        
-        // Spanish translations for UI
-        const temperamentLabels = {
-            peaceful: 'Pacífico',
-            'semi-aggressive': 'Semi-agresivo',
-            aggressive: 'Agresivo'
-        };
-        const careLabels = {
-            easy: 'Principiante',
-            moderate: 'Intermedio',
-            hard: 'Avanzado'
-        };
         
         let allFish = [];
         let fuse = null;
@@ -300,8 +289,13 @@
             try {
                 const response = await fetch('/data/fish.json');
                 allFish = await response.json();
+                // Add Spanish names to fish data
+                allFish = allFish.map(f => ({
+                    ...f,
+                    nameES: getFishNameES(f.id, f.name)
+                }));
                 fuse = new Fuse(allFish, {
-                    keys: ['name', 'scientific_name', 'category', 'description', 'tags'],
+                    keys: ['name', 'nameES', 'scientific_name', 'category', 'description', 'tags'],
                     threshold: 0.4,
                     includeScore: true
                 });
@@ -322,25 +316,27 @@
                 hard: 'bg-purple-100 text-purple-700'
             };
             
-            const liters = Math.round(fish.min_tank_gallons * 3.785);
-            const tankSize = liters + 'L (' + fish.min_tank_gallons + 'gal)';
-            const sizeCm = Math.round(fish.size_inches * 2.54);
-            const sizeDisplay = sizeCm + 'cm (' + fish.size_inches + '")';
+            const fishName = fish.nameES || getFishNameES(fish.id, fish.name);
+            const tankSize = tankSizeES(fish.min_tank_gallons);
+            const sizeDisplay = sizeES(fish.size_inches);
+            const tempLabel = temperamentES[fish.temperament] || fish.temperament;
+            const careLabel = careLevelES[fish.care_level] || fish.care_level;
+            const catLabel = categoryES[fish.category] || fish.category;
 
             return `
                 <a href="/es/peces/${fish.id}/" class="fish-card bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden block">
                     <div class="aspect-[4/3] bg-slate-50 relative overflow-hidden flex items-center justify-center p-4">
-                        <img src="/images/fish/${fish.id}.webp" alt="${fish.name}" class="w-full h-full object-contain" onerror="this.outerHTML='<span class=\\'text-6xl\\'>🐟</span>'">
+                        <img src="/images/fish/${fish.id}.webp" alt="${fishName}" class="w-full h-full object-contain" onerror="this.outerHTML='<span class=\\'text-6xl\\'>🐟</span>'">
                         <span class="absolute top-2 right-2 tag ${temperamentColors[fish.temperament] || 'bg-slate-100 text-slate-600'}">
-                            ${temperamentLabels[fish.temperament] || fish.temperament}
+                            ${tempLabel}
                         </span>
                     </div>
                     <div class="p-4">
-                        <h3 class="font-semibold text-slate-800 text-lg mb-1">${fish.name}</h3>
+                        <h3 class="font-semibold text-slate-800 text-lg mb-1">${fishName}</h3>
                         <p class="text-slate-400 text-sm mb-3 italic">${fish.scientific || ''}</p>
                         <div class="flex flex-wrap gap-1 mb-3">
-                            <span class="tag ${careColors[fish.care_level]}">${careLabels[fish.care_level] || fish.care_level}</span>
-                            <span class="tag bg-slate-100 text-slate-600">${fish.category}</span>
+                            <span class="tag ${careColors[fish.care_level]}">${careLabel}</span>
+                            <span class="tag bg-slate-100 text-slate-600">${catLabel}</span>
                         </div>
                         <div class="grid grid-cols-2 gap-2 text-center text-xs">
                             <div class="bg-slate-50 rounded-lg py-2">
@@ -455,6 +451,7 @@
             }
             const matches = allFish.filter(f => 
                 f.name.toLowerCase().includes(query) || 
+                f.nameES.toLowerCase().includes(query) ||
                 (f.scientific && f.scientific.toLowerCase().includes(query))
             ).slice(0, 8);
             if (matches.length === 0) {
@@ -464,10 +461,10 @@
             dropdown.innerHTML = matches.map(f => `
                 <a href="/es/peces/${f.id}/" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition first:rounded-t-2xl last:rounded-b-2xl">
                     <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
-                        <img src="/images/fish/${f.id}.webp" alt="${f.name}" class="w-full h-full object-contain" onerror="this.outerHTML='🐟'">
+                        <img src="/images/fish/${f.id}.webp" alt="${f.nameES}" class="w-full h-full object-contain" onerror="this.outerHTML='🐟'">
                     </div>
                     <div>
-                        <span class="font-medium text-slate-800">${f.name}</span>
+                        <span class="font-medium text-slate-800">${f.nameES}</span>
                         <span class="text-sm text-slate-400 block">${f.scientific || ''}</span>
                     </div>
                 </a>
