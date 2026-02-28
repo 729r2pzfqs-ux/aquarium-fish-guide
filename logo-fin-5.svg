@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Body -->
+  <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
+  <!-- Eye -->
+  <path d="M18 12v.5"/>
+  <!-- Gill -->
+  <path d="M16 10c1 0 2 1 2 2s-1 2-2 2"/>
+  <!-- Tail - swept back sleek -->
+  <path d="M6.5 12 Q4 12 2 12"/>
+  <path d="M6.5 6 Q4 7 2 8"/>
+  <path d="M6.5 18 Q4 17 2 16"/>
+</svg>

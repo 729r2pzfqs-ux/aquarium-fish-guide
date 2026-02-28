@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Bold geometric fish -->
+  <defs>
+    <linearGradient id="geoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0891b2"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <!-- Geometric body -->
+  <polygon points="16,32 52,16 52,48" fill="url(#geoGrad)"/>
+  <!-- Tail -->
+  <polygon points="16,32 4,20 4,44" fill="#14b8a6"/>
+  <!-- Fin accent -->
+  <polygon points="36,16 44,16 40,24" fill="#22d3ee"/>
+  <polygon points="36,48 44,48 40,40" fill="#22d3ee"/>
+  <!-- Eye -->
+  <circle cx="44" cy="32" r="5" fill="white"/>
+  <circle cx="45" cy="31" r="3" fill="#0f172a"/>
+  <!-- Scales pattern -->
+  <circle cx="28" cy="28" r="3" fill="#0e7490" opacity="0.3"/>
+  <circle cx="28" cy="36" r="3" fill="#0e7490" opacity="0.3"/>
+  <circle cx="34" cy="32" r="3" fill="#0e7490" opacity="0.3"/>
+</svg>
