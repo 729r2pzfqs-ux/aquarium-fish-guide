@@ -205,7 +205,14 @@
         fetch('/data/fish.json')
             .then(r => r.json())
             .then(data => {
-                fish = data;
+                fish = data.map(f => ({
+                    ...f,
+                    tank_size: f.min_tank_gallons <= 5 ? '5gal' : 
+                               f.min_tank_gallons <= 10 ? '10gal' : 
+                               f.min_tank_gallons <= 20 ? '20gal' : 
+                               f.min_tank_gallons <= 30 ? '30gal' : '75gal',
+                    tags: f.tags || []
+                }));
                 console.log(`${fish.length} Fischarten geladen`);
             })
             .catch(e => console.error('Fehler beim Laden der Fische:', e));
