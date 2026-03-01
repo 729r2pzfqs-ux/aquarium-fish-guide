@@ -313,6 +313,26 @@ TRANSLATIONS = [
     (r'Nocturnal species', 'Especie nocturna'),
     (r'Shy species', 'Especie tímida'),
     (r'Bold and active', 'Audaz y activo'),
+    
+    # More fish descriptions
+    (r'Hardy and common', 'Resistente y común'),
+    (r'Also called', 'También llamado'),
+    (r'Can be territorial', 'Puede ser territorial'),
+    (r'Three-spot Gourami', 'Gurami de Tres Puntos'),
+    (r'common gourami', 'gurami común'),
+    (r'Hardy and peaceful', 'Resistente y pacífico'),
+    (r'Hardy and active', 'Resistente y activo'),
+    (r'Shy and peaceful', 'Tímido y pacífico'),
+    (r'Active and colorful', 'Activo y colorido'),
+    (r'Peaceful schooling fish', 'Pez de cardumen pacífico'),
+    (r'Popular beginner fish', 'Pez popular para principiantes'),
+    (r'Classic aquarium fish', 'Pez de acuario clásico'),
+    (r'Great community fish', 'Excelente pez comunitario'),
+    (r'Excellent algae eater', 'Excelente comedor de algas'),
+    (r'Loves planted tanks', 'Ama los tanques plantados'),
+    (r'Needs warm water', 'Necesita agua cálida'),
+    (r'Prefers soft water', 'Prefiere agua blanda'),
+    (r'Requires good filtration', 'Requiere buena filtración'),
 ]
 
 def translate_content(content):

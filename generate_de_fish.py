@@ -487,6 +487,26 @@ TRANSLATIONS = [
     (r'Nocturnal species', 'Nachtaktive Art'),
     (r'Shy species', 'Scheue Art'),
     (r'Bold and active', 'Mutig und aktiv'),
+    
+    # More fish descriptions
+    (r'Hardy and common', 'Robust und verbreitet'),
+    (r'Also called', 'Auch bekannt als'),
+    (r'Can be territorial', 'Kann territorial sein'),
+    (r'Three-spot Gourami', 'Punktierter Fadenfisch'),
+    (r'common gourami', 'verbreiteter Gurami'),
+    (r'Hardy and peaceful', 'Robust und friedlich'),
+    (r'Hardy and active', 'Robust und aktiv'),
+    (r'Shy and peaceful', 'Scheu und friedlich'),
+    (r'Active and colorful', 'Aktiv und farbenfroh'),
+    (r'Peaceful schooling fish', 'Friedlicher Schwarmfisch'),
+    (r'Popular beginner fish', 'Beliebter Anfängerfisch'),
+    (r'Classic aquarium fish', 'Klassischer Aquarienfisch'),
+    (r'Great community fish', 'Toller Gesellschaftsfisch'),
+    (r'Excellent algae eater', 'Ausgezeichneter Algenfresser'),
+    (r'Loves planted tanks', 'Liebt bepflanzte Aquarien'),
+    (r'Needs warm water', 'Benötigt warmes Wasser'),
+    (r'Prefers soft water', 'Bevorzugt weiches Wasser'),
+    (r'Requires good filtration', 'Benötigt gute Filterung'),
 ]
 
 def translate_content(content):
