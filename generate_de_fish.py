@@ -424,6 +424,28 @@ TRANSLATIONS = [
     (r'community tank', 'Gesellschaftsaquarium'),
     (r'planted tanks', 'Pflanzenaquarien'),
     (r'nano tanks', 'Nano-Aquarien'),
+    
+    # Tank mates
+    (r'>Large Cichlids<', '>Große Buntbarsche<'),
+    (r'>Small Cichlids<', '>Kleine Buntbarsche<'),
+    (r'>Fin Nippers<', '>Flossenbeißer<'),
+    (r'>Other Livebearers<', '>Andere Lebendgebärende<'),
+    (r'>Bottom Dwellers<', '>Bodenbewohner<'),
+    (r'Avoid Keeping With', 'Nicht zusammen halten mit'),
+    
+    # Guppy/livebearer specific
+    (r'Keep more females than males', 'Mehr Weibchen als Männchen halten'),
+    (r'prolific breeders', 'produktive Züchter'),
+    (r'easy for beginners', 'einfach für Anfänger'),
+    
+    # More care tips
+    (r'Provide plenty of plants', 'Viele Pflanzen bieten'),
+    (r'needs hiding spots', 'benötigt Verstecke'),
+    (r'Regular water changes', 'Regelmäßige Wasserwechsel'),
+    (r'Avoid overfeeding', 'Überfütterung vermeiden'),
+    (r'Monitor water quality', 'Wasserqualität überwachen'),
+    (r'Hardy and peaceful', 'Robust und friedlich'),
+    (r'Great for community tanks', 'Toll für Gesellschaftsaquarien'),
 ]
 
 def translate_content(content):
