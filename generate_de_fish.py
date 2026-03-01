@@ -60,7 +60,7 @@ TRANSLATIONS = [
     (r'>Hillstream Loach<', '>Flossensauger<'),
     (r'>Otocinclus<', '>Otocinclus<'),
     (r'>Amano Shrimp<', '>Amanogarnele<'),
-    (r'>Cherry Shrimp<', '>Kirschgarnele<'),
+    (r'Cherry Shrimp', 'Kirschgarnele'),
     (r'>Ghost Shrimp<', '>Glasgarnele<'),
     (r'>Nerite Snail<', '>Geweihschnecke<'),
     (r'>Mystery Snail<', '>Apfelschnecke<'),
