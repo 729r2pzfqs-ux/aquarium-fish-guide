@@ -16,6 +16,10 @@ TRANSLATIONS = [
     # Meta/HTML
     (r'lang="en"', 'lang="de"'),
     
+    # Title and meta tags
+    (r'Care Guide \| FishFinder', 'Pflegeanleitung | FishFinder'),
+    (r'Care Guide, Tank Size & Compatibility', 'Pflegeanleitung, Aquariumgröße & Kompatibilität'),
+    
     # URLs
     (r'href="/fish/', 'href="/de/fische/'),
     (r'href="/"', 'href="/de/"'),
@@ -156,6 +160,12 @@ TRANSLATIONS = [
     (r'>Compatibility Checker<', '>Kompatibilitätsprüfer<'),
     (r'>years<', '>Jahre<'),
     (r'>year<', '>Jahr<'),
+    (r'(\d+) years', r'\1 Jahre'),
+    (r'(\d+)yr<', r'\1J<'),
+    (r'Temperature:', 'Temperatur:'),
+    (r'Compatible With', 'Kompatibel mit'),
+    (r'Avoid Keeping With', 'Nicht zusammen halten mit'),
+    (r'Avoid Keeping', 'Nicht zusammen halten'),
     (r'>months<', '>Monate<'),
     (r'>inches<', '>Zoll<'),
     (r'>gallons<', '>Gallonen<'),
@@ -190,6 +200,37 @@ TRANSLATIONS = [
     (r'Sensitive to water quality', 'Empfindlich bei Wasserqualität'),
     (r'Needs soft water', 'Benötigt weiches Wasser'),
     (r'Needs specific pH', 'Benötigt spezifischen pH-Wert'),
+    
+    # Section headings
+    (r'>Tank Mate Compatibility<', '>Mitbewohner-Kompatibilität<'),
+    (r'>Care Requirements<', '>Pflegeanforderungen<'),
+    (r'>Care Tips<', '>Pflegetipps<'),
+    (r'>Fish Quiz<', '>Fisch-Quiz<'),
+    
+    # Tank mates examples
+    (r'>Larger Tetras<', '>Größere Salmler<'),
+    (r'>Small Tetras<', '>Kleine Salmler<'),
+    (r'>Small Fish<', '>Kleine Fische<'),
+    (r'>Large Fish<', '>Große Fische<'),
+    (r'>Fin Nippers<', '>Flossenbeißer<'),
+    (r'>Aggressive Cichlids<', '>Aggressive Buntbarsche<'),
+    (r'>Peaceful Catfish<', '>Friedliche Welse<'),
+    (r'>Bottom Dwellers<', '>Bodenbewohner<'),
+    (r'>Corydoras<', '>Panzerwelse<'),
+    (r'>Plecos<', '>Saugwelse<'),
+    (r'>Livebearers<', '>Lebendgebärende<'),
+    (r'>Other Gouramis<', '>Andere Guramis<'),
+    (r'>Gouramis<', '>Guramis<'),
+    (r'>Compare<', '>Vergleichen<'),
+    (r'>Not compatible<', '>Nicht kompatibel<'),
+    (r'>Compatible<', '>Kompatibel<'),
+    (r'>FAQ<', '>FAQ<'),
+    (r'>Shrimp<', '>Garnelen<'),
+    (r'>Snails<', '>Schnecken<'),
+    (r'>Dwarf Shrimp<', '>Zwerggarnelen<'),
+    (r'>Min School<', '>Min. Schwarm<'),
+    (r'Check more combinations with our Compatibility Checker', 'Prüfe weitere Kombinationen mit unserem Kompatibilitätsprüfer'),
+    (r'Find compatible tankmates for your', 'Finde verträgliche Mitbewohner für deinen'),
     
     # CTA section
     (r'Build Your Perfect Community Tank', 'Erstelle dein perfektes Gesellschaftsaquarium'),
