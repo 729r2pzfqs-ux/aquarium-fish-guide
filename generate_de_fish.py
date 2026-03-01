@@ -446,6 +446,26 @@ TRANSLATIONS = [
     (r'Monitor water quality', 'Wasserqualität überwachen'),
     (r'Hardy and peaceful', 'Robust und friedlich'),
     (r'Great for community tanks', 'Toll für Gesellschaftsaquarien'),
+    
+    # Fish descriptions
+    (r'One of the most peaceful', 'Einer der friedlichsten'),
+    (r'Bright yellow coloration', 'Leuchtend gelbe Färbung'),
+    (r'Bright coloration', 'Leuchtende Färbung'),
+    (r'>Other Mbuna<', '>Andere Mbuna<'),
+    (r'Hard alkaline water required', 'Hartes alkalisches Wasser erforderlich'),
+    (r'keep with other Mbuna', 'mit anderen Mbuna halten'),
+    (r'overstocking reduces aggression', 'Überbesatz reduziert Aggression'),
+    (r'Hardy and colorful', 'Robust und farbenfroh'),
+    (r'Popular aquarium fish', 'Beliebter Aquarienfisch'),
+    (r'Easy to keep', 'Einfach zu halten'),
+    (r'Striking appearance', 'Auffällige Erscheinung'),
+    (r'Beautiful finnage', 'Schöne Beflossung'),
+    (r'Interesting behavior', 'Interessantes Verhalten'),
+    (r'Great algae eater', 'Toller Algenfresser'),
+    (r'Excellent scavenger', 'Ausgezeichneter Resteverwerter'),
+    (r'Nocturnal species', 'Nachtaktive Art'),
+    (r'Shy species', 'Scheue Art'),
+    (r'Bold and active', 'Mutig und aktiv'),
 ]
 
 def translate_content(content):
