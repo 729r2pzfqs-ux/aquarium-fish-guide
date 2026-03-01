@@ -215,7 +215,12 @@
                 // Add Spanish names to fish data
                 fish = data.map(f => ({
                     ...f,
-                    nameES: getFishNameES(f.id, f.name)
+                    nameES: getFishNameES(f.id, f.name),
+                    tank_size: f.min_tank_gallons <= 5 ? '5gal' : 
+                               f.min_tank_gallons <= 10 ? '10gal' : 
+                               f.min_tank_gallons <= 20 ? '20gal' : 
+                               f.min_tank_gallons <= 30 ? '30gal' : '75gal',
+                    tags: f.tags || []
                 }));
                 console.log(`Loaded ${fish.length} fish species`);
             })
