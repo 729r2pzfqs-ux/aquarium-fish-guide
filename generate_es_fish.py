@@ -622,6 +622,10 @@ TRANSLATIONS = [
     (r'loach', 'locha'),
     (r'snail', 'caracol'),
     (r'snails', 'caracoles'),
+    (r'Stays reasonably small', 'Se mantiene razonablemente pequeño'),
+    (r'Good alternative to', 'Buena alternativa a'),
+    (r'alternative to', 'alternativa a'),
+    (r'common pleco', 'pleco común'),
 ]
 
 def translate_content(content):

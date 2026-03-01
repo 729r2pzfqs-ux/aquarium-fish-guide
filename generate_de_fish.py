@@ -790,6 +790,10 @@ TRANSLATIONS = [
     (r'loach', 'Schmerle'),
     (r'snail', 'Schnecke'),
     (r'snails', 'Schnecken'),
+    (r'Stays reasonably small', 'Bleibt angemessen klein'),
+    (r'Good alternative to', 'Gute Alternative zum'),
+    (r'alternative to', 'Alternative zum'),
+    (r'common pleco', 'gewöhnlichen Wels'),
 ]
 
 def translate_content(content):
