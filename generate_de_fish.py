@@ -404,6 +404,26 @@ TRANSLATIONS = [
     (r'diurnal', 'tagaktiv'),
     (r'shy at first', 'anfangs schüchtern'),
     (r'very active', 'sehr aktiv'),
+    
+    # Fish descriptions
+    (r'livebearers', 'Lebendgebärende'),
+    (r'Livebearers', 'Lebendgebärende'),
+    (r'Breed readily in home aquariums', 'Vermehren sich leicht im Heimaquarium'),
+    (r'Many color varieties', 'Viele Farbvarianten'),
+    (r'color varieties', 'Farbvarianten'),
+    (r'Easy to breed', 'Leicht zu züchten'),
+    (r'Hardy species', 'Robuste Art'),
+    (r'Hardy and adaptable', 'Robust und anpassungsfähig'),
+    (r'Beginner friendly', 'Anfängerfreundlich'),
+    (r'beginner friendly', 'anfängerfreundlich'),
+    (r'Low maintenance', 'Pflegeleicht'),
+    (r'low maintenance', 'pflegeleicht'),
+    (r'Active swimmers', 'Aktive Schwimmer'),
+    (r'active swimmers', 'aktive Schwimmer'),
+    (r'schooling species', 'Schwarmfischart'),
+    (r'community tank', 'Gesellschaftsaquarium'),
+    (r'planted tanks', 'Pflanzenaquarien'),
+    (r'nano tanks', 'Nano-Aquarien'),
 ]
 
 def translate_content(content):
