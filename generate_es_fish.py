@@ -54,7 +54,8 @@ TRANSLATIONS = [
     
     # Stats labels
     (r'>Tank Size<', '>Tamaño Tanque<'),
-    (r'>Min Tank<', '>Tanque Mín<'),
+    (r'>Min Tank \((\d+)gal\)<', r'>Tanque Mín (\1gal)<'),
+    (r'>Adult Size \(([^)]+)\)<', r'>Tamaño Adulto (\1)<'),
     (r'>Temperature<', '>Temperatura<'),
     (r'>Size<', '>Tamaño<'),
     (r'>Lifespan<', '>Esperanza de Vida<'),

@@ -374,12 +374,12 @@ def generate_html(fish):
             <h2 class="text-xl font-bold text-slate-900 mb-6">Quick Facts</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="text-center p-4 bg-slate-50 rounded-xl">
-                    <p class="text-2xl font-bold text-cyan-600">{fish['min_tank_gallons']}G</p>
-                    <p class="text-sm text-slate-500">Min Tank Size</p>
+                    <p class="text-2xl font-bold text-cyan-600">{round(fish['min_tank_gallons'] * 3.785)}L</p>
+                    <p class="text-sm text-slate-500">Min Tank ({fish['min_tank_gallons']}gal)</p>
                 </div>
                 <div class="text-center p-4 bg-slate-50 rounded-xl">
-                    <p class="text-2xl font-bold text-cyan-600">{fish['size_inches']}"</p>
-                    <p class="text-sm text-slate-500">Adult Size</p>
+                    <p class="text-2xl font-bold text-cyan-600">{round(fish['size_inches'] * 2.54)}cm</p>
+                    <p class="text-sm text-slate-500">Adult Size ({fish['size_inches']}")</p>
                 </div>
                 <div class="text-center p-4 bg-slate-50 rounded-xl">
                     <p class="text-2xl font-bold text-cyan-600">{fish['lifespan_years']}yr</p>
