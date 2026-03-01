@@ -16,6 +16,20 @@ TRANSLATIONS = [
     # Meta/HTML
     (r'lang="en"', 'lang="es"'),
     
+    # Title and meta
+    (r'Care Guide \| FishFinder', 'Guía de Cuidado | FishFinder'),
+    (r'Care Guide, Tank Size & Compatibility', 'Guía de Cuidado, Tamaño del Tanque y Compatibilidad'),
+    (r'Complete (.+?) care guide\. Learn about tank size', r'Guía completa de cuidado del \1. Aprende sobre tamaño del tanque'),
+    (r'water parameters', 'parámetros del agua'),
+    (r'compatible tankmates', 'compañeros de tanque compatibles'),
+    (r'expert care tips', 'consejos de cuidado expertos'),
+    (r', and ', ', y '),
+    (r' and ', ' y '),
+    (r'\(10 gallons\)', '(38L)'),
+    (r'\(20 gallons\)', '(75L)'),
+    (r'\(30 gallons\)', '(114L)'),
+    (r'\(5 gallons\)', '(19L)'),
+    
     # URLs
     (r'href="/fish/', 'href="/es/peces/'),
     (r'href="/"', 'href="/es/"'),
@@ -209,6 +223,55 @@ TRANSLATIONS = [
     (r'Provide hiding spots', 'Proporcionar escondites'),
     (r'Keep in groups', 'Mantener en grupos'),
     (r'Keep in schools', 'Mantener en cardúmenes'),
+    
+    # More UI
+    (r'>Compare<', '>Comparar<'),
+    (r'>Fish Quiz<', '>Test de Peces<'),
+    (r'>Tank Mate Compatibility<', '>Compatibilidad de Compañeros<'),
+    (r'>Min School<', '>Cardumen Mín<'),
+    (r'>Not compatible<', '>No compatible<'),
+    (r'Compare with Others', 'Comparar con Otros'),
+    (r'Compatibility Checker', 'Verificador de Compatibilidad'),
+    
+    # Tank mates
+    (r'>Fin Nippers<', '>Mordedores de Aletas<'),
+    (r'>Large Cichlids<', '>Cíclidos Grandes<'),
+    (r'>Small Fish<', '>Peces Pequeños<'),
+    (r'>Large Fish<', '>Peces Grandes<'),
+    (r'>Aggressive Fish<', '>Peces Agresivos<'),
+    (r'>Bottom Dwellers<', '>Habitantes del Fondo<'),
+    (r'>Peaceful Catfish<', '>Peces Gato Pacíficos<'),
+    (r'>Other Livebearers<', '>Otros Vivíparos<'),
+    (r'>Dwarf Shrimp<', '>Gambas Enanas<'),
+    
+    # Common fish names (keep recognizable but can translate)
+    (r'>Tetras<', '>Tetras<'),
+    (r'>Mollies<', '>Mollies<'),
+    (r'>Platies<', '>Platys<'),
+    (r'>Corydoras<', '>Corydoras<'),
+    (r'>Gouramis<', '>Guramis<'),
+    (r'>Rasboras<', '>Rasboras<'),
+    
+    # More sections
+    (r'Avoid Keeping With', 'Evitar Mantener Con'),
+    (r'Expert Tips', 'Consejos de Expertos'),
+    (r'Diet type: Omnivore', 'Tipo de dieta: Omnívoro'),
+    (r'Diet type: Carnivore', 'Tipo de dieta: Carnívoro'),
+    (r'Diet type: Herbivore', 'Tipo de dieta: Herbívoro'),
+    (r'for your ([^<]+)', r'para tu \1'),
+    (r' for your ', ' para tu '),
+    
+    # Guppy specific
+    (r'Keep more females than males', 'Mantener más hembras que machos'),
+    (r'prolific breeders', 'criadores prolíficos'),
+    (r'easy for beginners', 'fácil para principiantes'),
+    
+    # General care tips
+    (r'Provide plenty of plants', 'Proporcionar muchas plantas'),
+    (r'needs hiding spots', 'necesita escondites'),
+    (r'Regular water changes', 'Cambios de agua regulares'),
+    (r'Avoid overfeeding', 'Evitar sobrealimentar'),
+    (r'Monitor water quality', 'Monitorear calidad del agua'),
 ]
 
 def translate_content(content):
