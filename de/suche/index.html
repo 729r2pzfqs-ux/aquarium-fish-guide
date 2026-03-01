@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#06b6d4">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWDX74LPLP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CWDX74LPLP');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquarienfische durchsuchen | FishFinder</title>
+    <meta name="description" content="Suche und filtere 120+ Aquarienfische nach Beckengröße, Temperament, Pflegestufe und mehr. Finde den perfekten Fisch für dein Aquarium.">
+    <link rel="canonical" href="https://fishfinder.guide/de/suche/">
+    <link rel="alternate" hreflang="en" href="https://fishfinder.guide/search/">
+    <link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/buscar/">
+    <link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/suche/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fishfinder.guide/de/suche/">
+    <meta property="og:title" content="120+ Aquarienfische durchsuchen | FishFinder">
+    <meta property="og:description" content="Suche und filtere Aquarienfische nach Beckengröße, Temperament und Pflegestufe.">
+    <meta property="og:site_name" content="FishFinder">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Aquarienfische durchsuchen",
+      "description": "Suche und filtere 120+ Aquarienfische nach Beckengröße, Temperament, Pflegestufe und mehr.",
+      "url": "https://fishfinder.guide/de/suche/",
+      "numberOfItems": 123,
+      "inLanguage": "de",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "FishFinder",
+        "url": "https://fishfinder.guide/"
+      }
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .fish-card { transition: transform 0.2s, box-shadow 0.2s; }
+        .fish-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 12px; font-weight: 500; }
+        input[type="checkbox"]:checked { background-color: #0891b2; border-color: #0891b2; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/de/" class="flex items-center gap-2">
+                    <svg class="w-8 h-8 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
+                        <path d="M18 12v.5"/>
+                        <path d="M16 10c1 0 2 1 2 2s-1 2-2 2"/>
+                        <path d="M2 12h3"/>
+                        <path d="M5 12 Q2 8 3 5"/>
+                        <path d="M5 12 Q2 16 3 19"/>
+                    </svg>
+                    <span class="font-bold text-xl bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">FishFinder</span>
+                </a>
+                <nav class="flex items-center gap-6">
+                    <a href="/de/suche/" class="text-cyan-600 font-medium">Durchsuchen</a>
+                    <a href="/de/kompatibilitaet/" class="text-slate-600 hover:text-slate-900 font-medium hidden sm:block">Kompatibilität</a>
+                    <div class="flex items-center gap-1 text-xs">
+                        <a href="/search/" class="text-slate-500 hover:text-cyan-600 transition">EN</a>
+                        <span class="text-slate-300">|</span>
+                        <span class="font-bold text-cyan-600">DE</span>
+                    </div>
+                    <a href="/de/quiz/" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-4 sm:px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition text-sm sm:text-base"><span class="sm:hidden">Quiz</span><span class="hidden sm:inline">Finde deinen Fisch</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">Finde deinen perfekten Aquarienfisch</h1>
+            <p class="text-slate-600 text-lg">Filtere nach Beckengröße, Temperament, Pflegestufe & mehr</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="max-w-2xl mx-auto mb-8">
+            <div class="relative">
+                <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-300"></i>
+                <input type="text" id="searchInput" placeholder="Fische suchen... (z.B. Neonsalmler, Kampffisch)" 
+                    class="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-200 bg-white shadow-sm focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 text-lg" autocomplete="off">
+                <button id="clearSearch" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-300 hover:text-slate-600 hidden">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+                <div id="search-dropdown" class="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-2xl shadow-xl z-50 hidden max-h-80 overflow-y-auto">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Filters Sidebar -->
+            <aside class="lg:w-72 flex-shrink-0">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="font-semibold text-slate-800 flex items-center gap-2">
+                            <i data-lucide="sliders" class="w-5 h-5"></i>
+                            Filter
+                        </h2>
+                        <button id="resetFilters" class="text-sm text-cyan-600 hover:text-cyan-700">Zurücksetzen</button>
+                    </div>
+
+                    <!-- Tank Size Filter -->
+                    <div class="border-b border-slate-100 py-4">
+                        <h3 class="font-medium text-slate-700 mb-3">Beckengröße</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="5gal" class="tank-filter rounded text-cyan-600">
+                                <span class="text-slate-600">19L (5gal) Nano</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="10gal" class="tank-filter rounded text-cyan-600">
+                                <span class="text-slate-600">38L (10gal)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="20gal" class="tank-filter rounded text-cyan-600">
+                                <span class="text-slate-600">75L (20gal)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="30gal" class="tank-filter rounded text-cyan-600">
+                                <span class="text-slate-600">114L+ (30gal+)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="75gal" class="tank-filter rounded text-cyan-600">
+                                <span class="text-slate-600">284L+ (75gal+) Groß</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Temperament Filter -->
+                    <div class="border-b border-slate-100 py-4">
+                        <h3 class="font-medium text-slate-700 mb-3">Temperament</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="peaceful" class="temperament-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Friedlich</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="semi-aggressive" class="temperament-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Semi-Aggressiv</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="aggressive" class="temperament-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Aggressiv</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Care Level Filter -->
+                    <div class="border-b border-slate-100 py-4">
+                        <h3 class="font-medium text-slate-700 mb-3">Pflegestufe</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="beginner" class="care-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Anfänger</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="intermediate" class="care-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Fortgeschritten</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="advanced" class="care-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Experte</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div class="border-b border-slate-100 py-4">
+                        <h3 class="font-medium text-slate-700 mb-3">Kategorie</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="tetra" class="category-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Salmler</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="livebearer" class="category-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Lebendgebärende</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="catfish" class="category-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Welse</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="cichlid" class="category-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Buntbarsche</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="betta" class="category-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Kampffische</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="shrimp" class="category-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Garnelen</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="snail" class="category-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Schnecken</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Schooling Filter -->
+                    <div class="py-4">
+                        <h3 class="font-medium text-slate-700 mb-3">Schwarmfisch</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="true" class="schooling-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Schwarmfische</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" value="false" class="schooling-filter rounded text-cyan-600">
+                                <span class="text-slate-600">Einzelgänger</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Results Grid -->
+            <div class="flex-1">
+                <div class="flex items-center justify-between mb-4">
+                    <p class="text-slate-600"><span id="resultCount">0</span> Fische gefunden</p>
+                    <select id="sortBy" class="px-3 py-2 rounded-lg border border-slate-200 bg-white text-sm focus:ring-2 focus:ring-cyan-500">
+                        <option value="name">Nach Name sortieren</option>
+                        <option value="tank_size">Nach Beckengröße</option>
+                        <option value="care_level">Nach Pflegestufe</option>
+                    </select>
+                </div>
+
+                <div id="resultsGrid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+                </div>
+
+                <div id="noResults" class="hidden text-center py-16">
+                    <i data-lucide="search" class="w-16 h-16 text-slate-300 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-semibold text-slate-700 mb-2">Keine Fische gefunden</h3>
+                    <p class="text-slate-300">Versuche, deine Filter oder Suchbegriffe anzupassen</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
+                        <path d="M18 12v.5"/>
+                    </svg>
+                    <span class="font-bold text-white">FishFinder</span>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="/de/" class="hover:text-white">Startseite</a>
+                    <a href="/de/quiz/" class="hover:text-white">Quiz</a>
+                    <a href="/de/einrichtungen/" class="hover:text-white">Einrichtungen</a>
+                    <a href="/de/kompatibilitaet/" class="hover:text-white">Kompatibilität</a>
+                </div>
+                <p class="text-sm">&copy; 2026 FishFinder</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/de/js/fish-de.js"></script>
+    <script>
+        lucide.createIcons();
+        
+        // Temperament translations
+        const TEMPERAMENT_DE = { peaceful: 'friedlich', 'semi-aggressive': 'semi-aggressiv', aggressive: 'aggressiv' };
+        const CARE_LABELS_DE = { easy: 'Anfänger', moderate: 'Fortgeschritten', hard: 'Experte' };
+        
+        // State
+        let allFish = [];
+        let fuse = null;
+
+        // Load fish data
+        async function loadFish() {
+            try {
+                const response = await fetch('/data/fish.json');
+                allFish = await response.json();
+                
+                fuse = new Fuse(allFish, {
+                    keys: ['name', 'scientific_name', 'category', 'description', 'tags'],
+                    threshold: 0.4,
+                    includeScore: true
+                });
+            } catch (error) {
+                console.error('Error loading fish:', error);
+            }
+        }
+
+        function renderFishCard(fish) {
+            const temperamentColors = {
+                peaceful: 'bg-emerald-100 text-emerald-700',
+                'semi-aggressive': 'bg-amber-100 text-amber-700',
+                aggressive: 'bg-red-100 text-red-700'
+            };
+
+            const careColors = {
+                easy: 'bg-green-100 text-green-700',
+                moderate: 'bg-yellow-100 text-yellow-700',
+                hard: 'bg-purple-100 text-purple-700'
+            };
+            
+            const fishName = getFishNameDE(fish.id, fish.name);
+            const liters = Math.round(fish.min_tank_gallons * 3.785);
+            const tankSize = liters + 'L (' + fish.min_tank_gallons + 'gal)';
+            const sizeCm = Math.round(fish.size_inches * 2.54);
+            const sizeDisplay = sizeCm + 'cm (' + fish.size_inches + '")';
+
+            return `
+                <a href="/de/fische/${fish.id}/" class="fish-card bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden block">
+                    <div class="aspect-[4/3] bg-slate-50 relative overflow-hidden flex items-center justify-center p-4">
+                        <img src="/images/fish/${fish.id}.webp" alt="${fishName}" class="w-full h-full object-contain" onerror="this.outerHTML='<span class=\\'text-6xl\\'>🐟</span>'">
+                        <span class="absolute top-2 right-2 tag ${temperamentColors[fish.temperament] || 'bg-slate-100 text-slate-600'}">
+                            ${TEMPERAMENT_DE[fish.temperament] || fish.temperament}
+                        </span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-slate-800 text-lg mb-1">${fishName}</h3>
+                        <p class="text-slate-400 text-sm mb-3 italic">${fish.scientific || ''}</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span class="tag ${careColors[fish.care_level]}">${CARE_LABELS_DE[fish.care_level] || fish.care_level}</span>
+                            <span class="tag bg-slate-100 text-slate-600">${fish.category}</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-center text-xs">
+                            <div class="bg-slate-50 rounded-lg py-2">
+                                <div class="text-slate-400">Beckengröße</div>
+                                <div class="font-semibold text-slate-700">${tankSize}</div>
+                            </div>
+                            <div class="bg-slate-50 rounded-lg py-2">
+                                <div class="text-slate-400">Größe</div>
+                                <div class="font-semibold text-slate-700">${sizeDisplay}</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            `;
+        }
+
+        function applyFilters() {
+            const searchQuery = document.getElementById('searchInput').value.trim();
+            const sortBy = document.getElementById('sortBy').value;
+
+            const selectedTanks = Array.from(document.querySelectorAll('.tank-filter:checked')).map(cb => cb.value);
+            const selectedTemperaments = Array.from(document.querySelectorAll('.temperament-filter:checked')).map(cb => cb.value);
+            const selectedCare = Array.from(document.querySelectorAll('.care-filter:checked')).map(cb => cb.value);
+            const selectedCategories = Array.from(document.querySelectorAll('.category-filter:checked')).map(cb => cb.value);
+            const selectedSchooling = Array.from(document.querySelectorAll('.schooling-filter:checked')).map(cb => cb.value);
+
+            let results = searchQuery && fuse 
+                ? fuse.search(searchQuery).map(r => r.item)
+                : [...allFish];
+
+            function matchesTankFilter(minGallons, filter) {
+                if (filter === '5gal') return minGallons <= 5;
+                if (filter === '10gal') return minGallons <= 10;
+                if (filter === '20gal') return minGallons <= 20;
+                if (filter === '30gal') return minGallons <= 30;
+                if (filter === '75gal') return minGallons <= 75;
+                return true;
+            }
+            
+            const careFilterMap = { 'beginner': 'easy', 'intermediate': 'moderate', 'advanced': 'hard' };
+
+            results = results.filter(fish => {
+                if (selectedTanks.length > 0 && !selectedTanks.some(t => matchesTankFilter(fish.min_tank_gallons, t))) return false;
+                if (selectedTemperaments.length > 0 && !selectedTemperaments.includes(fish.temperament)) return false;
+                if (selectedCare.length > 0 && !selectedCare.some(c => careFilterMap[c] === fish.care_level)) return false;
+                if (selectedCategories.length > 0 && !selectedCategories.includes(fish.category)) return false;
+                if (selectedSchooling.length > 0) {
+                    const schoolingStr = fish.schooling.toString();
+                    if (!selectedSchooling.includes(schoolingStr)) return false;
+                }
+                return true;
+            });
+
+            const careOrder = { 'easy': 1, 'moderate': 2, 'hard': 3 };
+            
+            results.sort((a, b) => {
+                switch (sortBy) {
+                    case 'tank_size': return a.min_tank_gallons - b.min_tank_gallons;
+                    case 'care_level': return (careOrder[a.care_level] || 2) - (careOrder[b.care_level] || 2);
+                    default: return getFishNameDE(a.id, a.name).localeCompare(getFishNameDE(b.id, b.name), 'de');
+                }
+            });
+
+            const grid = document.getElementById('resultsGrid');
+            const noResults = document.getElementById('noResults');
+            const resultCount = document.getElementById('resultCount');
+
+            resultCount.textContent = results.length;
+
+            if (results.length === 0) {
+                grid.innerHTML = '';
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+                grid.innerHTML = results.map(renderFishCard).join('');
+            }
+
+            document.getElementById('clearSearch').classList.toggle('hidden', !searchQuery);
+            lucide.createIcons();
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.querySelectorAll('.tank-filter, .temperament-filter, .care-filter, .category-filter, .schooling-filter').forEach(cb => cb.checked = false);
+            document.getElementById('sortBy').value = 'name';
+            applyFilters();
+        }
+
+        function applyUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            
+            const q = params.get('q');
+            if (q) document.getElementById('searchInput').value = q;
+            
+            const tankSize = params.get('tank_size');
+            if (tankSize) {
+                document.querySelector(`.tank-filter[value="${tankSize}"]`)?.click();
+            }
+            
+            const temperament = params.get('temperament');
+            if (temperament) {
+                document.querySelector(`.temperament-filter[value="${temperament}"]`)?.click();
+            }
+            
+            const careLevel = params.get('care_level');
+            if (careLevel) {
+                document.querySelector(`.care-filter[value="${careLevel}"]`)?.click();
+            }
+            
+            const category = params.get('category');
+            if (category) {
+                document.querySelector(`.category-filter[value="${category}"]`)?.click();
+            }
+        }
+
+        const searchInput = document.getElementById('searchInput');
+        const dropdown = document.getElementById('search-dropdown');
+        
+        searchInput.addEventListener('input', function() {
+            applyFilters();
+            
+            const query = this.value.trim().toLowerCase();
+            if (query.length < 1) {
+                dropdown.classList.add('hidden');
+                return;
+            }
+            
+            const matches = allFish.filter(f => {
+                const deName = getFishNameDE(f.id, f.name).toLowerCase();
+                return deName.includes(query) || 
+                    f.name.toLowerCase().includes(query) || 
+                    (f.scientific && f.scientific.toLowerCase().includes(query));
+            }).slice(0, 8);
+            
+            if (matches.length === 0) {
+                dropdown.classList.add('hidden');
+                return;
+            }
+            
+            dropdown.innerHTML = matches.map(f => `
+                <a href="/de/fische/${f.id}/" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition first:rounded-t-2xl last:rounded-b-2xl">
+                    <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <img src="/images/fish/${f.id}.webp" alt="${getFishNameDE(f.id, f.name)}" class="w-full h-full object-contain" onerror="this.outerHTML='🐟'">
+                    </div>
+                    <div>
+                        <span class="font-medium text-slate-800">${getFishNameDE(f.id, f.name)}</span>
+                        <span class="text-sm text-slate-400 block">${f.scientific || ''}</span>
+                    </div>
+                </a>
+            `).join('');
+            dropdown.classList.remove('hidden');
+        });
+        
+        searchInput.addEventListener('blur', function() {
+            setTimeout(() => dropdown.classList.add('hidden'), 200);
+        });
+        
+        searchInput.addEventListener('focus', function() {
+            if (this.value.trim().length >= 1) {
+                this.dispatchEvent(new Event('input'));
+            }
+        });
+        
+        document.getElementById('clearSearch').addEventListener('click', () => {
+            searchInput.value = '';
+            dropdown.classList.add('hidden');
+            applyFilters();
+        });
+        document.getElementById('sortBy').addEventListener('change', applyFilters);
+        document.getElementById('resetFilters').addEventListener('click', resetFilters);
+        document.querySelectorAll('.tank-filter, .temperament-filter, .care-filter, .category-filter, .schooling-filter').forEach(cb => 
+            cb.addEventListener('change', applyFilters)
+        );
+
+        loadFish().then(() => {
+            applyUrlParams();
+            applyFilters();
+        });
+    </script>
+</body>
+</html>
