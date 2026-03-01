@@ -1,775 +1,1670 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English Pages -->
   <url>
     <loc>https://fishfinder.guide/</loc>
-    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/"/>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://fishfinder.guide/search/</loc><priority>0.9</priority></url>
+  <url><loc>https://fishfinder.guide/quiz/</loc><priority>0.8</priority></url>
+  <url><loc>https://fishfinder.guide/compatibility/</loc><priority>0.8</priority></url>
+  <url><loc>https://fishfinder.guide/faq/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/about/</loc><priority>0.5</priority></url>
+  <url><loc>https://fishfinder.guide/articles/</loc><priority>0.8</priority></url>
+  <url><loc>https://fishfinder.guide/articles/aquarium-cycling-guide/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/articles/best-beginner-fish/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/articles/10-gallon-stocking-ideas/</loc><priority>0.7</priority></url>
+
+  <!-- Spanish Pages -->
   <url>
-    <loc>https://fishfinder.guide/search/</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://fishfinder.guide/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/"/>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://fishfinder.guide/quiz/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/compatibility/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/compare/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/faq/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/neon-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/betta-fish/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/guppy/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/corydoras-catfish/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/angelfish/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/platy/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/molly/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/cherry-barb/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/zebra-danio/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/dwarf-gourami/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/pleco-bristlenose/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/cardinal-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/harlequin-rasbora/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/german-blue-ram/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/kuhli-loach/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/black-skirt-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/rummy-nose-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/emperor-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/congo-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/serpae-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/glowlight-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/diamond-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/flame-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/black-phantom-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/lemon-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/bleeding-heart-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/buenos-aires-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/silvertip-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/red-eye-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/x-ray-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/penguin-tetra/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/swordtail/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/endler-livebearer/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/sailfin-molly/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/balloon-molly/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/otocinclus/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/pictus-catfish/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/glass-catfish/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/upside-down-catfish/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/panda-cory/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/bronze-cory/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/peppered-cory/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/sterbai-cory/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/pygmy-cory/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/julii-cory/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/discus/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/apistogramma-cacatuoides/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/apistogramma-borellii/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/kribensis/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/oscar/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/convict-cichlid/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/jack-dempsey/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/electric-blue-acara/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/firemouth-cichlid/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/severum/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/yellow-lab/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/peacock-cichlid/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/jewel-cichlid/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/tiger-barb/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/rosy-barb/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/gold-barb/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/denison-barb/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/odessa-barb/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/checker-barb/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/chili-rasbora/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/celestial-pearl-danio/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/emerald-eye-rasbora/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/scissortail-rasbora/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/lambchop-rasbora/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/phoenix-rasbora/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/clown-loach/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/yoyo-loach/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/hillstream-loach/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/dojo-loach/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/zebra-loach/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/dwarf-chain-loach/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/pearl-gourami/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/honey-gourami/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/moonlight-gourami/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/blue-gourami/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/kissing-gourami/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/sparkling-gourami/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/paradise-fish/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/cherry-shrimp/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/amano-shrimp/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/ghost-shrimp/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/crystal-red-shrimp/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/blue-velvet-shrimp/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/bamboo-shrimp/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/nerite-snail/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/mystery-snail/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/ramshorn-snail/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/assassin-snail/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/malaysian-trumpet-snail/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/rabbit-snail/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/clown-killifish/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/golden-wonder-killifish/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/blue-notho/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/least-killifish/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/boesemani-rainbow/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/neon-dwarf-rainbow/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/turquoise-rainbow/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/madagascar-rainbow/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/red-irian-rainbow/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/celebes-rainbow/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/forktail-rainbow/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/gertrudae-rainbow/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/white-cloud-mountain-minnow/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/leopard-danio/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/pearl-danio/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/giant-danio/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/longfin-zebra-danio/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/gold-ring-danio/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/siamese-algae-eater/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/flying-fox/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/red-tailed-shark/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/rainbow-shark/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/common-pleco/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/rubber-lip-pleco/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/clown-pleco/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/royal-pleco/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/bala-shark/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fishfinder.guide/fish/tinfoil-barb/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+  <url><loc>https://fishfinder.guide/es/buscar/</loc><priority>0.8</priority></url>
+  <url><loc>https://fishfinder.guide/es/test/</loc><priority>0.8</priority></url>
+  <url><loc>https://fishfinder.guide/es/compatibilidad/</loc><priority>0.8</priority></url>
+  <url><loc>https://fishfinder.guide/es/preguntas-frecuentes/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/es/sobre-nosotros/</loc><priority>0.5</priority></url>
+  <url><loc>https://fishfinder.guide/es/articulos/</loc><priority>0.8</priority></url>
+
+  <!-- German Pages -->
+  <url>
+    <loc>https://fishfinder.guide/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/"/>
+    <priority>0.9</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/de/suche/</loc><priority>0.8</priority></url>
+  <url><loc>https://fishfinder.guide/de/quiz/</loc><priority>0.8</priority></url>
+  <url><loc>https://fishfinder.guide/de/kompatibilitaet/</loc><priority>0.8</priority></url>
+  <url><loc>https://fishfinder.guide/de/faq/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/ueber/</loc><priority>0.5</priority></url>
+  <url><loc>https://fishfinder.guide/de/artikel/</loc><priority>0.8</priority></url>
+
+  <!-- French Pages -->
+  <url>
+    <loc>https://fishfinder.guide/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/"/>
+    <priority>0.9</priority>
   </url>
-</urlset>  <!-- French Pages -->
-  <url><loc>https://fishfinder.guide/fr/</loc><priority>0.9</priority></url>
   <url><loc>https://fishfinder.guide/fr/rechercher/</loc><priority>0.8</priority></url>
   <url><loc>https://fishfinder.guide/fr/quiz/</loc><priority>0.8</priority></url>
   <url><loc>https://fishfinder.guide/fr/compatibilite/</loc><priority>0.8</priority></url>
+  <url><loc>https://fishfinder.guide/fr/faq/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/fr/a-propos/</loc><priority>0.5</priority></url>
+
+
+
+  <!-- amano-shrimp -->
+  <url>
+    <loc>https://fishfinder.guide/fish/amano-shrimp/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/amano-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/amano-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/amano-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/amano-shrimp/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/amano-shrimp/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/amano-shrimp/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/amano-shrimp/</loc><priority>0.7</priority></url>
+
+  <!-- angelfish -->
+  <url>
+    <loc>https://fishfinder.guide/fish/angelfish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/angelfish/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/angelfish/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/angelfish/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/angelfish/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/angelfish/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/angelfish/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/angelfish/</loc><priority>0.7</priority></url>
+
+  <!-- apistogramma-borellii -->
+  <url>
+    <loc>https://fishfinder.guide/fish/apistogramma-borellii/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/apistogramma-borellii/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/apistogramma-borellii/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/apistogramma-borellii/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/apistogramma-borellii/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/apistogramma-borellii/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/apistogramma-borellii/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/apistogramma-borellii/</loc><priority>0.7</priority></url>
+
+  <!-- apistogramma-cacatuoides -->
+  <url>
+    <loc>https://fishfinder.guide/fish/apistogramma-cacatuoides/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/apistogramma-cacatuoides/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/apistogramma-cacatuoides/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/apistogramma-cacatuoides/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/apistogramma-cacatuoides/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/apistogramma-cacatuoides/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/apistogramma-cacatuoides/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/apistogramma-cacatuoides/</loc><priority>0.7</priority></url>
+
+  <!-- assassin-snail -->
+  <url>
+    <loc>https://fishfinder.guide/fish/assassin-snail/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/assassin-snail/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/assassin-snail/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/assassin-snail/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/assassin-snail/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/assassin-snail/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/assassin-snail/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/assassin-snail/</loc><priority>0.7</priority></url>
+
+  <!-- bala-shark -->
+  <url>
+    <loc>https://fishfinder.guide/fish/bala-shark/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/bala-shark/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/bala-shark/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/bala-shark/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/bala-shark/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/bala-shark/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/bala-shark/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/bala-shark/</loc><priority>0.7</priority></url>
+
+  <!-- balloon-molly -->
+  <url>
+    <loc>https://fishfinder.guide/fish/balloon-molly/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/balloon-molly/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/balloon-molly/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/balloon-molly/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/balloon-molly/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/balloon-molly/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/balloon-molly/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/balloon-molly/</loc><priority>0.7</priority></url>
+
+  <!-- bamboo-shrimp -->
+  <url>
+    <loc>https://fishfinder.guide/fish/bamboo-shrimp/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/bamboo-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/bamboo-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/bamboo-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/bamboo-shrimp/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/bamboo-shrimp/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/bamboo-shrimp/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/bamboo-shrimp/</loc><priority>0.7</priority></url>
+
+  <!-- betta-fish -->
+  <url>
+    <loc>https://fishfinder.guide/fish/betta-fish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/betta-fish/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/betta-fish/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/betta-fish/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/betta-fish/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/betta-fish/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/betta-fish/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/betta-fish/</loc><priority>0.7</priority></url>
+
+  <!-- black-phantom-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/black-phantom-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/black-phantom-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/black-phantom-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/black-phantom-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/black-phantom-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/black-phantom-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/black-phantom-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/black-phantom-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- black-skirt-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/black-skirt-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/black-skirt-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/black-skirt-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/black-skirt-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/black-skirt-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/black-skirt-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/black-skirt-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/black-skirt-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- bleeding-heart-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/bleeding-heart-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/bleeding-heart-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/bleeding-heart-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/bleeding-heart-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/bleeding-heart-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/bleeding-heart-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/bleeding-heart-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/bleeding-heart-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- blue-gourami -->
+  <url>
+    <loc>https://fishfinder.guide/fish/blue-gourami/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/blue-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/blue-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/blue-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/blue-gourami/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/blue-gourami/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/blue-gourami/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/blue-gourami/</loc><priority>0.7</priority></url>
+
+  <!-- blue-notho -->
+  <url>
+    <loc>https://fishfinder.guide/fish/blue-notho/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/blue-notho/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/blue-notho/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/blue-notho/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/blue-notho/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/blue-notho/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/blue-notho/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/blue-notho/</loc><priority>0.7</priority></url>
+
+  <!-- blue-velvet-shrimp -->
+  <url>
+    <loc>https://fishfinder.guide/fish/blue-velvet-shrimp/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/blue-velvet-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/blue-velvet-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/blue-velvet-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/blue-velvet-shrimp/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/blue-velvet-shrimp/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/blue-velvet-shrimp/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/blue-velvet-shrimp/</loc><priority>0.7</priority></url>
+
+  <!-- boesemani-rainbow -->
+  <url>
+    <loc>https://fishfinder.guide/fish/boesemani-rainbow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/boesemani-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/boesemani-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/boesemani-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/boesemani-rainbow/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/boesemani-rainbow/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/boesemani-rainbow/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/boesemani-rainbow/</loc><priority>0.7</priority></url>
+
+  <!-- bronze-cory -->
+  <url>
+    <loc>https://fishfinder.guide/fish/bronze-cory/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/bronze-cory/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/bronze-cory/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/bronze-cory/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/bronze-cory/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/bronze-cory/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/bronze-cory/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/bronze-cory/</loc><priority>0.7</priority></url>
+
+  <!-- buenos-aires-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/buenos-aires-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/buenos-aires-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/buenos-aires-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/buenos-aires-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/buenos-aires-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/buenos-aires-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/buenos-aires-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/buenos-aires-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- cardinal-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/cardinal-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/cardinal-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/cardinal-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/cardinal-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/cardinal-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/cardinal-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/cardinal-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/cardinal-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- celebes-rainbow -->
+  <url>
+    <loc>https://fishfinder.guide/fish/celebes-rainbow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/celebes-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/celebes-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/celebes-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/celebes-rainbow/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/celebes-rainbow/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/celebes-rainbow/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/celebes-rainbow/</loc><priority>0.7</priority></url>
+
+  <!-- celestial-pearl-danio -->
+  <url>
+    <loc>https://fishfinder.guide/fish/celestial-pearl-danio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/celestial-pearl-danio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/celestial-pearl-danio/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/celestial-pearl-danio/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/celestial-pearl-danio/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/celestial-pearl-danio/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/celestial-pearl-danio/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/celestial-pearl-danio/</loc><priority>0.7</priority></url>
+
+  <!-- checker-barb -->
+  <url>
+    <loc>https://fishfinder.guide/fish/checker-barb/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/checker-barb/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/checker-barb/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/checker-barb/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/checker-barb/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/checker-barb/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/checker-barb/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/checker-barb/</loc><priority>0.7</priority></url>
+
+  <!-- cherry-barb -->
+  <url>
+    <loc>https://fishfinder.guide/fish/cherry-barb/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/cherry-barb/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/cherry-barb/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/cherry-barb/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/cherry-barb/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/cherry-barb/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/cherry-barb/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/cherry-barb/</loc><priority>0.7</priority></url>
+
+  <!-- cherry-shrimp -->
+  <url>
+    <loc>https://fishfinder.guide/fish/cherry-shrimp/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/cherry-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/cherry-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/cherry-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/cherry-shrimp/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/cherry-shrimp/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/cherry-shrimp/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/cherry-shrimp/</loc><priority>0.7</priority></url>
+
+  <!-- chili-rasbora -->
+  <url>
+    <loc>https://fishfinder.guide/fish/chili-rasbora/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/chili-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/chili-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/chili-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/chili-rasbora/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/chili-rasbora/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/chili-rasbora/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/chili-rasbora/</loc><priority>0.7</priority></url>
+
+  <!-- clown-killifish -->
+  <url>
+    <loc>https://fishfinder.guide/fish/clown-killifish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/clown-killifish/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/clown-killifish/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/clown-killifish/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/clown-killifish/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/clown-killifish/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/clown-killifish/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/clown-killifish/</loc><priority>0.7</priority></url>
+
+  <!-- clown-loach -->
+  <url>
+    <loc>https://fishfinder.guide/fish/clown-loach/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/clown-loach/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/clown-loach/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/clown-loach/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/clown-loach/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/clown-loach/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/clown-loach/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/clown-loach/</loc><priority>0.7</priority></url>
+
+  <!-- clown-pleco -->
+  <url>
+    <loc>https://fishfinder.guide/fish/clown-pleco/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/clown-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/clown-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/clown-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/clown-pleco/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/clown-pleco/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/clown-pleco/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/clown-pleco/</loc><priority>0.7</priority></url>
+
+  <!-- common-pleco -->
+  <url>
+    <loc>https://fishfinder.guide/fish/common-pleco/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/common-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/common-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/common-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/common-pleco/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/common-pleco/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/common-pleco/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/common-pleco/</loc><priority>0.7</priority></url>
+
+  <!-- congo-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/congo-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/congo-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/congo-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/congo-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/congo-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/congo-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/congo-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/congo-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- convict-cichlid -->
+  <url>
+    <loc>https://fishfinder.guide/fish/convict-cichlid/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/convict-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/convict-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/convict-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/convict-cichlid/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/convict-cichlid/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/convict-cichlid/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/convict-cichlid/</loc><priority>0.7</priority></url>
+
+  <!-- corydoras-catfish -->
+  <url>
+    <loc>https://fishfinder.guide/fish/corydoras-catfish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/corydoras-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/corydoras-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/corydoras-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/corydoras-catfish/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/corydoras-catfish/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/corydoras-catfish/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/corydoras-catfish/</loc><priority>0.7</priority></url>
+
+  <!-- crystal-red-shrimp -->
+  <url>
+    <loc>https://fishfinder.guide/fish/crystal-red-shrimp/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/crystal-red-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/crystal-red-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/crystal-red-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/crystal-red-shrimp/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/crystal-red-shrimp/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/crystal-red-shrimp/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/crystal-red-shrimp/</loc><priority>0.7</priority></url>
+
+  <!-- denison-barb -->
+  <url>
+    <loc>https://fishfinder.guide/fish/denison-barb/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/denison-barb/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/denison-barb/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/denison-barb/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/denison-barb/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/denison-barb/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/denison-barb/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/denison-barb/</loc><priority>0.7</priority></url>
+
+  <!-- diamond-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/diamond-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/diamond-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/diamond-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/diamond-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/diamond-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/diamond-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/diamond-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/diamond-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- discus -->
+  <url>
+    <loc>https://fishfinder.guide/fish/discus/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/discus/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/discus/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/discus/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/discus/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/discus/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/discus/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/discus/</loc><priority>0.7</priority></url>
+
+  <!-- dojo-loach -->
+  <url>
+    <loc>https://fishfinder.guide/fish/dojo-loach/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/dojo-loach/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/dojo-loach/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/dojo-loach/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/dojo-loach/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/dojo-loach/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/dojo-loach/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/dojo-loach/</loc><priority>0.7</priority></url>
+
+  <!-- dwarf-chain-loach -->
+  <url>
+    <loc>https://fishfinder.guide/fish/dwarf-chain-loach/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/dwarf-chain-loach/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/dwarf-chain-loach/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/dwarf-chain-loach/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/dwarf-chain-loach/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/dwarf-chain-loach/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/dwarf-chain-loach/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/dwarf-chain-loach/</loc><priority>0.7</priority></url>
+
+  <!-- dwarf-gourami -->
+  <url>
+    <loc>https://fishfinder.guide/fish/dwarf-gourami/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/dwarf-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/dwarf-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/dwarf-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/dwarf-gourami/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/dwarf-gourami/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/dwarf-gourami/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/dwarf-gourami/</loc><priority>0.7</priority></url>
+
+  <!-- electric-blue-acara -->
+  <url>
+    <loc>https://fishfinder.guide/fish/electric-blue-acara/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/electric-blue-acara/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/electric-blue-acara/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/electric-blue-acara/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/electric-blue-acara/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/electric-blue-acara/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/electric-blue-acara/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/electric-blue-acara/</loc><priority>0.7</priority></url>
+
+  <!-- emerald-eye-rasbora -->
+  <url>
+    <loc>https://fishfinder.guide/fish/emerald-eye-rasbora/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/emerald-eye-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/emerald-eye-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/emerald-eye-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/emerald-eye-rasbora/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/emerald-eye-rasbora/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/emerald-eye-rasbora/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/emerald-eye-rasbora/</loc><priority>0.7</priority></url>
+
+  <!-- emperor-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/emperor-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/emperor-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/emperor-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/emperor-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/emperor-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/emperor-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/emperor-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/emperor-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- endler-livebearer -->
+  <url>
+    <loc>https://fishfinder.guide/fish/endler-livebearer/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/endler-livebearer/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/endler-livebearer/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/endler-livebearer/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/endler-livebearer/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/endler-livebearer/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/endler-livebearer/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/endler-livebearer/</loc><priority>0.7</priority></url>
+
+  <!-- firemouth-cichlid -->
+  <url>
+    <loc>https://fishfinder.guide/fish/firemouth-cichlid/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/firemouth-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/firemouth-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/firemouth-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/firemouth-cichlid/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/firemouth-cichlid/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/firemouth-cichlid/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/firemouth-cichlid/</loc><priority>0.7</priority></url>
+
+  <!-- flame-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/flame-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/flame-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/flame-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/flame-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/flame-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/flame-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/flame-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/flame-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- flying-fox -->
+  <url>
+    <loc>https://fishfinder.guide/fish/flying-fox/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/flying-fox/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/flying-fox/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/flying-fox/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/flying-fox/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/flying-fox/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/flying-fox/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/flying-fox/</loc><priority>0.7</priority></url>
+
+  <!-- forktail-rainbow -->
+  <url>
+    <loc>https://fishfinder.guide/fish/forktail-rainbow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/forktail-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/forktail-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/forktail-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/forktail-rainbow/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/forktail-rainbow/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/forktail-rainbow/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/forktail-rainbow/</loc><priority>0.7</priority></url>
+
+  <!-- german-blue-ram -->
+  <url>
+    <loc>https://fishfinder.guide/fish/german-blue-ram/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/german-blue-ram/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/german-blue-ram/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/german-blue-ram/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/german-blue-ram/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/german-blue-ram/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/german-blue-ram/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/german-blue-ram/</loc><priority>0.7</priority></url>
+
+  <!-- gertrudae-rainbow -->
+  <url>
+    <loc>https://fishfinder.guide/fish/gertrudae-rainbow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/gertrudae-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/gertrudae-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/gertrudae-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/gertrudae-rainbow/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/gertrudae-rainbow/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/gertrudae-rainbow/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/gertrudae-rainbow/</loc><priority>0.7</priority></url>
+
+  <!-- ghost-shrimp -->
+  <url>
+    <loc>https://fishfinder.guide/fish/ghost-shrimp/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/ghost-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/ghost-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/ghost-shrimp/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/ghost-shrimp/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/ghost-shrimp/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/ghost-shrimp/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/ghost-shrimp/</loc><priority>0.7</priority></url>
+
+  <!-- giant-danio -->
+  <url>
+    <loc>https://fishfinder.guide/fish/giant-danio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/giant-danio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/giant-danio/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/giant-danio/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/giant-danio/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/giant-danio/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/giant-danio/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/giant-danio/</loc><priority>0.7</priority></url>
+
+  <!-- glass-catfish -->
+  <url>
+    <loc>https://fishfinder.guide/fish/glass-catfish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/glass-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/glass-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/glass-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/glass-catfish/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/glass-catfish/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/glass-catfish/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/glass-catfish/</loc><priority>0.7</priority></url>
+
+  <!-- glowlight-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/glowlight-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/glowlight-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/glowlight-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/glowlight-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/glowlight-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/glowlight-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/glowlight-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/glowlight-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- gold-barb -->
+  <url>
+    <loc>https://fishfinder.guide/fish/gold-barb/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/gold-barb/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/gold-barb/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/gold-barb/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/gold-barb/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/gold-barb/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/gold-barb/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/gold-barb/</loc><priority>0.7</priority></url>
+
+  <!-- gold-ring-danio -->
+  <url>
+    <loc>https://fishfinder.guide/fish/gold-ring-danio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/gold-ring-danio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/gold-ring-danio/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/gold-ring-danio/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/gold-ring-danio/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/gold-ring-danio/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/gold-ring-danio/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/gold-ring-danio/</loc><priority>0.7</priority></url>
+
+  <!-- golden-wonder-killifish -->
+  <url>
+    <loc>https://fishfinder.guide/fish/golden-wonder-killifish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/golden-wonder-killifish/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/golden-wonder-killifish/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/golden-wonder-killifish/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/golden-wonder-killifish/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/golden-wonder-killifish/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/golden-wonder-killifish/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/golden-wonder-killifish/</loc><priority>0.7</priority></url>
+
+  <!-- guppy -->
+  <url>
+    <loc>https://fishfinder.guide/fish/guppy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/guppy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/guppy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/guppy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/guppy/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/guppy/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/guppy/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/guppy/</loc><priority>0.7</priority></url>
+
+  <!-- harlequin-rasbora -->
+  <url>
+    <loc>https://fishfinder.guide/fish/harlequin-rasbora/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/harlequin-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/harlequin-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/harlequin-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/harlequin-rasbora/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/harlequin-rasbora/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/harlequin-rasbora/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/harlequin-rasbora/</loc><priority>0.7</priority></url>
+
+  <!-- hillstream-loach -->
+  <url>
+    <loc>https://fishfinder.guide/fish/hillstream-loach/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/hillstream-loach/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/hillstream-loach/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/hillstream-loach/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/hillstream-loach/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/hillstream-loach/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/hillstream-loach/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/hillstream-loach/</loc><priority>0.7</priority></url>
+
+  <!-- honey-gourami -->
+  <url>
+    <loc>https://fishfinder.guide/fish/honey-gourami/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/honey-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/honey-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/honey-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/honey-gourami/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/honey-gourami/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/honey-gourami/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/honey-gourami/</loc><priority>0.7</priority></url>
+
+  <!-- jack-dempsey -->
+  <url>
+    <loc>https://fishfinder.guide/fish/jack-dempsey/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/jack-dempsey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/jack-dempsey/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/jack-dempsey/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/jack-dempsey/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/jack-dempsey/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/jack-dempsey/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/jack-dempsey/</loc><priority>0.7</priority></url>
+
+  <!-- jewel-cichlid -->
+  <url>
+    <loc>https://fishfinder.guide/fish/jewel-cichlid/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/jewel-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/jewel-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/jewel-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/jewel-cichlid/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/jewel-cichlid/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/jewel-cichlid/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/jewel-cichlid/</loc><priority>0.7</priority></url>
+
+  <!-- julii-cory -->
+  <url>
+    <loc>https://fishfinder.guide/fish/julii-cory/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/julii-cory/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/julii-cory/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/julii-cory/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/julii-cory/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/julii-cory/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/julii-cory/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/julii-cory/</loc><priority>0.7</priority></url>
+
+  <!-- kissing-gourami -->
+  <url>
+    <loc>https://fishfinder.guide/fish/kissing-gourami/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/kissing-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/kissing-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/kissing-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/kissing-gourami/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/kissing-gourami/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/kissing-gourami/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/kissing-gourami/</loc><priority>0.7</priority></url>
+
+  <!-- kribensis -->
+  <url>
+    <loc>https://fishfinder.guide/fish/kribensis/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/kribensis/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/kribensis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/kribensis/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/kribensis/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/kribensis/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/kribensis/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/kribensis/</loc><priority>0.7</priority></url>
+
+  <!-- kuhli-loach -->
+  <url>
+    <loc>https://fishfinder.guide/fish/kuhli-loach/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/kuhli-loach/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/kuhli-loach/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/kuhli-loach/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/kuhli-loach/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/kuhli-loach/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/kuhli-loach/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/kuhli-loach/</loc><priority>0.7</priority></url>
+
+  <!-- lambchop-rasbora -->
+  <url>
+    <loc>https://fishfinder.guide/fish/lambchop-rasbora/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/lambchop-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/lambchop-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/lambchop-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/lambchop-rasbora/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/lambchop-rasbora/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/lambchop-rasbora/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/lambchop-rasbora/</loc><priority>0.7</priority></url>
+
+  <!-- least-killifish -->
+  <url>
+    <loc>https://fishfinder.guide/fish/least-killifish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/least-killifish/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/least-killifish/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/least-killifish/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/least-killifish/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/least-killifish/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/least-killifish/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/least-killifish/</loc><priority>0.7</priority></url>
+
+  <!-- lemon-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/lemon-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/lemon-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/lemon-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/lemon-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/lemon-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/lemon-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/lemon-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/lemon-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- leopard-danio -->
+  <url>
+    <loc>https://fishfinder.guide/fish/leopard-danio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/leopard-danio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/leopard-danio/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/leopard-danio/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/leopard-danio/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/leopard-danio/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/leopard-danio/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/leopard-danio/</loc><priority>0.7</priority></url>
+
+  <!-- longfin-zebra-danio -->
+  <url>
+    <loc>https://fishfinder.guide/fish/longfin-zebra-danio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/longfin-zebra-danio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/longfin-zebra-danio/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/longfin-zebra-danio/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/longfin-zebra-danio/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/longfin-zebra-danio/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/longfin-zebra-danio/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/longfin-zebra-danio/</loc><priority>0.7</priority></url>
+
+  <!-- madagascar-rainbow -->
+  <url>
+    <loc>https://fishfinder.guide/fish/madagascar-rainbow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/madagascar-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/madagascar-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/madagascar-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/madagascar-rainbow/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/madagascar-rainbow/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/madagascar-rainbow/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/madagascar-rainbow/</loc><priority>0.7</priority></url>
+
+  <!-- malaysian-trumpet-snail -->
+  <url>
+    <loc>https://fishfinder.guide/fish/malaysian-trumpet-snail/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/malaysian-trumpet-snail/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/malaysian-trumpet-snail/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/malaysian-trumpet-snail/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/malaysian-trumpet-snail/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/malaysian-trumpet-snail/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/malaysian-trumpet-snail/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/malaysian-trumpet-snail/</loc><priority>0.7</priority></url>
+
+  <!-- molly -->
+  <url>
+    <loc>https://fishfinder.guide/fish/molly/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/molly/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/molly/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/molly/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/molly/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/molly/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/molly/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/molly/</loc><priority>0.7</priority></url>
+
+  <!-- moonlight-gourami -->
+  <url>
+    <loc>https://fishfinder.guide/fish/moonlight-gourami/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/moonlight-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/moonlight-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/moonlight-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/moonlight-gourami/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/moonlight-gourami/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/moonlight-gourami/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/moonlight-gourami/</loc><priority>0.7</priority></url>
+
+  <!-- mystery-snail -->
+  <url>
+    <loc>https://fishfinder.guide/fish/mystery-snail/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/mystery-snail/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/mystery-snail/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/mystery-snail/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/mystery-snail/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/mystery-snail/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/mystery-snail/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/mystery-snail/</loc><priority>0.7</priority></url>
+
+  <!-- neon-dwarf-rainbow -->
+  <url>
+    <loc>https://fishfinder.guide/fish/neon-dwarf-rainbow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/neon-dwarf-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/neon-dwarf-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/neon-dwarf-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/neon-dwarf-rainbow/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/neon-dwarf-rainbow/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/neon-dwarf-rainbow/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/neon-dwarf-rainbow/</loc><priority>0.7</priority></url>
+
+  <!-- neon-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/neon-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/neon-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/neon-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/neon-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/neon-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/neon-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/neon-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/neon-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- nerite-snail -->
+  <url>
+    <loc>https://fishfinder.guide/fish/nerite-snail/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/nerite-snail/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/nerite-snail/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/nerite-snail/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/nerite-snail/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/nerite-snail/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/nerite-snail/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/nerite-snail/</loc><priority>0.7</priority></url>
+
+  <!-- odessa-barb -->
+  <url>
+    <loc>https://fishfinder.guide/fish/odessa-barb/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/odessa-barb/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/odessa-barb/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/odessa-barb/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/odessa-barb/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/odessa-barb/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/odessa-barb/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/odessa-barb/</loc><priority>0.7</priority></url>
+
+  <!-- oscar -->
+  <url>
+    <loc>https://fishfinder.guide/fish/oscar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/oscar/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/oscar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/oscar/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/oscar/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/oscar/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/oscar/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/oscar/</loc><priority>0.7</priority></url>
+
+  <!-- otocinclus -->
+  <url>
+    <loc>https://fishfinder.guide/fish/otocinclus/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/otocinclus/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/otocinclus/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/otocinclus/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/otocinclus/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/otocinclus/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/otocinclus/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/otocinclus/</loc><priority>0.7</priority></url>
+
+  <!-- panda-cory -->
+  <url>
+    <loc>https://fishfinder.guide/fish/panda-cory/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/panda-cory/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/panda-cory/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/panda-cory/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/panda-cory/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/panda-cory/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/panda-cory/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/panda-cory/</loc><priority>0.7</priority></url>
+
+  <!-- paradise-fish -->
+  <url>
+    <loc>https://fishfinder.guide/fish/paradise-fish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/paradise-fish/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/paradise-fish/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/paradise-fish/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/paradise-fish/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/paradise-fish/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/paradise-fish/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/paradise-fish/</loc><priority>0.7</priority></url>
+
+  <!-- peacock-cichlid -->
+  <url>
+    <loc>https://fishfinder.guide/fish/peacock-cichlid/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/peacock-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/peacock-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/peacock-cichlid/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/peacock-cichlid/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/peacock-cichlid/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/peacock-cichlid/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/peacock-cichlid/</loc><priority>0.7</priority></url>
+
+  <!-- pearl-danio -->
+  <url>
+    <loc>https://fishfinder.guide/fish/pearl-danio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/pearl-danio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/pearl-danio/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/pearl-danio/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/pearl-danio/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/pearl-danio/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/pearl-danio/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/pearl-danio/</loc><priority>0.7</priority></url>
+
+  <!-- pearl-gourami -->
+  <url>
+    <loc>https://fishfinder.guide/fish/pearl-gourami/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/pearl-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/pearl-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/pearl-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/pearl-gourami/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/pearl-gourami/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/pearl-gourami/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/pearl-gourami/</loc><priority>0.7</priority></url>
+
+  <!-- penguin-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/penguin-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/penguin-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/penguin-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/penguin-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/penguin-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/penguin-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/penguin-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/penguin-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- peppered-cory -->
+  <url>
+    <loc>https://fishfinder.guide/fish/peppered-cory/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/peppered-cory/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/peppered-cory/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/peppered-cory/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/peppered-cory/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/peppered-cory/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/peppered-cory/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/peppered-cory/</loc><priority>0.7</priority></url>
+
+  <!-- phoenix-rasbora -->
+  <url>
+    <loc>https://fishfinder.guide/fish/phoenix-rasbora/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/phoenix-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/phoenix-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/phoenix-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/phoenix-rasbora/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/phoenix-rasbora/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/phoenix-rasbora/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/phoenix-rasbora/</loc><priority>0.7</priority></url>
+
+  <!-- pictus-catfish -->
+  <url>
+    <loc>https://fishfinder.guide/fish/pictus-catfish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/pictus-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/pictus-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/pictus-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/pictus-catfish/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/pictus-catfish/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/pictus-catfish/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/pictus-catfish/</loc><priority>0.7</priority></url>
+
+  <!-- platy -->
+  <url>
+    <loc>https://fishfinder.guide/fish/platy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/platy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/platy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/platy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/platy/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/platy/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/platy/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/platy/</loc><priority>0.7</priority></url>
+
+  <!-- pleco-bristlenose -->
+  <url>
+    <loc>https://fishfinder.guide/fish/pleco-bristlenose/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/pleco-bristlenose/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/pleco-bristlenose/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/pleco-bristlenose/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/pleco-bristlenose/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/pleco-bristlenose/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/pleco-bristlenose/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/pleco-bristlenose/</loc><priority>0.7</priority></url>
+
+  <!-- pygmy-cory -->
+  <url>
+    <loc>https://fishfinder.guide/fish/pygmy-cory/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/pygmy-cory/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/pygmy-cory/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/pygmy-cory/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/pygmy-cory/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/pygmy-cory/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/pygmy-cory/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/pygmy-cory/</loc><priority>0.7</priority></url>
+
+  <!-- rabbit-snail -->
+  <url>
+    <loc>https://fishfinder.guide/fish/rabbit-snail/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/rabbit-snail/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/rabbit-snail/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/rabbit-snail/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/rabbit-snail/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/rabbit-snail/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/rabbit-snail/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/rabbit-snail/</loc><priority>0.7</priority></url>
+
+  <!-- rainbow-shark -->
+  <url>
+    <loc>https://fishfinder.guide/fish/rainbow-shark/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/rainbow-shark/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/rainbow-shark/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/rainbow-shark/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/rainbow-shark/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/rainbow-shark/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/rainbow-shark/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/rainbow-shark/</loc><priority>0.7</priority></url>
+
+  <!-- ramshorn-snail -->
+  <url>
+    <loc>https://fishfinder.guide/fish/ramshorn-snail/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/ramshorn-snail/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/ramshorn-snail/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/ramshorn-snail/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/ramshorn-snail/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/ramshorn-snail/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/ramshorn-snail/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/ramshorn-snail/</loc><priority>0.7</priority></url>
+
+  <!-- red-eye-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/red-eye-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/red-eye-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/red-eye-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/red-eye-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/red-eye-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/red-eye-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/red-eye-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/red-eye-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- red-irian-rainbow -->
+  <url>
+    <loc>https://fishfinder.guide/fish/red-irian-rainbow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/red-irian-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/red-irian-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/red-irian-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/red-irian-rainbow/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/red-irian-rainbow/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/red-irian-rainbow/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/red-irian-rainbow/</loc><priority>0.7</priority></url>
+
+  <!-- red-tailed-shark -->
+  <url>
+    <loc>https://fishfinder.guide/fish/red-tailed-shark/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/red-tailed-shark/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/red-tailed-shark/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/red-tailed-shark/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/red-tailed-shark/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/red-tailed-shark/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/red-tailed-shark/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/red-tailed-shark/</loc><priority>0.7</priority></url>
+
+  <!-- rosy-barb -->
+  <url>
+    <loc>https://fishfinder.guide/fish/rosy-barb/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/rosy-barb/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/rosy-barb/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/rosy-barb/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/rosy-barb/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/rosy-barb/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/rosy-barb/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/rosy-barb/</loc><priority>0.7</priority></url>
+
+  <!-- royal-pleco -->
+  <url>
+    <loc>https://fishfinder.guide/fish/royal-pleco/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/royal-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/royal-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/royal-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/royal-pleco/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/royal-pleco/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/royal-pleco/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/royal-pleco/</loc><priority>0.7</priority></url>
+
+  <!-- rubber-lip-pleco -->
+  <url>
+    <loc>https://fishfinder.guide/fish/rubber-lip-pleco/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/rubber-lip-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/rubber-lip-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/rubber-lip-pleco/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/rubber-lip-pleco/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/rubber-lip-pleco/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/rubber-lip-pleco/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/rubber-lip-pleco/</loc><priority>0.7</priority></url>
+
+  <!-- rummy-nose-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/rummy-nose-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/rummy-nose-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/rummy-nose-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/rummy-nose-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/rummy-nose-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/rummy-nose-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/rummy-nose-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/rummy-nose-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- sailfin-molly -->
+  <url>
+    <loc>https://fishfinder.guide/fish/sailfin-molly/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/sailfin-molly/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/sailfin-molly/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/sailfin-molly/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/sailfin-molly/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/sailfin-molly/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/sailfin-molly/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/sailfin-molly/</loc><priority>0.7</priority></url>
+
+  <!-- scissortail-rasbora -->
+  <url>
+    <loc>https://fishfinder.guide/fish/scissortail-rasbora/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/scissortail-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/scissortail-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/scissortail-rasbora/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/scissortail-rasbora/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/scissortail-rasbora/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/scissortail-rasbora/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/scissortail-rasbora/</loc><priority>0.7</priority></url>
+
+  <!-- serpae-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/serpae-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/serpae-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/serpae-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/serpae-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/serpae-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/serpae-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/serpae-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/serpae-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- severum -->
+  <url>
+    <loc>https://fishfinder.guide/fish/severum/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/severum/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/severum/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/severum/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/severum/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/severum/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/severum/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/severum/</loc><priority>0.7</priority></url>
+
+  <!-- siamese-algae-eater -->
+  <url>
+    <loc>https://fishfinder.guide/fish/siamese-algae-eater/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/siamese-algae-eater/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/siamese-algae-eater/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/siamese-algae-eater/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/siamese-algae-eater/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/siamese-algae-eater/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/siamese-algae-eater/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/siamese-algae-eater/</loc><priority>0.7</priority></url>
+
+  <!-- silvertip-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/silvertip-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/silvertip-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/silvertip-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/silvertip-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/silvertip-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/silvertip-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/silvertip-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/silvertip-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- sparkling-gourami -->
+  <url>
+    <loc>https://fishfinder.guide/fish/sparkling-gourami/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/sparkling-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/sparkling-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/sparkling-gourami/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/sparkling-gourami/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/sparkling-gourami/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/sparkling-gourami/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/sparkling-gourami/</loc><priority>0.7</priority></url>
+
+  <!-- sterbai-cory -->
+  <url>
+    <loc>https://fishfinder.guide/fish/sterbai-cory/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/sterbai-cory/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/sterbai-cory/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/sterbai-cory/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/sterbai-cory/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/sterbai-cory/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/sterbai-cory/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/sterbai-cory/</loc><priority>0.7</priority></url>
+
+  <!-- swordtail -->
+  <url>
+    <loc>https://fishfinder.guide/fish/swordtail/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/swordtail/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/swordtail/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/swordtail/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/swordtail/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/swordtail/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/swordtail/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/swordtail/</loc><priority>0.7</priority></url>
+
+  <!-- tiger-barb -->
+  <url>
+    <loc>https://fishfinder.guide/fish/tiger-barb/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/tiger-barb/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/tiger-barb/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/tiger-barb/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/tiger-barb/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/tiger-barb/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/tiger-barb/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/tiger-barb/</loc><priority>0.7</priority></url>
+
+  <!-- tinfoil-barb -->
+  <url>
+    <loc>https://fishfinder.guide/fish/tinfoil-barb/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/tinfoil-barb/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/tinfoil-barb/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/tinfoil-barb/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/tinfoil-barb/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/tinfoil-barb/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/tinfoil-barb/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/tinfoil-barb/</loc><priority>0.7</priority></url>
+
+  <!-- turquoise-rainbow -->
+  <url>
+    <loc>https://fishfinder.guide/fish/turquoise-rainbow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/turquoise-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/turquoise-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/turquoise-rainbow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/turquoise-rainbow/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/turquoise-rainbow/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/turquoise-rainbow/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/turquoise-rainbow/</loc><priority>0.7</priority></url>
+
+  <!-- upside-down-catfish -->
+  <url>
+    <loc>https://fishfinder.guide/fish/upside-down-catfish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/upside-down-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/upside-down-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/upside-down-catfish/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/upside-down-catfish/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/upside-down-catfish/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/upside-down-catfish/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/upside-down-catfish/</loc><priority>0.7</priority></url>
+
+  <!-- white-cloud-mountain-minnow -->
+  <url>
+    <loc>https://fishfinder.guide/fish/white-cloud-mountain-minnow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/white-cloud-mountain-minnow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/white-cloud-mountain-minnow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/white-cloud-mountain-minnow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/white-cloud-mountain-minnow/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/white-cloud-mountain-minnow/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/white-cloud-mountain-minnow/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/white-cloud-mountain-minnow/</loc><priority>0.7</priority></url>
+
+  <!-- x-ray-tetra -->
+  <url>
+    <loc>https://fishfinder.guide/fish/x-ray-tetra/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/x-ray-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/x-ray-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/x-ray-tetra/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/x-ray-tetra/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/x-ray-tetra/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/x-ray-tetra/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/x-ray-tetra/</loc><priority>0.7</priority></url>
+
+  <!-- yellow-lab -->
+  <url>
+    <loc>https://fishfinder.guide/fish/yellow-lab/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/yellow-lab/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/yellow-lab/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/yellow-lab/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/yellow-lab/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/yellow-lab/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/yellow-lab/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/yellow-lab/</loc><priority>0.7</priority></url>
+
+  <!-- yoyo-loach -->
+  <url>
+    <loc>https://fishfinder.guide/fish/yoyo-loach/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/yoyo-loach/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/yoyo-loach/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/yoyo-loach/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/yoyo-loach/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/yoyo-loach/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/yoyo-loach/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/yoyo-loach/</loc><priority>0.7</priority></url>
+
+  <!-- zebra-danio -->
+  <url>
+    <loc>https://fishfinder.guide/fish/zebra-danio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/zebra-danio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/zebra-danio/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/zebra-danio/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/zebra-danio/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/zebra-danio/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/zebra-danio/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/zebra-danio/</loc><priority>0.7</priority></url>
+
+  <!-- zebra-loach -->
+  <url>
+    <loc>https://fishfinder.guide/fish/zebra-loach/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/zebra-loach/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/zebra-loach/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/zebra-loach/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/zebra-loach/"/>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://fishfinder.guide/es/peces/zebra-loach/</loc><priority>0.7</priority></url>
+  <url><loc>https://fishfinder.guide/de/fische/zebra-loach/</loc><priority>0.7</priority></url>
   <url><loc>https://fishfinder.guide/fr/poissons/zebra-loach/</loc><priority>0.7</priority></url>
+</urlset>
