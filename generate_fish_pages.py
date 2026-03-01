@@ -211,12 +211,12 @@ def generate_html(fish):
         <!-- Hero Section -->
         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden mb-8">
             <div class="md:flex">
-                <div class="md:w-2/5">
-                    <div class="w-full aspect-[4/5] bg-gradient-to-br from-cyan-100 via-teal-100 to-blue-100 flex items-center justify-center border-r border-slate-200 p-6">
+                <div class="md:w-1/2">
+                    <div class="w-full aspect-square bg-gradient-to-br from-cyan-100 via-teal-100 to-blue-100 flex items-center justify-center border-r border-slate-200 p-4">
                         <img src="/images/fish/{fish_id}.webp" alt="{name}" class="w-full h-full object-contain" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\\'text-8xl\\'>🐟</span>';">
                     </div>
                 </div>
-                <div class="md:w-3/5 p-6 md:p-8">
+                <div class="md:w-1/2 p-6 md:p-8">
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="{temp_bg} {temp_text} px-3 py-1 rounded-full text-sm font-medium">{temperament}</span>
                         <span class="{care_bg} {care_text} px-3 py-1 rounded-full text-sm font-medium">{care_level}</span>
