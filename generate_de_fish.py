@@ -67,7 +67,8 @@ TRANSLATIONS = [
     
     # Stats labels
     (r'>Tank Size<', '>Aquariumgröße<'),
-    (r'>Min Tank<', '>Min. Aquarium<'),
+    (r'>Min Tank \((\d+)gal\)<', r'>Min. Aquarium (\1gal)<'),
+    (r'>Adult Size \(([^)]+)\)<', r'>Erwachsenengröße (\1)<'),
     (r'>Minimum Tank<', '>Mindestaquarium<'),
     (r'>Temperature<', '>Temperatur<'),
     (r'>Size<', '>Größe<'),
