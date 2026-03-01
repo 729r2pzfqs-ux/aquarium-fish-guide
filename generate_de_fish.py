@@ -30,6 +30,7 @@ TRANSLATIONS = [
     (r'href="/faq/"', 'href="/de/faq/"'),
     (r'href="/articles/"', 'href="/de/artikel/"'),
     (r'href="/about/"', 'href="/de/ueber/"'),
+    (r'href="/compare/"', 'href="/de/kompatibilitaet/"'),
     (r'href="../search/"', 'href="../suche/"'),
     (r'href="../quiz/"', 'href="../quiz/"'),
     (r'href="../compatibility/"', 'href="../kompatibilitaet/"'),
@@ -201,8 +202,24 @@ TRANSLATIONS = [
     (r'Needs soft water', 'Benötigt weiches Wasser'),
     (r'Needs specific pH', 'Benötigt spezifischen pH-Wert'),
     
+    # Breadcrumb schema
+    (r'"name": "Home"', '"name": "Startseite"'),
+    (r'"name": "Fish"', '"name": "Fische"'),
+    
     # Section headings
+    (r'>About ([^<]+)<', r'>Über \1<'),
+    (r'>Tank Setup<', '>Aquarium-Einrichtung<'),
     (r'>Tank Mate Compatibility<', '>Mitbewohner-Kompatibilität<'),
+    (r'Tank Setup', 'Aquarium-Einrichtung'),
+    (r'Diet & Feeding', 'Ernährung & Fütterung'),
+    (r'Diet type:', 'Ernährungstyp:'),
+    (r'Expert Tips', 'Experten-Tipps'),
+    (r'>Omnivore<', '>Allesfresser<'),
+    (r'>Carnivore<', '>Fleischfresser<'),
+    (r'>Herbivore<', '>Pflanzenfresser<'),
+    (r': Omnivore', ': Allesfresser'),
+    (r': Carnivore', ': Fleischfresser'),
+    (r': Herbivore', ': Pflanzenfresser'),
     (r'>Care Requirements<', '>Pflegeanforderungen<'),
     (r'>Care Tips<', '>Pflegetipps<'),
     (r'>Fish Quiz<', '>Fisch-Quiz<'),
