@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#06b6d4">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWDX74LPLP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CWDX74LPLP');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquarienfische FAQ — Häufig gestellte Fragen | FishFinder</title>
+    <meta name="description" content="Antworten auf häufig gestellte Fragen zur Aquarienfischhaltung. Erfahre alles über Einfahren, Fischkompatibilität, Fütterung und mehr.">
+    <link rel="canonical" href="https://fishfinder.guide/de/faq/">
+    <link rel="alternate" hreflang="en" href="https://fishfinder.guide/faq/">
+    <link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/preguntas-frecuentes/">
+    <link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/faq/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fishfinder.guide/de/faq/">
+    <meta property="og:title" content="Aquarienfische FAQ — Häufig gestellte Fragen">
+    <meta property="og:description" content="Antworten auf häufig gestellte Fragen zur Aquarienfischhaltung.">
+    <meta property="og:site_name" content="FishFinder">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Welche Fische sind die besten für Anfänger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die besten Anfängerfische sind Kampffische, Guppys, Platys, Mollys, Zebrabärblinge und Panzerwelse. Diese Arten sind robust, verzeihen Fehler und sind leicht zu pflegen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie fahre ich mein Aquarium ein?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das Einfahren etabliert nützliche Bakterien, die giftiges Ammoniak in weniger schädliches Nitrat umwandeln. Füge Ammoniak hinzu (Fischfutter oder reines Ammoniak) und warte 4-6 Wochen beim Testen des Wassers. Wenn Ammoniak und Nitrit 0 ppm anzeigen und Nitrat vorhanden ist, ist dein Becken eingefahren."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Fische kann ich in mein Aquarium setzen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine allgemeine Richtlinie ist 1 cm Fisch pro Liter, aber das variiert. Berücksichtige die Erwachsenengröße, das Aktivitätslevel und die Biobelastung. Ein 38-Liter-Becken kann 6-8 kleine Salmler oder 1 Kampffisch beherbergen. Recherchiere immer die spezifischen Anforderungen jeder Art."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie oft sollte ich das Wasser wechseln?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wechsle wöchentlich 20-30% deines Beckenwassers. Dies entfernt Nitrate und füllt Mineralien auf. Nutze einen Mulmabsauger, um den Bodengrund während der Wasserwechsel zu reinigen. Behandle neues Wasser immer mit Wasseraufbereiter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Temperatur sollte mein Aquarium haben?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die meisten tropischen Fische brauchen 24-27°C. Manche wie Kampffische bevorzugen 26-28°C, während andere wie Zebrabärblinge kühlere Temperaturen (18-25°C) tolerieren. Recherchiere die Bedürfnisse jeder Art und finde einen kompatiblen Bereich."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie oft sollte ich meine Fische füttern?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Füttere erwachsene Fische ein- oder zweimal täglich, nur so viel wie sie in 2-3 Minuten fressen können. Überfütterung ist der häufigste Fehler und verursacht Wasserqualitätsprobleme. Überspringe einen Fütterungstag pro Woche, um ihr Verdauungssystem zu entlasten."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .card-shadow {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .faq-item[open] .faq-icon {
+            transform: rotate(180deg);
+        }
+        .faq-item[open] summary {
+            color: #0891b2;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-slate-800">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/de/" class="flex items-center gap-2">
+                <svg class="w-8 h-8 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
+                    <path d="M18 12v.5"/>
+                    <path d="M16 10c1 0 2 1 2 2s-1 2-2 2"/>
+                    <path d="M2 12h3"/>
+                    <path d="M5 12 Q2 8 3 5"/>
+                    <path d="M5 12 Q2 16 3 19"/>
+                </svg>
+                <span class="text-xl font-bold bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">FishFinder</span>
+            </a>
+            <nav class="flex items-center gap-4 md:gap-6 text-sm font-medium">
+                <a href="/de/suche/" class="text-slate-600 hover:text-cyan-600 transition ml-2 md:ml-0">Fische durchsuchen</a>
+                <div class="flex items-center gap-1 text-xs">
+                    <a href="/faq/" class="text-slate-500 hover:text-cyan-600 transition">EN</a>
+                    <span class="text-slate-300">|</span>
+                    <span class="font-bold text-cyan-600">DE</span>
+                </div>
+                <a href="/de/quiz/" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-4 sm:px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition text-sm sm:text-base"><span class="sm:hidden">Quiz</span><span class="hidden sm:inline">Finde deinen Fisch</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-16 px-4">
+        <div class="max-w-3xl mx-auto">
+            <!-- Page Header -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-cyan-50 px-4 py-2 rounded-full text-sm font-medium text-cyan-600 mb-4">
+                    <i data-lucide="help-circle" class="w-4 h-4"></i>
+                    Häufig gestellte Fragen
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">Aquarienfische FAQ</h1>
+                <p class="text-lg text-slate-600 max-w-xl mx-auto">Häufige Fragen zur Fischhaltung, Beckeneinrichtung und Aquarienpflege.</p>
+            </div>
+
+            <!-- FAQ Categories -->
+            <div class="space-y-8">
+                
+                <!-- Getting Started -->
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-cyan-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="play-circle" class="w-4 h-4 text-cyan-600"></i>
+                        </span>
+                        Erste Schritte
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Welche Fische sind die besten für Anfänger?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p>Die besten Anfängerfische sind robust und verzeihen Schwankungen der Wasserqualität:</p>
+                                <ul class="list-disc ml-5 mt-2 space-y-1">
+                                    <li><a href="/de/fische/betta-fish/" class="text-cyan-600 hover:underline">Kampffisch</a> — Perfekt für kleine Becken, wunderschön, pflegeleicht</li>
+                                    <li><a href="/de/fische/guppy/" class="text-cyan-600 hover:underline">Guppys</a> — Farbenfroh, robust, vermehren sich leicht</li>
+                                    <li><a href="/de/fische/platy/" class="text-cyan-600 hover:underline">Platys</a> — Robust, friedlich, viele Farbvarianten</li>
+                                    <li><a href="/de/fische/molly/" class="text-cyan-600 hover:underline">Mollys</a> — Anpassungsfähig, friedliche Gesellschaftsfische</li>
+                                    <li><a href="/de/fische/zebra-danio/" class="text-cyan-600 hover:underline">Zebrabärblinge</a> — Extrem robust, aktive Schwimmer</li>
+                                </ul>
+                                <p class="mt-3"><a href="/de/quiz/" class="text-cyan-600 hover:underline font-medium">Mach unser Quiz →</a> um deinen perfekten Fisch zu finden.</p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Wie fahre ich mein Aquarium ein?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p><strong>Einfahren</strong> etabliert nützliche Bakterien, die giftiges Ammoniak (aus Fischabfällen) in weniger schädliches Nitrat umwandeln. So geht's:</p>
+                                <ol class="list-decimal ml-5 mt-2 space-y-2">
+                                    <li>Richte dein Becken mit Filter, Heizer und entchlortem Wasser ein</li>
+                                    <li>Füge eine Ammoniakquelle hinzu (Fischfutter oder reines Ammoniak)</li>
+                                    <li>Teste täglich das Wasser mit einem Testkit (JBL oder API empfohlen)</li>
+                                    <li>Warte 4-6 Wochen — Ammoniak steigt, dann Nitrit, dann fallen beide auf 0</li>
+                                    <li>Wenn Ammoniak = 0, Nitrit = 0, und Nitrat vorhanden ist, bist du fertig!</li>
+                                </ol>
+                                <p class="mt-3"><strong>Setze niemals Fische in ein nicht eingefahrenes Becken.</strong> Ammoniakvergiftung ist der Hauptgrund für den Tod neuer Fische.</p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Wie viele Fische kann ich in mein Becken setzen?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p>Die alte Regel "1 cm Fisch pro Liter" ist ein grober Ausgangspunkt, aber vereinfacht. Bedenke:</p>
+                                <ul class="list-disc ml-5 mt-2 space-y-1">
+                                    <li><strong>Erwachsenengröße</strong> — Nutze die ausgewachsene Größe, nicht die aktuelle</li>
+                                    <li><strong>Aktivitätslevel</strong> — Aktive Schwimmer brauchen mehr Platz</li>
+                                    <li><strong>Biobelastung</strong> — Schmutzige Fische (Goldfische, Welse) brauchen mehr Filterung</li>
+                                    <li><strong>Territorialbedürfnisse</strong> — Manche Fische brauchen eigenen Raum</li>
+                                </ul>
+                                <p class="mt-3">Beispielbesatz für ein 38-Liter-Becken:</p>
+                                <ul class="list-disc ml-5 mt-1 space-y-1">
+                                    <li>1 Kampffisch (allein oder mit Schnecken/Garnelen)</li>
+                                    <li>ODER 6-8 Neonsalmler + 3-4 Panzerwelse</li>
+                                    <li>ODER 6 Guppys + 1 Apfelschnecke</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Tank Maintenance -->
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="droplets" class="w-4 h-4 text-teal-600"></i>
+                        </span>
+                        Beckenpflege
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Wie oft sollte ich das Wasser wechseln?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p><strong>Wöchentliche 20-30% Wasserwechsel</strong> sind die Grundlage guter Fischhaltung.</p>
+                                <ul class="list-disc ml-5 mt-2 space-y-1">
+                                    <li>Entfernt Nitrate, die sich mit der Zeit ansammeln</li>
+                                    <li>Füllt Mineralien auf, die Fische brauchen</li>
+                                    <li>Nutze einen Mulmabsauger, um den Bodengrund zu reinigen</li>
+                                    <li>Behandle neues Wasser immer mit Wasseraufbereiter</li>
+                                    <li>Passe die Temperatur des neuen Wassers an das Beckenwasser an</li>
+                                </ul>
+                                <p class="mt-3">Regelmäßigkeit ist der Schlüssel — regelmäßige kleine Wechsel sind besser als gelegentliche große.</p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Warum ist mein Aquariumwasser trüb?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p>Trübes Wasser hat verschiedene Ursachen:</p>
+                                <ul class="list-disc ml-5 mt-2 space-y-2">
+                                    <li><strong>Weiß/grau trüb</strong> — Bakterienblüte, häufig in neuen Becken. Klärt sich meist innerhalb einer Woche.</li>
+                                    <li><strong>Grün trüb</strong> — Algenblüte. Zu viel Licht oder Nährstoffe. Reduziere Beleuchtung, mache Wasserwechsel.</li>
+                                    <li><strong>Nach Wasserwechsel</strong> — Aufgewirbelter Mulm. Sollte sich innerhalb von Stunden setzen.</li>
+                                </ul>
+                                <p class="mt-3"><strong>Lösungen:</strong></p>
+                                <ul class="list-disc ml-5 mt-1 space-y-1">
+                                    <li>Nicht überfüttern (häufigste Ursache)</li>
+                                    <li>Ausreichende Filterung sicherstellen</li>
+                                    <li>Regelmäßige Wasserwechsel machen</li>
+                                    <li>Geduldig sein — Trübung in neuen Becken löst sich oft von selbst</li>
+                                </ul>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Welche Filtergröße brauche ich?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p>Wähle einen Filter, der für <strong>mindestens deine Beckengröße ausgelegt ist, idealerweise 1,5-2x größer</strong>.</p>
+                                <ul class="list-disc ml-5 mt-2 space-y-1">
+                                    <li>75-Liter-Becken → Filter für 100-150 Liter ausgelegt</li>
+                                    <li>Achte auf Filter mit guter biologischer Filterung (wo Bakterien leben)</li>
+                                    <li>Außenfilter, Innenfilter oder Hamburger Mattenfilter sind alle gute Optionen</li>
+                                    <li>Mehr Filterung ist fast immer besser</li>
+                                </ul>
+                                <p class="mt-3">Für <a href="/de/fische/betta-fish/" class="text-cyan-600 hover:underline">Kampffische</a> und andere langsame Schwimmer wähle Filter mit einstellbarer Strömung, um starke Strömungen zu vermeiden.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Fish Care -->
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="heart" class="w-4 h-4 text-emerald-600"></i>
+                        </span>
+                        Fischpflege
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Wie oft sollte ich meine Fische füttern?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p><strong>Ein- oder zweimal täglich, nur so viel wie sie in 2-3 Minuten fressen können.</strong></p>
+                                <ul class="list-disc ml-5 mt-2 space-y-1">
+                                    <li>Überfütterung ist der häufigste Anfängerfehler</li>
+                                    <li>Nicht gefressenes Futter verrottet und verschmutzt das Wasser</li>
+                                    <li>Fischmägen sind winzig — ein paar Flocken/Pellets reichen</li>
+                                    <li>Einen Tag pro Woche Fütterung auslassen ist gut für ihre Verdauung</li>
+                                    <li>Variiere ihre Ernährung mit Flocken, Pellets und gelegentlich Frost- oder Lebendfutter</li>
+                                </ul>
+                                <p class="mt-3"><strong>Merke:</strong> Ein hungriger Fisch ist ein gesunder Fisch. Sie sehen immer hungrig aus!</p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Welche Temperatur sollte mein Aquarium haben?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p>Die meisten tropischen Fische gedeihen bei <strong>24-27°C</strong>, aber es variiert:</p>
+                                <ul class="list-disc ml-5 mt-2 space-y-1">
+                                    <li><a href="/de/fische/betta-fish/" class="text-cyan-600 hover:underline">Kampffische</a>: 26-28°C — bevorzugen wärmeres Wasser</li>
+                                    <li><a href="/de/fische/neon-tetra/" class="text-cyan-600 hover:underline">Neonsalmler</a>: 22-26°C — mittlerer tropischer Bereich</li>
+                                    <li><a href="/de/fische/zebra-danio/" class="text-cyan-600 hover:underline">Zebrabärblinge</a>: 18-25°C — tolerieren kühlere Temperaturen</li>
+                                    <li><a href="/de/fische/oscar/" class="text-cyan-600 hover:underline">Oscars</a>: 23-27°C — Warmwasser-Buntbarsche</li>
+                                </ul>
+                                <p class="mt-3">Bei mehreren Arten finde ihren überlappenden Temperaturbereich. Nutze einen zuverlässigen Heizer mit Thermostat.</p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Brauche ich einen Heizer für mein Aquarium?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p><strong>Ja, für fast alle tropischen Fische.</strong></p>
+                                <ul class="list-disc ml-5 mt-2 space-y-1">
+                                    <li>Die meisten tropischen Fische brauchen stabile Temperaturen von 24-28°C</li>
+                                    <li>Raumtemperatur schwankt, besonders nachts</li>
+                                    <li>Temperaturschwankungen stressen Fische und schwächen das Immunsystem</li>
+                                    <li>Wähle einen Heizer, der für deine Beckengröße ausgelegt ist (meist 1 Watt pro Liter)</li>
+                                    <li>Nutze ein separates Thermometer zur Kontrolle</li>
+                                </ul>
+                                <p class="mt-3"><strong>Ausnahmen:</strong> Manche Fische wie Kardinalfische und Goldfische bevorzugen kühleres Wasser und brauchen keinen Heizer.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Compatibility -->
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="users" class="w-4 h-4 text-purple-600"></i>
+                        </span>
+                        Kompatibilität & Mitbewohner
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Kann ich verschiedene Arten zusammen halten?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p>Ja, aber wähle sorgfältig! Bedenke:</p>
+                                <ul class="list-disc ml-5 mt-2 space-y-1">
+                                    <li><strong>Temperament</strong> — Vergesellschafte keine aggressiven mit friedlichen</li>
+                                    <li><strong>Größe</strong> — Große Fische könnten kleine fressen</li>
+                                    <li><strong>Wasserwerte</strong> — pH und Temperaturpräferenzen sollten sich überschneiden</li>
+                                    <li><strong>Schwimmzone</strong> — Mische Oberflächen-, Mittel- und Bodenbewohner für optische Vielfalt</li>
+                                </ul>
+                                <p class="mt-3"><strong>Sichere Gesellschaftsfische:</strong> Salmler, Rasboras, Panzerwelse, Lebendgebärende und friedliche Fadenfische.</p>
+                                <p class="mt-2"><a href="/de/kompatibilitaet/" class="text-cyan-600 hover:underline font-medium">Nutze unseren Kompatibilitätsprüfer →</a></p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Können Kampffische mit anderen Fischen leben?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p><strong>Männliche Kampffische dürfen niemals mit anderen männlichen Kampffischen gehalten werden.</strong> Allerdings können manche mit friedlichen Mitbewohnern leben:</p>
+                                <p class="mt-2"><strong>Oft kompatibel:</strong></p>
+                                <ul class="list-disc ml-5 mt-1 space-y-1">
+                                    <li><a href="/de/fische/corydoras-catfish/" class="text-cyan-600 hover:underline">Panzerwelse</a> — Bodenbewohner, werden von Kampffischen ignoriert</li>
+                                    <li><a href="/de/fische/mystery-snail/" class="text-cyan-600 hover:underline">Apfelschnecken</a> — Friedliches Aufräumteam</li>
+                                    <li><a href="/de/fische/cherry-shrimp/" class="text-cyan-600 hover:underline">Zwerggarnelen</a> — Können gefressen werden, koexistieren aber oft</li>
+                                </ul>
+                                <p class="mt-2"><strong>Vermeiden:</strong> Guppys (farbenfroh = Ziel), Flossenbeißer, andere Labyrinthfische</p>
+                                <p class="mt-2">Der Erfolg hängt von der individuellen Kampffisch-Persönlichkeit und einem ausreichend großen Becken ab (mind. 38 Liter empfohlen).</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Troubleshooting -->
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="alert-triangle" class="w-4 h-4 text-red-600"></i>
+                        </span>
+                        Problemlösung
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Warum sterben meine Fische?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p><strong>Teste zuerst dein Wasser!</strong> Die meisten Fischtode werden durch Wasserqualitätsprobleme verursacht.</p>
+                                <p class="mt-2"><strong>Häufige Ursachen:</strong></p>
+                                <ul class="list-disc ml-5 mt-1 space-y-1">
+                                    <li><strong>Ammoniak/Nitrit-Vergiftung</strong> — Becken nicht eingefahren oder überbesetzt</li>
+                                    <li><strong>Temperaturschock</strong> — Plötzliche Temperaturänderungen</li>
+                                    <li><strong>Chlor</strong> — Vergessen, neues Wasser aufzubereiten</li>
+                                    <li><strong>Inkompatible Mitbewohner</strong> — Aggression oder Stress</li>
+                                    <li><strong>Überfütterung</strong> — Verschmutzt Wasser und verursacht Blähungen</li>
+                                    <li><strong>Krankheit</strong> — Oft durch Stress aus obigen Faktoren verursacht</li>
+                                </ul>
+                                <p class="mt-3"><strong>Gesunde Wasserwerte:</strong> Ammoniak 0, Nitrit 0, Nitrat &lt;40ppm, pH stabil für deine Arten.</p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-slate-800 hover:text-cyan-600 transition">
+                                Wie lange leben Aquarienfische?
+                                <i data-lucide="chevron-down" class="w-5 h-5 faq-icon transition-transform text-slate-300"></i>
+                            </summary>
+                            <div class="px-5 pb-5 text-slate-600 leading-relaxed">
+                                <p>Die Lebenserwartung variiert stark je nach Art:</p>
+                                <ul class="list-disc ml-5 mt-2 space-y-1">
+                                    <li><a href="/de/fische/betta-fish/" class="text-cyan-600 hover:underline">Kampffische</a>: 3-5 Jahre</li>
+                                    <li><a href="/de/fische/guppy/" class="text-cyan-600 hover:underline">Guppys</a>: 2-3 Jahre</li>
+                                    <li><a href="/de/fische/neon-tetra/" class="text-cyan-600 hover:underline">Neonsalmler</a>: 5-8 Jahre</li>
+                                    <li><a href="/de/fische/corydoras-catfish/" class="text-cyan-600 hover:underline">Panzerwelse</a>: 5-10 Jahre</li>
+                                    <li><a href="/de/fische/angelfish/" class="text-cyan-600 hover:underline">Skalare</a>: 10-15 Jahre</li>
+                                    <li><a href="/de/fische/oscar/" class="text-cyan-600 hover:underline">Oscars</a>: 10-20 Jahre</li>
+                                    <li><a href="/de/fische/common-pleco/" class="text-cyan-600 hover:underline">Welse</a>: 10-15+ Jahre</li>
+                                </ul>
+                                <p class="mt-3">Gute Pflege beeinflusst die Langlebigkeit erheblich. Fische sterben oft jung wegen schlechter Wasserqualität, nicht wegen Alter.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="mt-16 bg-gradient-to-br from-cyan-50 to-teal-50 rounded-3xl p-8 text-center border border-cyan-100">
+                <h2 class="text-2xl font-bold text-slate-900 mb-3">Noch Fragen?</h2>
+                <p class="text-slate-600 mb-6">Nutze unsere Tools, um den perfekten Fisch für deine Einrichtung zu finden.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/de/quiz/" class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-xl hover:shadow-cyan-500/25 transition">
+                        <i data-lucide="target" class="w-5 h-5"></i>
+                        Finde deinen Fisch Quiz
+                    </a>
+                    <a href="/de/kompatibilitaet/" class="inline-flex items-center gap-2 bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-2xl font-semibold text-lg hover:border-slate-300 hover:shadow-lg transition">
+                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                        Kompatibilitätsprüfer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <svg class="w-8 h-8 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
+                        <path d="M18 12v.5"/>
+                    </svg>
+                    <span class="text-xl font-bold">FishFinder</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-slate-300">
+                    <a href="/de/quiz/" class="hover:text-white transition">Fisch-Quiz</a>
+                    <a href="/de/einrichtungen/" class="hover:text-white transition">Einrichtungen</a>
+                    <a href="/de/kompatibilitaet/" class="hover:text-white transition">Kompatibilität</a>
+                    <a href="./" class="hover:text-white transition text-white">FAQ</a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-300">
+                <p>© 2026 FishFinder. Erstellt mit 🐠 für Fischliebhaber überall.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
