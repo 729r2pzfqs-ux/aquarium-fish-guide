@@ -150,6 +150,65 @@ TRANSLATIONS = [
     # Footer
     (r'Made with', 'Hecho con'),
     (r'for fish lovers everywhere', 'para amantes de los peces'),
+    
+    # Section headings
+    (r'>About ([^<]+)<', r'>Sobre \1<'),
+    (r'>Care Requirements<', '>Requisitos de Cuidado<'),
+    (r'>Care Tips<', '>Consejos de Cuidado<'),
+    (r'Tank Setup', 'Configuración del Tanque'),
+    (r'Diet & Feeding', 'Dieta y Alimentación'),
+    
+    # Care notes
+    (r'Minimum 5-gallon tank required', 'Se requiere tanque mínimo de 19L'),
+    (r'Minimum 10-gallon tank required', 'Se requiere tanque mínimo de 38L'),
+    (r'Minimum 20-gallon tank required', 'Se requiere tanque mínimo de 75L'),
+    (r'Minimum 30-gallon tank required', 'Se requiere tanque mínimo de 114L'),
+    (r'Minimum 40-gallon tank required', 'Se requiere tanque mínimo de 151L'),
+    (r'Minimum 50-gallon tank required', 'Se requiere tanque mínimo de 189L'),
+    (r'Feed 1-2 times daily', 'Alimentar 1-2 veces al día'),
+    (r'Feed 2-3 times daily', 'Alimentar 2-3 veces al día'),
+    
+    # Categories
+    (r'Category: Livebearer', 'Categoría: Vivíparo'),
+    (r'Category: Cichlid', 'Categoría: Cíclido'),
+    (r'Category: Tetra', 'Categoría: Tetra'),
+    (r'Category: Catfish', 'Categoría: Pez Gato'),
+    (r'Category: Shrimp', 'Categoría: Gamba'),
+    (r'Category: Snail', 'Categoría: Caracol'),
+    (r'Category: Loach', 'Categoría: Locha'),
+    (r'Category: Barb', 'Categoría: Barbo'),
+    (r'Category: Gourami', 'Categoría: Gurami'),
+    (r'Category: Betta', 'Categoría: Betta'),
+    (r'Category: Pleco', 'Categoría: Pleco'),
+    (r'Category: Corydoras', 'Categoría: Corydora'),
+    
+    # Fish descriptions
+    (r'Colorful and active', 'Colorido y activo'),
+    (r'livebearers', 'vivíparos'),
+    (r'Livebearers', 'Vivíparos'),
+    (r'Breed readily in home aquariums', 'Se reproducen fácilmente en acuarios domésticos'),
+    (r'Many color varieties', 'Muchas variedades de color'),
+    (r'Easy to breed', 'Fácil de criar'),
+    (r'Hardy species', 'Especie resistente'),
+    (r'Beginner friendly', 'Apto para principiantes'),
+    (r'Low maintenance', 'Bajo mantenimiento'),
+    (r'Active swimmers', 'Nadadores activos'),
+    (r'Peaceful community fish', 'Pez comunitario pacífico'),
+    (r'A centerpiece fish', 'Un pez central'),
+    (r'for larger tanks', 'para tanques grandes'),
+    (r'Elegant cichlids', 'Cíclidos elegantes'),
+    (r'with tall, triangular bodies', 'con cuerpos altos y triangulares'),
+    
+    # More care notes
+    (r'Tall tank needed', 'Se necesita tanque alto'),
+    (r'may eat small fish', 'puede comer peces pequeños'),
+    (r'can be territorial when breeding', 'puede ser territorial al criar'),
+    (r'Varied diet recommended', 'Se recomienda dieta variada'),
+    (r'Weekly water changes', 'Cambios de agua semanales'),
+    (r'Stable water parameters', 'Parámetros de agua estables'),
+    (r'Provide hiding spots', 'Proporcionar escondites'),
+    (r'Keep in groups', 'Mantener en grupos'),
+    (r'Keep in schools', 'Mantener en cardúmenes'),
 ]
 
 def translate_content(content):
