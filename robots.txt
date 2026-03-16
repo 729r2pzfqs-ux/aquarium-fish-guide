@@ -2,6 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://fishfinder.guide/sitemap.xml
-Disallow: /compare
-Disallow: /*?fish1=
-Disallow: /*?fish2=
