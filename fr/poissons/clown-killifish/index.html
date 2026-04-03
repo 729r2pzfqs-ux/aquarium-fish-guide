@@ -2,13 +2,8 @@
 <html lang="fr">
 <head>
     <!-- Google Analytics Placeholder -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWDX74LPLP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CWDX74LPLP');
-    </script>
+    
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clown Killifish Guide d'entretien | FishFinder</title>
@@ -72,7 +67,13 @@
       ]
     }
     </script>
-</head>
+
+    <link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/clown-killifish/" />
+    <link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/clown-killifish/" />
+    <link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/clown-killifish/" />
+    <link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/clown-killifish/" />
+    <link rel="alternate" hreflang="x-default" href="https://fishfinder.guide/fish/clown-killifish/" />
+    </head>
 <body class="bg-slate-50 text-slate-800">
     <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4">
@@ -373,5 +374,21 @@
     <script>
         lucide.createIcons();
     </script>
+<!-- GDPR Cookie Consent -->
+<div id="cookie-consent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:16px 24px;z-index:9999;font-family:system-ui,sans-serif;font-size:14px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;flex:1;min-width:200px;">We use cookies for analytics. By clicking "Accept", you consent to our use of cookies.</p>
+    <div style="display:flex;gap:8px;">
+      <button onclick="acceptCookies()" style="background:#0891b2;color:#fff;border:none;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:14px;">Accept</button>
+      <button onclick="declineCookies()" style="background:transparent;color:#fff;border:1px solid #555;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:14px;">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+function loadGA(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-CWDX74LPLP';document.head.appendChild(s);s.onload=function(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CWDX74LPLP');};}
+function acceptCookies(){localStorage.setItem('fishfinder-consent','granted');document.getElementById('cookie-consent').style.display='none';loadGA();}
+function declineCookies(){localStorage.setItem('fishfinder-consent','denied');document.getElementById('cookie-consent').style.display='none';}
+(function(){var c=localStorage.getItem('fishfinder-consent');if(c==='granted'){loadGA();}else if(!c){document.getElementById('cookie-consent').style.display='block';}})();
+</script>
 </body>
 </html>
