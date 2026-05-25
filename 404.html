@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found | FishFinder Guide</title>
   <link rel="icon" href="/favicon.ico">
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      var lower = path.toLowerCase();
+      if (path !== lower) {
+        window.location.replace(lower + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
   <style>
     :root { --primary: #0891b2; --bg: #f0fdfa; --text: #1e293b; --muted: #64748b; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -19,7 +28,7 @@
   </style>
 </head>
 <body>
-  <h1>🐠</h1>
+  <h1>&#x1F420;</h1>
   <h2>Page Not Found</h2>
   <p>This fish swam away! Try searching for your favorite aquarium fish instead.</p>
   <div class="links">
