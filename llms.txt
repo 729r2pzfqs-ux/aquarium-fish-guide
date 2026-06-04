@@ -1,0 +1,7 @@
+# fishfinder.guide
+
+## About
+FishFinder.guide helps you identify aquarium fish and learn about their care. Browse 200+ freshwater and saltwater species with photos, tank requirements, and compatibility information. Available in English, German, Spanish, and French.
+
+## URLs
+- Homepage: https://fishfinder.guide/
