@@ -26,7 +26,6 @@
     var localeMatch = p.match(/^\/(es|fr|ar|ru|ja|zh|hi|pt|tr)\//);
     if (localeMatch) {
       var rest = p.replace(/^\/(es|fr|ar|ru|ja|zh|hi|pt|tr)\//, '/');
-      // Map German search path to English
       if (rest === '/suche/' || rest === '/suche') rest = '/search/';
       if (rest === '/peces/' || rest === '/peces') rest = '/fish/';
       if (!rest || rest === '/') rest = '/';
@@ -41,14 +40,14 @@
         window.location.replace(lower + s);
         return;
       }
-      // Already lowercase but still 404 - go to /de/
       window.location.replace('/de/');
       return;
     }
 
-    // 4. Corrupted fish slugs (e.g. cichtyophthirioselid)
-    if (p.indexOf('/fish/') === 0 && p.length > 50) {
-      window.location.replace('/fish/');
+    // 4. Case normalization
+    var lower = p.toLowerCase();
+    if (p !== lower) {
+      window.location.replace(lower + s);
       return;
     }
 
@@ -58,10 +57,13 @@
       return;
     }
 
-    // 6. Case normalization (catches remaining mixed-case URLs)
-    var lower = p.toLowerCase();
-    if (p !== lower) {
-      window.location.replace(lower + s);
+    // 6. Section-based fallbacks for paths that still 404
+    if (p.indexOf('/fish/') === 0) {
+      window.location.replace('/fish/');
+      return;
+    }
+    if (p.indexOf('/articles/') === 0) {
+      window.location.replace('/');
       return;
     }
 
