@@ -6,14 +6,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found | FishFinder Guide</title>
   <link rel="icon" href="/favicon.ico">
+  <meta name="robots" content="noindex">
   <script>
-    (function() {
-      var path = window.location.pathname;
-      var lower = path.toLowerCase();
-      if (path !== lower) {
-        window.location.replace(lower + window.location.search + window.location.hash);
+  (function(){
+    var p = window.location.pathname;
+    var s = window.location.search;
+
+    // Prevent redirect loops
+    var lk='ff404_'+p;
+    try{if(sessionStorage.getItem(lk)){sessionStorage.removeItem(lk);return;}sessionStorage.setItem(lk,'1');}catch(e){}
+
+    // 1. Template variable leaks
+    if (p.indexOf('${') !== -1 || p.indexOf('{') !== -1) {
+      window.location.replace('/');
+      return;
+    }
+
+    // 2. Locale redirects: /es/X → /X, /fr/X → /X (English equivalent)
+    var localeMatch = p.match(/^\/(es|fr|ar|ru|ja|zh|hi|pt|tr)\//);
+    if (localeMatch) {
+      var rest = p.replace(/^\/(es|fr|ar|ru|ja|zh|hi|pt|tr)\//, '/');
+      // Map German search path to English
+      if (rest === '/suche/' || rest === '/suche') rest = '/search/';
+      if (rest === '/peces/' || rest === '/peces') rest = '/fish/';
+      if (!rest || rest === '/') rest = '/';
+      window.location.replace(rest + s);
+      return;
+    }
+
+    // 3. German locale: /de/fische/X → try lowercase, fallback to /de/
+    if (p.indexOf('/de/') === 0) {
+      var lower = p.toLowerCase();
+      if (p !== lower) {
+        window.location.replace(lower + s);
+        return;
       }
-    })();
+      // Already lowercase but still 404 - go to /de/
+      window.location.replace('/de/');
+      return;
+    }
+
+    // 4. Corrupted fish slugs (e.g. cichtyophthirioselid)
+    if (p.indexOf('/fish/') === 0 && p.length > 50) {
+      window.location.replace('/fish/');
+      return;
+    }
+
+    // 5. Compare pages with query params
+    if (p.indexOf('/compare') === 0) {
+      window.location.replace('/compare/');
+      return;
+    }
+
+    // 6. Case normalization (catches remaining mixed-case URLs)
+    var lower = p.toLowerCase();
+    if (p !== lower) {
+      window.location.replace(lower + s);
+      return;
+    }
+
+    // 7. Add trailing slash
+    if (p.length > 1 && !p.match(/\.\w+$/) && !p.match(/\/$/)) {
+      window.location.replace(p + '/' + s);
+      return;
+    }
+  })();
   </script>
   <style>
     :root { --primary: #0891b2; --bg: #f0fdfa; --text: #1e293b; --muted: #64748b; }
