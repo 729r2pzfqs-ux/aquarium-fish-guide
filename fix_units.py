@@ -5,7 +5,7 @@ import re
 import json
 
 # Load fish data
-with open('/Users/juhaporraskorpi/clawd/aquarium-fish/data/fish.json') as f:
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data/fish.json')) as f:
     fish_data = {fish['id']: fish for fish in json.load(f)}
 
 def inches_to_cm(inches):
@@ -17,7 +17,7 @@ def gallons_to_liters(gallons):
 def f_to_c(f):
     return round((f - 32) * 5/9)
 
-fish_dir = '/Users/juhaporraskorpi/clawd/aquarium-fish/fish'
+fish_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fish')
 
 for fish_id in os.listdir(fish_dir):
     fish_path = os.path.join(fish_dir, fish_id, 'index.html')
