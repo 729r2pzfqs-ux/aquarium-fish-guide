@@ -4,7 +4,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWDX74LPLP"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-CWDX74LPLP");</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found | FishFinder Guide</title>
+  <title>Page Not Found | FishFinder</title>
   <link rel="icon" href="/favicon.ico">
   <meta name="robots" content="noindex">
   <script>
@@ -22,22 +22,27 @@
       return;
     }
 
-    // 2. Locale redirects: /es/X → /X, /fr/X → /X (English equivalent)
-    var localeMatch = p.match(/^\/(es|fr|ar|ru|ja|zh|hi|pt|tr)\//);
-    if (localeMatch) {
-      var rest = p.replace(/^\/(es|fr|ar|ru|ja|zh|hi|pt|tr)\//, '/');
-      if (rest === '/suche/' || rest === '/suche') rest = '/search/';
-      if (rest === '/peces/' || rest === '/peces') rest = '/fish/';
-      if (!rest || rest === '/') rest = '/';
-      window.location.replace(rest + s);
+    // 2. Locale redirects: /es/X, /fr/X → English equivalent section
+    var secMap = {'suche':'search','peces':'fish','poissons':'fish','rechercher':'search','buscar':'search','compatibilite':'compatibility','compatibilidad':'compatibility','comparer':'compatibility','configurations':'setups','configuraciones':'setups','a-propos':'about','sobre':'about','sobre-nosotros':'about','articulos':'articles','test':'quiz','preguntas-frecuentes':'faq'};
+    var lm = p.match(/^\/(es|fr|ar|ru|ja|zh|hi|pt|tr)\/([^\/]*)(\/.*)?$/);
+    if (lm) {
+      var sec = secMap[lm[2]] || lm[2];
+      var rest = lm[3] || '/';
+      window.location.replace((sec ? '/' + sec + rest : '/') + s);
       return;
     }
 
-    // 3. German locale: /de/fische/X → try lowercase, fallback to /de/
+    // 3. German locale: /de/X → try lowercase, then English equivalent, fallback to /de/
     if (p.indexOf('/de/') === 0) {
       var lower = p.toLowerCase();
       if (p !== lower) {
         window.location.replace(lower + s);
+        return;
+      }
+      var dmap = {'fische':'fish','suche':'search','kompatibilitaet':'compatibility','einrichtungen':'setups','ueber':'about','artikel':'articles'};
+      var dm = p.match(/^\/de\/([^\/]*)(\/.*)?$/);
+      if (dm && dmap[dm[1]]) {
+        window.location.replace('/' + dmap[dm[1]] + (dm[2] || '/') + s);
         return;
       }
       window.location.replace('/de/');
@@ -51,15 +56,15 @@
       return;
     }
 
-    // 5. Compare pages with query params
+    // 5. Compare pages: send to compatibility tool, keep query params
     if (p.indexOf('/compare') === 0) {
-      window.location.replace('/compare/');
+      window.location.replace('/compatibility/' + s);
       return;
     }
 
     // 6. Section-based fallbacks for paths that still 404
     if (p.indexOf('/fish/') === 0) {
-      window.location.replace('/fish/');
+      window.location.replace('/search/');
       return;
     }
     if (p.indexOf('/articles/') === 0) {

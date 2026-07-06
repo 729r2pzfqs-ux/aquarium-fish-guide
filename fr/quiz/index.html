@@ -8,6 +8,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#06b6d4">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWDX74LPLP"></script>
+    <script src="/fr/js/fish-fr.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -16,27 +17,30 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finde deinen Fisch Quiz — Entdecke deinen perfekten Fisch | FishFinder</title>
-    <meta name="description" content="Mach unser kurzes Quiz, um den perfekten Aquarienfisch pour deine Taille d'Aquarium, Erfahrungsstufe et Vorlieben zu finden.">
+    <title>Quiz : trouvez votre poisson — Découvrez votre poisson parfait | FishFinder</title>
+    <meta name="description" content="Faites notre petit quiz pour trouver le poisson d’aquarium parfait selon la taille de votre aquarium, votre niveau d’expérience et vos préférences.">
     <link rel="canonical" href="https://fishfinder.guide/fr/quiz/">
     <link rel="alternate" hreflang="en" href="https://fishfinder.guide/quiz/">
     <link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/test/">
     <link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/quiz/">
     
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Quiz : trouvez votre poisson — Découvrez votre poisson parfait">
+    <meta name="twitter:description" content="Faites notre petit quiz pour trouver le poisson d’aquarium parfait pour votre installation.">
     <meta property="og:url" content="https://fishfinder.guide/fr/quiz/">
-    <meta property="og:title" content="Finde deinen Fisch Quiz — Entdecke deinen perfekten Fisch">
-    <meta property="og:description" content="Mach unser kurzes Quiz, um den perfekten Aquarienfisch pour deine Einrichtung zu finden.">
+    <meta property="og:title" content="Quiz : trouvez votre poisson — Découvrez votre poisson parfait">
+    <meta property="og:description" content="Faites notre petit quiz pour trouver le poisson d’aquarium parfait pour votre installation.">
     <meta property="og:site_name" content="FishFinder">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Quiz",
-      "name": "Finde deinen Fisch Quiz",
-      "description": "Mach unser kurzes Quiz, um den perfekten Aquarienfisch pour deine Taille d'Aquarium, Erfahrungsstufe et Vorlieben zu finden.",
+      "name": "Quiz : trouvez votre poisson",
+      "description": "Faites notre petit quiz pour trouver le poisson d’aquarium parfait selon la taille de votre aquarium, votre niveau d’expérience et vos préférences.",
       "url": "https://fishfinder.guide/fr/quiz/",
-      "inLanguage": "de",
+      "inLanguage": "fr",
       "isPartOf": {
         "@type": "WebSite",
         "name": "FishFinder",
@@ -58,7 +62,7 @@
     <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <a href="/fr/" class="flex items-center gap-2">
-                <svg class="w-8 h-8 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="roet" stroke-linejoin="roet">
+                <svg class="w-8 h-8 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6Z"/>
                     <path d="M18 12v.5"/>
                     <path d="M16 10c1 0 2 1 2 2s-1 2-2 2"/>
@@ -69,8 +73,8 @@
                 <span class="text-xl font-bold bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">FishFinder</span>
             </a>
             <nav class="flex items-center gap-6 text-sm font-medium">
-                <a href="/fr/rechercher/" class="hidden sm:block text-slate-600 hover:text-cyan-600 transition">Fische durchsuchen</a>
-                <a href="./" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-5 py-2.5 roeted-xl font-semibold shadow-lg shadow-cyan-500/25">Quiz machen</a>
+                <a href="/fr/rechercher/" class="hidden sm:block text-slate-600 hover:text-cyan-600 transition">Parcourir les poissons</a>
+                <a href="./" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg shadow-cyan-500/25">Faire le quiz</a>
             </nav>
         </div>
     </header>
@@ -80,29 +84,29 @@
         <div id="quiz-container">
             <!-- Intro -->
             <div id="quiz-intro" class="text-center">
-                <div class="inline-flex items-center gap-2 bg-white px-4 py-2 roeted-full shadow-sm border border-slate-100 text-sm text-slate-600 mb-6">
+                <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100 text-sm text-slate-600 mb-6">
                     <span>🎯</span>
-                    <span>6 kurze Fragen</span>
+                    <span>6 questions rapides</span>
                 </div>
                 <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
-                    Finde deinen
-                    <span class="bg-gradient-to-r from-cyan-500 to-teal-600 bg-clip-text text-transparent">perfekten Fisch</span>
+                    Trouvez votre
+                    <span class="bg-gradient-to-r from-cyan-500 to-teal-600 bg-clip-text text-transparent">poisson parfait</span>
                 </h1>
-                <p class="text-lg text-slate-600 mb-8">Répondez à quelques questions zu deinem Becken et deinen Vorlieben, et wir empfehlen dir die idealen Fischarten.</p>
-                <button onclick="startQuiz()" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-8 py-4 roeted-2xl font-bold text-lg hover:shadow-xl hover:shadow-cyan-500/25 transition transform hover:scale-105">
+                <p class="text-lg text-slate-600 mb-8">Répondez à quelques questions sur votre bac et vos préférences, et nous vous recommanderons les espèces idéales.</p>
+                <button onclick="startQuiz()" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-xl hover:shadow-cyan-500/25 transition transform hover:scale-105">
                     Commencer le quiz →
                 </button>
             </div>
 
             <!-- Questions -->
             <div id="quiz-questions" class="hidden">
-                <div class="bg-white roeted-3xl shadow-xl shadow-slate-200/50 p-8">
+                <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8">
                     <div class="mb-8">
                         <div class="flex justify-between text-sm text-slate-300 mb-2">
-                            <span>Frage <span id="current-q">1</span> de 6</span>
+                            <span>Question <span id="current-q">1</span> sur 6</span>
                             <span id="progress-pct">17%</span>
                         </div>
-                        <div class="h-2 bg-slate-100 roeted-full overflow-hidden">
+                        <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
                             <div id="progress-bar" class="h-full bg-gradient-to-r from-cyan-500 to-teal-600 transition-all duration-300" style="width: 17%"></div>
                         </div>
                     </div>
@@ -116,17 +120,17 @@
             <div id="quiz-results" class="hidden">
                 <div class="text-center mb-8">
                     <span class="text-6xl mb-4 block">🐠</span>
-                    <h2 class="text-3xl font-bold mb-2">Deine perfekten Fisch-Empfehlungen!</h2>
-                    <p class="text-slate-600">Basierend auf deinen Antworten sind diese Fische ideal pour dich:</p>
+                    <h2 class="text-3xl font-bold mb-2">Vos recommandations de poissons parfaits !</h2>
+                    <p class="text-slate-600">D’après vos réponses, ces poissons sont parfaits pour vous :</p>
                 </div>
                 <div id="results-container" class="space-y-4"></div>
                 <div class="text-center mt-8 space-y-4">
-                    <a href="/fr/compatibilite/" class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-6 py-3 roeted-xl font-semibold hover:shadow-lg transition">
+                    <a href="/fr/compatibilite/" class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition">
                         <i data-lucide="check-circle" class="w-5 h-5"></i>
-                        Kompatibilität prüfen
+                        Vérifier la compatibilité
                     </a>
                     <div>
-                        <button onclick="restartQuiz()" class="text-cyan-600 font-semibold hover:text-cyan-700">← Quiz wiederholen</button>
+                        <button onclick="restartQuiz()" class="text-cyan-600 font-semibold hover:text-cyan-700">← Recommencer le quiz</button>
                     </div>
                 </div>
             </div>
@@ -136,64 +140,63 @@
     <!-- Footer -->
     <footer class="border-t border-slate-100 mt-16 py-8">
         <div class="max-w-6xl mx-auto px-4 text-center text-slate-300 text-sm">
-            <p>© 2026 FishFinder. Erstellt avec 🐠 pour Fischliebhaber überall.</p>
+            <p>© 2026 FishFinder. Créé avec 🐠 pour les passionnés d’aquariophilie. · <a href="/privacy/" class="underline hover:no-underline">Confidentialité</a></p>
         </div>
     </footer>
 
-    <script src="/fr/js/fish-de.js"></script>
     <script>
         lucide.createIcons();
         
         const questions = [
             {
-                q: "Wie groß ist dein Becken?",
+                q: "Quelle est la taille de votre aquarium ?",
                 options: [
-                    { text: "🫧 19L / 5gal (Nano-Becken)", criteria: { tank_size: "5gal" } },
-                    { text: "🐟 38L / 10gal (Einsteigerbecken)", criteria: { tank_size: "10gal" } },
-                    { text: "🐠 75L / 20gal (Gesellschaftsbecken)", criteria: { tank_size: "20gal" } },
-                    { text: "🐡 114L+ / 30gal+ (Großes Becken)", criteria: { tank_size: "30gal" } },
-                    { text: "🦈 284L+ / 75gal+ (Extra groß)", criteria: { tank_size: "75gal" } }
+                    { text: "🫧 19L / 5gal (nano-aquarium)", criteria: { tank_size: "5gal" } },
+                    { text: "🐟 38L / 10gal (bac pour débutants)", criteria: { tank_size: "10gal" } },
+                    { text: "🐠 75L / 20gal (bac communautaire)", criteria: { tank_size: "20gal" } },
+                    { text: "🐡 114L+ / 30gal+ (grand bac)", criteria: { tank_size: "30gal" } },
+                    { text: "🦈 284L+ / 75gal+ (très grand)", criteria: { tank_size: "75gal" } }
                 ]
             },
             {
-                q: "Wie ist dein Erfahrungslevel in der Fischhaltung?",
+                q: "Quel est votre niveau d’expérience en aquariophilie ?",
                 options: [
-                    { text: "🌱 Kompletter Débutant", criteria: { care_level: "beginner" } },
-                    { text: "📚 Etwas Erfahrung", criteria: { care_level: "intermediate" } },
-                    { text: "🎓 Erfahrener Aquarianer", criteria: { care_level: "advanced" } }
+                    { text: "🌱 Débutant complet", criteria: { care_level: "beginner" } },
+                    { text: "📚 Un peu d’expérience", criteria: { care_level: "intermediate" } },
+                    { text: "🎓 Aquariophile expérimenté", criteria: { care_level: "advanced" } }
                 ]
             },
             {
-                q: "Wie viel Zeit kannst du pour die Beckenpflege aufwenden?",
+                q: "Combien de temps pouvez-vous consacrer à l’entretien du bac ?",
                 options: [
-                    { text: "⚡ Minimal — nur Gretversorgung", criteria: { maintenance: "low" } },
-                    { text: "⏰ Moderat — wöchentliche Eauwechsel", criteria: { maintenance: "medium" } },
-                    { text: "🔬 Viel — ich genieße das Hobby", criteria: { maintenance: "high" } }
+                    { text: "⚡ Minimal — juste l’essentiel", criteria: { maintenance: "low" } },
+                    { text: "⏰ Modéré — changements d’eau hebdomadaires", criteria: { maintenance: "medium" } },
+                    { text: "🔬 Beaucoup — je profite de ce loisir", criteria: { maintenance: "high" } }
                 ]
             },
             {
-                q: "Möchtest du mehrere Fische zusammen halten?",
+                q: "Souhaitez-vous maintenir plusieurs poissons ensemble ?",
                 options: [
-                    { text: "👥 Ja, ein Gesellschaftsbecken!", criteria: { community: true, temperament: "peaceful" } },
-                    { text: "🐟 Nur einen besonderen Fisch", criteria: { community: false } },
-                    { text: "🏫 Einen Schwarm derselben Art", criteria: { schooling: true } }
+                    { text: "👥 Oui, un bac communautaire !", criteria: { community: true, temperament: "peaceful" } },
+                    { text: "🐟 Un seul poisson spécial", criteria: { community: false } },
+                    { text: "🏫 Un banc de la même espèce", criteria: { schooling: true } }
                 ]
             },
             {
-                q: "Was ist dir am wichtigsten?",
+                q: "Qu’est-ce qui compte le plus pour vous ?",
                 options: [
-                    { text: "🎨 Leuchtende, farbenfrohe Fische", criteria: { priority: "colorful" } },
-                    { text: "🧹 Fische, die beim Reinigen helfen", criteria: { priority: "cleanup" } },
-                    { text: "🌿 Fische pour Pflanzenaquarien", criteria: { priority: "planted" } },
-                    { text: "🤩 Einzigartiges ou interessantes Verhalten", criteria: { priority: "unique" } }
+                    { text: "🎨 Des poissons éclatants et colorés", criteria: { priority: "colorful" } },
+                    { text: "🧹 Des poissons qui aident au nettoyage", criteria: { priority: "cleanup" } },
+                    { text: "🌿 Des poissons pour aquariums plantés", criteria: { priority: "planted" } },
+                    { text: "🤩 Un comportement unique ou intéressant", criteria: { priority: "unique" } }
                 ]
             },
             {
-                q: "Hast du eine Präferenz pour die Aktivität der Fische?",
+                q: "Avez-vous une préférence pour l’activité des poissons ?",
                 options: [
-                    { text: "⚡ Aktive Schwimmer, die herumdüsen", criteria: { activity: "high" } },
-                    { text: "🧘 Ruhige, friedliche Schwimmer", criteria: { activity: "low" } },
-                    { text: "🤷 Keine Präferenz", criteria: { activity: "any" } }
+                    { text: "⚡ Des nageurs actifs qui filent partout", criteria: { activity: "high" } },
+                    { text: "🧘 Des nageurs calmes et paisibles", criteria: { activity: "low" } },
+                    { text: "🤷 Pas de préférence", criteria: { activity: "any" } }
                 ]
             }
         ];
@@ -213,9 +216,9 @@
                                f.min_tank_gallons <= 30 ? '30gal' : '75gal',
                     tags: f.tags || []
                 }));
-                console.log(`${fish.length} Fischarten geladen`);
+                console.log(`${fish.length} espèces chargées`);
             })
-            .catch(e => console.error('Fehler beim Laden der Fische:', e));
+            .catch(e => console.error('Erreur lors du chargement des poissons :', e));
 
         function startQuiz() {
             document.getElementById('quiz-intro').classList.add('hidden');
@@ -227,7 +230,7 @@
             const q = questions[index];
             document.getElementById('question-text').textContent = q.q;
             document.getElementById('current-q').textContent = index + 1;
-            const pct = Math.roet(((index + 1) / questions.length) * 100);
+            const pct = Math.round(((index + 1) / questions.length) * 100);
             document.getElementById('progress-pct').textContent = pct + '%';
             document.getElementById('progress-bar').style.width = pct + '%';
 
@@ -236,7 +239,7 @@
             
             q.options.forEach((opt, i) => {
                 const btn = document.createElement('button');
-                btn.className = 'w-full text-left p-4 roeted-xl border-2 border-slate-200 hover:border-cyan-400 hover:bg-cyan-50 transition font-medium';
+                btn.className = 'w-full text-left p-4 rounded-xl border-2 border-slate-200 hover:border-cyan-400 hover:bg-cyan-50 transition font-medium';
                 btn.textContent = opt.text;
                 btn.onclick = () => selectOption(opt.criteria);
                 container.appendChild(btn);
@@ -291,21 +294,21 @@
             container.innerHTML = '';
 
             top5.forEach((f, i) => {
-                const match = Math.min(100, Math.roet((f.score / 80) * 100));
-                const fishName = getFishNameDE(f.id, f.name);
+                const match = Math.min(100, Math.round((f.score / 80) * 100));
+                const fishName = getFishNameFR(f.id, f.name);
                 const div = document.createElement('a');
                 div.href = '/fr/poissons/' + f.id + '/';
-                div.className = 'block bg-white roeted-2xl p-6 shadow-lg shadow-slate-200/50 hover:shadow-xl transition';
+                div.className = 'block bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/50 hover:shadow-xl transition';
                 div.innerHTML = `
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-100 to-teal-100 roeted-xl flex items-center justify-center text-2xl font-bold text-cyan-600">${i + 1}</div>
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-100 to-teal-100 rounded-xl flex items-center justify-center text-2xl font-bold text-cyan-600">${i + 1}</div>
                             <div>
                                 <h3 class="text-xl font-bold">${fishName}</h3>
                                 <p class="text-slate-300 text-sm">${f.tank_size} • ${f.temperament} • ${f.care_level}</p>
                             </div>
                         </div>
-                        <div class="text-cyan-600 font-semibold">${match}% Übereinstimmung →</div>
+                        <div class="text-cyan-600 font-semibold">${match}% de compatibilité →</div>
                     </div>
                 `;
                 container.appendChild(div);
