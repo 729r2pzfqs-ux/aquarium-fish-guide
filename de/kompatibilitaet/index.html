@@ -46,8 +46,11 @@
     }
     </script>
     
-    <link rel="stylesheet" href="/css/tailwind.css">
-<script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/css/tailwind.css?v=b8704e8c">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>function renderIcons(){if(window.lucide){window.lucide.createIcons();}else{document.addEventListener("DOMContentLoaded",function(){window.lucide&&window.lucide.createIcons();});}}</script>
+<script src="https://unpkg.com/lucide@0.544.0/dist/umd/lucide.min.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -173,7 +176,7 @@
     </footer>
 
     <script>
-        lucide.createIcons();
+        renderIcons();
         
         let allFish = [];
         let selectedFish = [];
@@ -439,7 +442,7 @@
                 </div>
             `).join('');
             
-            lucide.createIcons();
+            renderIcons();
         }
     </script>
 </body>
