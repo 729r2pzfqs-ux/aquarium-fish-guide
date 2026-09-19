@@ -5288,4 +5288,46 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fishfinder.guide/setups/"/>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://fishfinder.guide/articles/aquarium-water-parameters/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/articles/aquarium-water-parameters/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishfinder.guide/articles/aquarium-water-parameters/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fishfinder.guide/articles/how-many-fish-in-a-tank/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/articles/how-many-fish-in-a-tank/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishfinder.guide/articles/how-many-fish-in-a-tank/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fishfinder.guide/articles/20-gallon-stocking-ideas/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/articles/20-gallon-stocking-ideas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishfinder.guide/articles/20-gallon-stocking-ideas/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fishfinder.guide/articles/aquarium-algae-control/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/articles/aquarium-algae-control/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishfinder.guide/articles/aquarium-algae-control/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fishfinder.guide/articles/fish-tank-mates-guide/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/articles/fish-tank-mates-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishfinder.guide/articles/fish-tank-mates-guide/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fishfinder.guide/articles/5-gallon-tank-stocking/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishfinder.guide/articles/5-gallon-tank-stocking/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishfinder.guide/articles/5-gallon-tank-stocking/"/>
+    <priority>0.7</priority>
+  </url>
 </urlset>
