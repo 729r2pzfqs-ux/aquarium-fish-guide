@@ -174,6 +174,7 @@ def generate_html(fish):
       ]
     }}
     </script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="9lr6YCArhHF3Ga0FR3XXAA" async></script>
 </head>
 <body class="bg-slate-50 text-slate-800">
     <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
