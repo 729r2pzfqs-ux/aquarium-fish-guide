@@ -1,13 +1,26 @@
 #!/usr/bin/env python3
 """Generate fish care guide pages from JSON data."""
 
+import argparse
 import json
 import os
+import re
+import sys
 from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(BASE_DIR / 'scripts'))
+
+import seo_lib as S  # noqa: E402  (shared markup: Lucide, meta, FAQ, links)
+
 # Load fish data
-with open('data/fish.json', 'r') as f:
+with open(BASE_DIR / 'data' / 'fish.json', 'r', encoding='utf-8') as f:
     fish_data = json.load(f)
+
+IMAGE_DIMS = S.load_image_dims()
+CSS_VERSION = S.css_version()
+GA_ID = 'G-CWDX74LPLP'
+AHREFS_KEY = '9lr6YCArhHF3Ga0FR3XXAA' 
 
 def celsius(f_temp):
     """Convert Fahrenheit to Celsius."""
@@ -59,8 +72,53 @@ def format_avoid_list(items, current_fish_id):
 '''
     return html
 
-def generate_html(fish):
+_RELATED_RE = re.compile(r'<!-- Related Fish Section -->.*?</section>', re.DOTALL)
+
+
+def existing_related_species(fish_id):
+    """Reuse the block already published for this fish, if there is one."""
+    page = BASE_DIR / 'fish' / fish_id / 'index.html'
+    if not page.exists():
+        return None
+    match = _RELATED_RE.search(page.read_text(encoding='utf-8'))
+    # Re-indent to the template slot so repeated runs stay byte-identical.
+    return '\n    ' + match.group(0) if match else None
+
+
+def format_related_species(fish, fish_list, limit=6):
+    """Same-family species, the block the live pages already carry."""
+    existing = existing_related_species(fish['id'])
+    if existing is not None:
+        return existing
+    related = [f for f in fish_list
+               if f['category'] == fish['category'] and f['id'] != fish['id']][:limit]
+    if not related:
+        return ''
+    cards = ''
+    for other in related:
+        cards += f'''
+            <a href="/fish/{other['id']}/" class="block bg-white rounded-lg border border-slate-200 p-4 hover:shadow-md transition">
+                <h3 class="font-bold text-slate-900">{other['name']}</h3>
+                <p class="text-sm text-slate-500">{other['scientific']}</p>
+                <div class="mt-2 flex flex-wrap gap-1">
+                    <span class="text-xs bg-cyan-50 text-cyan-700 px-2 py-0.5 rounded">{other['care_level']}</span>
+                    <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">{other['temperament']}</span>
+                    <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">{other['min_tank_gallons']}+ gal</span>
+                </div>
+            </a>'''
+    return f'''
+    <!-- Related Fish Section -->
+    <section class="mt-12 mb-8">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related Species You Might Like</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+{cards}
+        </div>
+    </section>'''
+
+
+def generate_html(fish, fish_list=None):
     """Generate HTML page for a fish."""
+    fish_list = fish_list if fish_list is not None else fish_data
     fish_id = fish['id']
     name = fish['name']
     scientific = fish['scientific']
@@ -97,20 +155,17 @@ def generate_html(fish):
     compatible_html = format_compatible_list(fish.get('compatible_with', []), fish_id)
     avoid_html = format_avoid_list(fish.get('avoid_with', []), fish_id)
     
-    # Meta description
-    meta_desc = f"Complete {name} care guide. Learn about tank size ({fish['min_tank_gallons']} gallons), water parameters ({temp_min_f}-{temp_max_f}°F, pH {fish['ph_min']}-{fish['ph_max']}), compatible tankmates, and expert care tips."
+    # Answer-first meta description (see scripts/seo_lib.py).
+    meta_desc = S.meta_description(fish, 'en').replace('"', '&quot;')
+
+    # Same-family block; tank mates and the FAQ are added by enhance_page below.
+    related_html = format_related_species(fish, fish_list)
     
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics Placeholder -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){{dataLayer.push(arguments);}}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GA_ID}');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{name} Care Guide | FishFinder</title>
@@ -120,9 +175,15 @@ def generate_html(fish):
     <meta property="og:description" content="{meta_desc}">
     <meta property="og:url" content="https://fishfinder.guide/fish/{fish_id}/">
     <meta property="og:type" content="article">
+    <meta property="og:site_name" content="FishFinder">
+    <meta property="og:image" content="https://fishfinder.guide/images/fish/{fish_id}.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{name} Care Guide | FishFinder">
+    <meta name="twitter:description" content="{meta_desc}">
+    <meta name="twitter:image" content="https://fishfinder.guide/images/fish/{fish_id}.webp">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/css/tailwind.css">
+{S.LUCIDE_TAG}
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {{ font-family: 'Plus Jakarta Sans', sans-serif; }}
@@ -140,6 +201,7 @@ def generate_html(fish):
         "@id": "https://fishfinder.guide/fish/{fish_id}/"
       }},
       "headline": "{name}: Care Guide, Tank Size & Compatibility",
+      "image": "https://fishfinder.guide/images/fish/{fish_id}.webp",
       "description": "{fish['description']}",
       "author": {{
         "@type": "Organization",
@@ -174,7 +236,12 @@ def generate_html(fish):
       ]
     }}
     </script>
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="9lr6YCArhHF3Ga0FR3XXAA" async></script>
+    <link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/{fish_id}/">
+    <link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/{fish_id}/">
+    <link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/{fish_id}/">
+    <link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/{fish_id}/">
+    <link rel="alternate" hreflang="x-default" href="https://fishfinder.guide/fish/{fish_id}/">
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="{AHREFS_KEY}" async></script>
 </head>
 <body class="bg-slate-50 text-slate-800">
     <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
@@ -195,7 +262,7 @@ def generate_html(fish):
                     <a href="/search/" class="text-slate-600 hover:text-slate-900 font-medium hidden sm:block">Browse Fish</a>
                     <a href="/quiz/" class="text-slate-600 hover:text-slate-900 font-medium hidden sm:block">Quiz</a>
                     <a href="/compatibility/" class="text-slate-600 hover:text-slate-900 font-medium hidden sm:block">Compatibility</a>
-                    <a href="/compare/" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition">Compare</a>
+                    <a href="/compatibility/" class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition">Compare</a>
                 </div>
             </div>
         </div>
@@ -404,12 +471,13 @@ def generate_html(fish):
                     <i data-lucide="check-circle" class="w-5 h-5"></i>
                     Compatibility Checker
                 </a>
-                <a href="/compare/?fish1={fish_id}" class="inline-flex items-center gap-2 bg-white text-slate-700 border border-slate-200 px-6 py-3 rounded-xl font-semibold hover:border-slate-300 transition">
+                <a href="/compatibility/?fish1={fish_id}" class="inline-flex items-center gap-2 bg-white text-slate-700 border border-slate-200 px-6 py-3 rounded-xl font-semibold hover:border-slate-300 transition">
                     <i data-lucide="scale" class="w-5 h-5"></i>
                     Compare with Others
                 </a>
             </div>
         </div>
+{related_html}
     </main>
 
     <!-- Footer -->
@@ -429,13 +497,12 @@ def generate_html(fish):
                 </div>
                 <div class="flex gap-8 text-sm text-slate-400">
                     <a href="/quiz/" class="hover:text-white transition">Fish Quiz</a>
-                    <a href="/compare/" class="hover:text-white transition">Compare</a>
                     <a href="/compatibility/" class="hover:text-white transition">Compatibility</a>
                     <a href="/faq/" class="hover:text-white transition">FAQ</a>
                 </div>
             </div>
             <div class="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-500">
-                <p>© 2026 FishFinder. Made with 🐠 for fish lovers everywhere.</p>
+                <p>© 2026 FishFinder. Made with 🐠 for fish lovers everywhere. · <a href="/privacy/" class="underline hover:no-underline">Privacy</a></p>
             </div>
         </div>
     </footer>
@@ -445,7 +512,19 @@ def generate_html(fish):
     </script>
 </body>
 </html>'''
-    return html
+
+    # Lucide pinning/deferring, image attributes, FAQ schema + section and the
+    # computed tank-mate links all come from the shared pipeline, so a
+    # regenerated page matches what scripts/seo_optimize.py produces.
+    return S.enhance_page(
+        html,
+        fish=fish,
+        all_fish=fish_list,
+        lang='en',
+        fish_index=S.by_id(fish_list),
+        image_dims=IMAGE_DIMS,
+        css_ver=CSS_VERSION,
+    )
 
 def generate_sitemap(fish_list):
     """Generate sitemap.xml with all fish URLs."""
@@ -494,26 +573,32 @@ def generate_sitemap(fish_list):
 
 # Main execution
 if __name__ == '__main__':
-    base_dir = Path(__file__).parent
-    fish_dir = base_dir / 'fish'
-    
+    parser = argparse.ArgumentParser(description='Generate English fish pages.')
+    parser.add_argument(
+        '--sitemap', action='store_true',
+        help='Also rewrite sitemap.xml. Off by default: the checked-in sitemap '
+             'covers all four locales with hreflang alternates, and this '
+             'generator only knows about the English URLs.')
+    args = parser.parse_args()
+
+    fish_dir = BASE_DIR / 'fish'
+
     # Generate pages for each fish
     generated = 0
     for fish in fish_data:
         fish_id = fish['id']
         page_dir = fish_dir / fish_id
         page_dir.mkdir(parents=True, exist_ok=True)
-        
-        html = generate_html(fish)
+
+        html = generate_html(fish, fish_data)
         page_file = page_dir / 'index.html'
-        page_file.write_text(html)
+        page_file.write_text(html, encoding='utf-8')
         generated += 1
         print(f"✓ Generated: {fish['name']} ({fish_id})")
-    
-    # Generate sitemap
-    sitemap = generate_sitemap(fish_data)
-    sitemap_file = base_dir / 'sitemap.xml'
-    sitemap_file.write_text(sitemap)
-    print(f"\n✓ Generated sitemap.xml with {len(fish_data)} fish URLs")
-    
+
+    if args.sitemap:
+        sitemap_file = BASE_DIR / 'sitemap.xml'
+        sitemap_file.write_text(generate_sitemap(fish_data), encoding='utf-8')
+        print(f"\n✓ Rewrote sitemap.xml with {len(fish_data)} English fish URLs")
+
     print(f"\n🎉 Done! Generated {generated} fish pages.")

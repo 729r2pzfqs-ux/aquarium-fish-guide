@@ -3,6 +3,19 @@
 import os
 import re
 import shutil
+import sys
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(BASE_DIR / 'scripts'))
+
+import seo_lib as S  # noqa: E402  (shared markup: Lucide, meta, FAQ, links)
+
+LANG = 'es'
+ALL_FISH = S.load_fish()
+FISH_INDEX = S.by_id(ALL_FISH)
+IMAGE_DIMS = S.load_image_dims()
+CSS_VERSION = S.css_version()
 
 # Directories
 EN_FISH_DIR = "fish"
@@ -10,6 +23,18 @@ ES_FISH_DIR = "es/peces"
 
 # Create output directory
 os.makedirs(ES_FISH_DIR, exist_ok=True)
+
+def locale_names(fish_dir):
+    """fish id -> the name the existing es pages use, for link/alt text."""
+    table = {}
+    base = Path(fish_dir)
+    if base.is_dir():
+        for page in base.glob('*/index.html'):
+            table[page.parent.name] = S.page_name(
+                page.read_text(encoding='utf-8'), page.parent.name)
+    return table
+
+LOCALE_NAMES = locale_names(ES_FISH_DIR)
 
 # Translation patterns (English -> Spanish)
 TRANSLATIONS = [
@@ -826,6 +851,20 @@ def process_fish_page(fish_id):
 '''
         content = content.replace('<link rel="canonical"', hreflang + '    <link rel="canonical"')
     
+    # The copied English page carries an English FAQ and tank-mate block that
+    # the regex translator can only mangle. enhance_page replaces both with
+    # properly localised versions pointing at this locale's URLs.
+    content = S.enhance_page(
+        content,
+        fish=FISH_INDEX.get(fish_id),
+        all_fish=ALL_FISH,
+        lang=LANG,
+        fish_index=FISH_INDEX,
+        image_dims=IMAGE_DIMS,
+        css_ver=CSS_VERSION,
+        names=LOCALE_NAMES,
+    )
+
     # Create directory and write
     os.makedirs(os.path.dirname(es_path), exist_ok=True)
     with open(es_path, 'w', encoding='utf-8') as f:

@@ -28,24 +28,6 @@ FISH_DIRS = [
 
 SKIP_DIRS = {".git", "node_modules", "__pycache__"}
 
-_H1_RE = re.compile(r"<h1[^>]*>(.*?)</h1>", re.DOTALL)
-_FAQ_SCHEMA_RE = re.compile(
-    r"<!-- FAQ Schema -->\s*<script type=\"application/ld\+json\">.*?</script>",
-    re.DOTALL,
-)
-_FAQ_SECTION_RE = re.compile(
-    re.escape(S.FAQ_MARKER) + r".*?</section>", re.DOTALL
-)
-_TANKMATE_SECTION_RE = re.compile(
-    re.escape(S.TANKMATE_MARKER) + r".*?</section>\s*(?=<|$)", re.DOTALL
-)
-_DESC_RES = [
-    re.compile(r'(<meta name="description" content=")[^"]*(")'),
-    re.compile(r'(<meta property="og:description" content=")[^"]*(")'),
-    re.compile(r'(<meta name="twitter:description" content=")[^"]*(")'),
-]
-
-
 def html_files():
     for path in sorted(ROOT.rglob("*.html")):
         if any(part in SKIP_DIRS for part in path.parts):
@@ -66,54 +48,6 @@ def classify(path):
     return "en", None
 
 
-def local_name(html, fallback):
-    match = _H1_RE.search(html)
-    if not match:
-        return fallback
-    name = re.sub(r"<[^>]+>", "", match.group(1)).strip()
-    return name or fallback
-
-
-def attr_escape(text):
-    return text.replace("&", "&amp;").replace('"', "&quot;")
-
-
-def apply_meta(html, fish, lang, name):
-    desc = attr_escape(S.meta_description(fish, lang, name))
-    for pattern in _DESC_RES:
-        html = pattern.sub(lambda m: m.group(1) + desc + m.group(2), html)
-    return html
-
-
-def apply_faq_schema(html, fish, lang, name):
-    schema = S.faq_schema(fish, lang, name)
-    if _FAQ_SCHEMA_RE.search(html):
-        return _FAQ_SCHEMA_RE.sub(lambda m: schema, html, count=1)
-    return html.replace("</head>", f"    {schema}\n</head>", 1)
-
-
-def apply_sections(html, fish, all_fish, lang, name, image_dims, names=None):
-    faq = S.faq_section(fish, lang, name)
-    mates = S.tankmate_section(fish, all_fish, lang, name, image_dims, names)
-
-    if _FAQ_SECTION_RE.search(html):
-        html = _FAQ_SECTION_RE.sub(lambda m: faq, html, count=1)
-        new_faq = ""
-    else:
-        new_faq = faq
-
-    if _TANKMATE_SECTION_RE.search(html):
-        html = _TANKMATE_SECTION_RE.sub(lambda m: mates + "\n", html, count=1)
-        new_mates = ""
-    else:
-        new_mates = mates
-
-    additions = "\n".join(block for block in (new_mates, new_faq) if block)
-    if additions:
-        html = html.replace("</main>", f"{additions}\n</main>", 1)
-    return html
-
-
 def collect_locale_names():
     """fish id -> display name, per language, taken from each page's own <h1>."""
     names = {}
@@ -125,29 +59,24 @@ def collect_locale_names():
             continue
         for page in base.glob("*/index.html"):
             html = page.read_text(encoding="utf-8")
-            table[page.parent.name] = local_name(html, page.parent.name)
+            table[page.parent.name] = S.page_name(html, page.parent.name)
         names[lang] = table
     return names
 
 
 def process(path, all_fish, fish_index, image_dims, css_ver=None, locale_names=None):
     original = path.read_text(encoding="utf-8")
-    html = original
     lang, fish_id = classify(path)
-    fish = fish_index.get(fish_id) if fish_id else None
-
-    html = S.fix_lucide(html)
-    html = S.version_css_link(html, css_ver)
-    names = (locale_names or {}).get(lang, {})
-    html = S.fix_images(html, fish_index, lang, image_dims,
-                        hero_slug=fish_id if fish else None, names=names)
-
-    if fish is not None and "</main>" in html:
-        name = local_name(html, fish["name"])
-        html = apply_meta(html, fish, lang, name)
-        html = apply_faq_schema(html, fish, lang, name)
-        html = apply_sections(html, fish, all_fish, lang, name, image_dims, names)
-
+    html = S.enhance_page(
+        original,
+        fish=fish_index.get(fish_id) if fish_id else None,
+        all_fish=all_fish,
+        lang=lang,
+        fish_index=fish_index,
+        image_dims=image_dims,
+        css_ver=css_ver,
+        names=(locale_names or {}).get(lang, {}),
+    )
     return original, html
 
 

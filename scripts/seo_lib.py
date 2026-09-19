@@ -384,7 +384,12 @@ _FAQ_HEADING = {
     "fr": "Questions fréquentes",
 }
 
-FAQ_MARKER = "<!-- fishfinder:faq -->"
+# Markers deliberately contain no translatable words: the DE/ES/FR generators
+# run a regex find-and-replace over the English page, and an earlier marker of
+# "<!-- fishfinder:tankmates -->" came out the other side as
+# "<!-- fishfinder:compañeros de tanque -->", which made the block impossible
+# to find and replace on the next run.
+FAQ_MARKER = "<!--ff:qa-->"
 
 
 def faq_section(fish, lang="en", name=None):
@@ -435,7 +440,13 @@ LONG_FINNED = {"betta-fish", "angelfish", "guppy", "sailfin-molly", "balloon-mol
 
 
 def _descriptor_matches(term, fish):
-    """Does a free-text avoid_with/compatible_with term describe this fish?"""
+    """Does a free-text avoid_with/compatible_with term describe this fish?
+
+    Terms are a mix of species names ("cardinal tetras"), families ("barbs")
+    and free descriptions ("large aggressive fish", "warm water fish"). A
+    descriptor that is recognised decides the answer on its own; anything
+    unrecognised falls through to family and name matching.
+    """
     t = term.lower().strip()
     size = fish["size_inches"]
     temperament = fish["temperament"].lower()
@@ -444,6 +455,19 @@ def _descriptor_matches(term, fish):
         return fish["id"] in FIN_NIPPERS
     if "long-finned" in t or "long finned" in t:
         return fish["id"] in LONG_FINNED
+    # "slow fish" means trailing-finned or slow-moving species, not every
+    # peaceful fish in the database.
+    if "slow" in t:
+        return fish["id"] in LONG_FINNED or fish["category"] in ("snail", "shrimp")
+    if "warm water" in t:
+        return fish["temp_min"] >= 74
+    if "cold water" in t or "coldwater" in t:
+        return fish["temp_max"] <= 75
+    # Tanks, plants and water conditions describe the setup, not a tank mate.
+    if any(w in t for w in ("plant", "substrate", "water quality", "acidic water",
+                            "goldfish", "puffer")):
+        return False
+
     if "aggressive" in t:
         if not (temperament == "aggressive" or
                 (temperament == "semi-aggressive" and "very" not in t)):
@@ -451,31 +475,25 @@ def _descriptor_matches(term, fish):
     if "large" in t or "larger" in t:
         if size < 6:
             return False
-    if "small" in t or "micro" in t or "very small" in t:
+    if "small" in t or "micro" in t:
         if size > 2.5:
             return False
-    if "slow" in t and fish["id"] not in LONG_FINNED and temperament != "peaceful":
-        return False
     if "peaceful" in t and temperament != "peaceful":
         return False
-    if "cold water" in t and fish["temp_min"] > 68:
-        return False
-    if "goldfish" in t or "puffer" in t or "plant" in t or "substrate" in t or "water quality" in t:
-        return False
 
-    # A category word anywhere in the term makes it apply to that category.
+    # A family word anywhere in the term makes it apply to that family.
     for plural in CATEGORY_PLURALS.get(fish["category"], []):
         if re.search(rf"\b{re.escape(plural)}\b", t):
             return True
-    # Bare descriptors with no category word ("large fish", "aggressive fish").
+    # Bare descriptors with no family word ("large fish", "aggressive fish").
     if re.search(r"\bfish\b", t) and any(
-        w in t for w in ("large", "larger", "small", "aggressive", "peaceful", "slow",
-                         "robust", "fast", "community", "micro", "bottom", "warm")
+        w in t for w in ("large", "larger", "small", "aggressive", "peaceful",
+                         "robust", "fast", "community", "micro", "bottom")
     ):
         return True
     # Direct name match, e.g. "cardinal tetras", "otocinclus".
     stem = fish["name"].lower().rstrip("s")
-    return stem and (stem in t or fish["id"].replace("-", " ") in t)
+    return bool(stem) and (stem in t or fish["id"].replace("-", " ") in t)
 
 
 def _avoids(a, b):
@@ -574,7 +592,7 @@ def similar_care(fish, all_fish, exclude_ids=(), limit=3):
     return [other for _, _, other in scored[:limit]]
 
 
-TANKMATE_MARKER = "<!-- fishfinder:tankmates -->"
+TANKMATE_MARKER = "<!--ff:tm-->"
 
 _TANKMATE_STRINGS = {
     "en": {
@@ -850,3 +868,106 @@ def version_css_link(html, version):
     if not version:
         return html
     return _CSS_HREF_RE.sub(lambda m: f"{m.group(1)}{m.group(2)}?v={version}{m.group(3)}", html)
+
+
+# --------------------------------------------------------------------------
+# Whole-page pipeline (shared by scripts/seo_optimize.py and the generators)
+# --------------------------------------------------------------------------
+
+_H1_RE = re.compile(r"<h1[^>]*>(.*?)</h1>", re.DOTALL)
+_FAQ_SCHEMA_RE = re.compile(
+    r"<!-- FAQ Schema -->\s*<script type=\"application/ld\+json\">.*?</script>",
+    re.DOTALL,
+)
+# A generated block is recognised by its marker, or - for pages written before
+# the markers were made translation-proof - by markup unique to that block.
+_GENERATED_SECTION_RES = [
+    re.compile(r"\s*" + re.escape(FAQ_MARKER) + r".*?</section>", re.DOTALL),
+    re.compile(r"\s*" + re.escape(TANKMATE_MARKER) + r".*?</section>", re.DOTALL),
+    re.compile(r'\s*<!--\s*fishfinder:[^>]*-->\s*<section\b(?:(?!</section>).)*?'
+               r'class="group flex gap-3 items-center.*?</section>', re.DOTALL),
+    re.compile(r'\s*<!--\s*fishfinder:[^>]*-->\s*<section\b(?:(?!</section>).)*?'
+               r'class="border-b border-slate-100 last:border-0.*?</section>', re.DOTALL),
+]
+_DESC_RES = [
+    re.compile(r'(<meta name="description" content=")[^"]*(")'),
+    re.compile(r'(<meta property="og:description" content=")[^"]*(")'),
+    re.compile(r'(<meta name="twitter:description" content=")[^"]*(")'),
+]
+
+
+def page_name(html, fallback):
+    """The name this page actually shows in its <h1>."""
+    match = _H1_RE.search(html)
+    if not match:
+        return fallback
+    name = re.sub(r"<[^>]+>", "", match.group(1)).strip()
+    return name or fallback
+
+
+def _attr_escape(text):
+    return text.replace("&", "&amp;").replace('"', "&quot;")
+
+
+def apply_meta(html, fish, lang, name):
+    desc = _attr_escape(meta_description(fish, lang, name))
+    for pattern in _DESC_RES:
+        html = pattern.sub(lambda m: m.group(1) + desc + m.group(2), html)
+    return html
+
+
+def apply_faq_schema(html, fish, lang, name):
+    schema = faq_schema(fish, lang, name)
+    if _FAQ_SCHEMA_RE.search(html):
+        return _FAQ_SCHEMA_RE.sub(lambda m: schema, html, count=1)
+    return html.replace("</head>", f"    {schema}\n</head>", 1)
+
+
+def strip_generated_sections(html):
+    """Remove any tank-mate / FAQ block this pipeline wrote earlier."""
+    for pattern in _GENERATED_SECTION_RES:
+        html = pattern.sub("", html)
+    return html
+
+
+def apply_sections(html, fish, all_fish, lang, name, image_dims, names=None):
+    """Rewrite the generated blocks: strip the old ones, append fresh ones.
+
+    Stripping first (rather than substituting in place) keeps the result the
+    same whether the page has no block, a current one, or one left by an
+    earlier version with a mangled marker.
+    """
+    html = strip_generated_sections(html)
+
+    blocks = [
+        tankmate_section(fish, all_fish, lang, name, image_dims, names),
+        faq_section(fish, lang, name),
+    ]
+    additions = "\n".join(block for block in blocks if block)
+    if additions:
+        # Swallow any indentation before </main> so the inserted markup lands
+        # at the same column whether the page came from the generator or from
+        # a previous run of this pipeline.
+        html = re.sub(r"[ \t]*</main>", lambda m: f"{additions}\n</main>",
+                      html, count=1)
+    return html
+
+
+def enhance_page(html, fish=None, all_fish=None, lang="en", fish_index=None,
+                 image_dims=None, css_ver=None, names=None):
+    """Apply every shared fix to one page. Safe to run repeatedly."""
+    fish_index = fish_index if fish_index is not None else {}
+    image_dims = image_dims if image_dims is not None else {}
+
+    html = fix_lucide(html)
+    html = version_css_link(html, css_ver)
+    html = fix_images(html, fish_index, lang, image_dims,
+                      hero_slug=fish["id"] if fish else None, names=names)
+
+    if fish is not None and "</main>" in html:
+        name = page_name(html, fish["name"])
+        html = apply_meta(html, fish, lang, name)
+        html = apply_faq_schema(html, fish, lang, name)
+        html = apply_sections(html, fish, all_fish or [], lang, name,
+                              image_dims, names)
+    return html
