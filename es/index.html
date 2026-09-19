@@ -536,7 +536,7 @@
                 dropdown.innerHTML = matches.map(f => `
                     <a href="peces/${f.slug}/" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition first:rounded-t-2xl last:rounded-b-2xl">
                         <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
-                            <img src="/images/fish/${f.slug}.webp" alt="${f.name}" class="w-full h-full object-contain" onerror="this.style.display='none';this.parentElement.innerHTML='🐟';">
+                            <img src="/images/fish/${f.slug}.webp" alt="${f.name} pez de acuario" class="w-full h-full object-contain" onerror="this.style.display='none';this.parentElement.innerHTML='🐟';" loading="lazy" decoding="async">
                         </div>
                         <span class="font-medium text-slate-800">${f.name}</span>
                     </a>

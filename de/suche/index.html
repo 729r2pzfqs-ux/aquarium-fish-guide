@@ -353,7 +353,7 @@
             return `
                 <a href="/de/fische/${fish.id}/" class="fish-card bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden block">
                     <div class="aspect-[4/3] bg-slate-50 relative overflow-hidden flex items-center justify-center p-4">
-                        <img src="/images/fish/${fish.id}.webp" alt="${fishName}" class="w-full h-full object-contain" onerror="this.outerHTML='<span class=\\'text-6xl\\'>🐟</span>'">
+                        <img src="/images/fish/${fish.id}.webp" alt="${fishName} Aquarienfisch" class="w-full h-full object-contain" onerror="this.outerHTML='<span class=\\'text-6xl\\'>🐟</span>'" loading="lazy" decoding="async">
                         <span class="absolute top-2 right-2 tag ${temperamentColors[fish.temperament] || 'bg-slate-100 text-slate-600'}">
                             ${TEMPERAMENT_DE[fish.temperament] || fish.temperament}
                         </span>
@@ -506,7 +506,7 @@
             dropdown.innerHTML = matches.map(f => `
                 <a href="/de/fische/${f.id}/" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition first:rounded-t-2xl last:rounded-b-2xl">
                     <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
-                        <img src="/images/fish/${f.id}.webp" alt="${getFishNameDE(f.id, f.name)}" class="w-full h-full object-contain" onerror="this.outerHTML='🐟'">
+                        <img src="/images/fish/${f.id}.webp" alt="${getFishNameDE(f.id, f.name)} Aquarienfisch" class="w-full h-full object-contain" onerror="this.outerHTML='🐟'" loading="lazy" decoding="async">
                     </div>
                     <div>
                         <span class="font-medium text-slate-800">${getFishNameDE(f.id, f.name)}</span>

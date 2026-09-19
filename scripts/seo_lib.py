@@ -728,6 +728,16 @@ def tankmate_section(fish, all_fish, lang="en", name=None, image_dims=None, name
 # Images
 # --------------------------------------------------------------------------
 
+# Cards rendered by inline JS build their alt from a template literal, so the
+# species name is only known at runtime. Appending a constant keeps the alt
+# descriptive rather than a bare name.
+_ALT_SUFFIX = {
+    "en": " aquarium fish",
+    "de": " Aquarienfisch",
+    "es": " pez de acuario",
+    "fr": " poisson d'aquarium",
+}
+
 _ALT_TEMPLATE = {
     "en": "{name} ({scientific}) in a planted freshwater aquarium",
     "de": "{name} ({scientific}) im bepflanzten Süßwasseraquarium",
@@ -813,12 +823,29 @@ def fix_images(html, fish_index, lang="en", image_dims=None, hero_slug=None, nam
         if not src_match:
             return tag
         src = src_match.group(1)
-        if "${" in src:  # JS template literal inside an inline script
+        attrs_all = set(_ATTR_RE.findall(tag))
+
+        if "${" in src:
+            # Rendered by inline JS: the species is unknown at build time, but
+            # these grids are always below the fold, so they should still be
+            # lazy, and the alt can still say what kind of thing it is.
+            extra = []
+            if "loading" not in attrs_all:
+                extra.append('loading="lazy"')
+            if "decoding" not in attrs_all:
+                extra.append('decoding="async"')
+            if extra:
+                tag = tag[:-1].rstrip() + " " + " ".join(extra) + ">"
+            suffix = _ALT_SUFFIX.get(lang, _ALT_SUFFIX["en"])
+            alt_match = re.search(r'alt="([^"]*)"', tag)
+            if alt_match and "${" in alt_match.group(1) and suffix not in alt_match.group(1):
+                tag = tag.replace(f'alt="{alt_match.group(1)}"',
+                                  f'alt="{alt_match.group(1)}{suffix}"', 1)
             return tag
 
         slug = _slug_from_src(src)
         fish = fish_index.get(slug) if slug else None
-        attrs = set(_ATTR_RE.findall(tag))
+        attrs = attrs_all
         is_hero = slug is not None and slug == hero_slug and "object-contain" in tag and "w-full" in tag
 
         additions = []

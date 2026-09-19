@@ -202,7 +202,7 @@
                 <button onclick="toggleFish('${f.id}')" id="btn-${f.id}" 
                     class="p-3 rounded-xl border-2 border-slate-200 hover:border-cyan-400 transition text-left">
                     <div class="flex items-center gap-2">
-                        <img src="/images/fish/${f.id}.webp" alt="${fishName}" class="w-8 h-8 object-contain" onerror="this.outerHTML='🐟'">
+                        <img src="/images/fish/${f.id}.webp" alt="${fishName} poisson d'aquarium" class="w-8 h-8 object-contain" onerror="this.outerHTML='🐟'" loading="lazy" decoding="async">
                         <span class="font-medium text-sm text-slate-700">${fishName}</span>
                     </div>
                 </button>
@@ -259,7 +259,7 @@
                 const fishName = getFishNameFR(f.id, f.name);
                 return `
                     <span class="inline-flex items-center gap-2 bg-cyan-100 text-cyan-800 px-3 py-1.5 rounded-full text-sm font-medium">
-                        <img src="/images/fish/${f.id}.webp" alt="${fishName}" class="w-6 h-6 object-contain" onerror="this.outerHTML='🐟'">
+                        <img src="/images/fish/${f.id}.webp" alt="${fishName} poisson d'aquarium" class="w-6 h-6 object-contain" onerror="this.outerHTML='🐟'" loading="lazy" decoding="async">
                         ${fishName}
                         <button onclick="toggleFish('${id}')" class="hover:text-cyan-600">×</button>
                     </span>
