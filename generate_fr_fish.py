@@ -360,7 +360,7 @@ TRANSLATIONS = [
     (r'hardy', 'robuste'),
     (r'sensitive', 'sensible'),
     (r'disease-resistant', 'résistant aux maladies'),
-    (r'ich', 'ichtyophthiriose'),
+    (r'\bich\b', 'ichtyophthiriose'),
     (r'fin rot', 'pourriture des nageoires'),
     (r'dropsy', 'hydropisie'),
     (r'quarantine', 'quarantaine'),
