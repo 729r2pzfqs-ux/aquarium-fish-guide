@@ -273,6 +273,23 @@ def _esc_json(text):
     return json.dumps(text, ensure_ascii=False)[1:-1]
 
 
+_TRANSLATED_TIPS = {}
+
+def _get_translated_tips(lang, fish_id):
+    """Load translated care_tips from translations_XX.json."""
+    if lang == "en" or lang not in ("de", "es", "fr"):
+        return None
+    if lang not in _TRANSLATED_TIPS:
+        tf = ROOT / "data" / f"translations_{lang}.json"
+        if tf.exists():
+            with open(tf, encoding="utf-8") as f:
+                _TRANSLATED_TIPS[lang] = json.load(f)
+        else:
+            _TRANSLATED_TIPS[lang] = {}
+    entry = _TRANSLATED_TIPS[lang].get(fish_id, {})
+    return entry.get("care_tips")
+
+
 def faq_entries(fish, lang="en", name=None):
     """Four Q&As built from the care data already shown on the page."""
     name = name or fish["name"]
@@ -288,7 +305,8 @@ def faq_entries(fish, lang="en", name=None):
     size_cm = centimetres(fish["size_inches"], lang in ("de", "es", "fr"))
     life = fish["lifespan_years"]
     diet = fish["diet"].lower()
-    tips = fish.get("care_tips", "").strip()
+    tips_en = fish.get("care_tips", "").strip()
+    tips = _get_translated_tips(lang, fish["id"]) or tips_en
     school = fish.get("school_size") or 6
     schooling = fish.get("schooling")
 
