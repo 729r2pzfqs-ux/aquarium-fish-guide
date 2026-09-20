@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generate German fish pages from English ones."""
+import json
 import os
 import re
 import shutil
@@ -10,6 +11,10 @@ BASE_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE_DIR / 'scripts'))
 
 import seo_lib as S  # noqa: E402  (shared markup: Lucide, meta, FAQ, links)
+
+# Load pre-translated description and care_tips
+with open(BASE_DIR / 'data' / 'translations_de.json', encoding='utf-8') as _f:
+    TRANSLATED_TEXTS = json.load(_f)
 
 LANG = 'de'
 ALL_FISH = S.load_fish()
@@ -918,6 +923,33 @@ def translate_content(content):
         content = re.sub(pattern, replacement, content)
     return content
 
+def replace_description_and_care(content, fish_id):
+    """Replace mangled description and care_tips with proper translations."""
+    trans = TRANSLATED_TEXTS.get(fish_id)
+    if not trans:
+        return content
+    # Replace description paragraph
+    desc = trans.get('description', '')
+    if desc:
+        content = re.sub(
+            r'(<div class="prose text-slate-600 leading-relaxed space-y-4">\s*<p>)(.*?)(</p>\s*</div>)',
+            lambda m: m.group(1) + desc + m.group(3),
+            content,
+            count=1,
+            flags=re.DOTALL
+        )
+    # Replace care_tips paragraph
+    care = trans.get('care_tips', '')
+    if care:
+        content = re.sub(
+            r'(<h3 class="font-semibold text-cyan-800 mb-2 flex items-center gap-2">\s*<i data-lucide="lightbulb" class="w-5 h-5"></i>\s*.*?</h3>\s*<p class="text-slate-600">)(.*?)(</p>)',
+            lambda m: m.group(1) + care + m.group(3),
+            content,
+            count=1,
+            flags=re.DOTALL
+        )
+    return content
+
 def process_fish_page(fish_id):
     """Process a single fish page."""
     en_path = os.path.join(EN_FISH_DIR, fish_id, "index.html")
@@ -931,9 +963,12 @@ def process_fish_page(fish_id):
     with open(en_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Translate
+    # Translate UI strings via regex
     content = translate_content(content)
-    
+
+    # Replace mangled description/care_tips with proper translations
+    content = replace_description_and_care(content, fish_id)
+
     # Update canonical URL
     content = content.replace(
         f'fishfinder.guide/fish/{fish_id}/',
