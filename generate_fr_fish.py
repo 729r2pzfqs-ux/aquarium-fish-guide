@@ -480,12 +480,31 @@ TRANSLATIONS = [
 ]
 
 def translate_content(content):
-    """Apply all translations to content."""
+    """Apply all translations to content, protecting URLs from corruption."""
+    _placeholders = {}
+    _counter = [0]
+
+    def _save(match):
+        key = f"\x00U{_counter[0]}\x00"
+        _placeholders[key] = match.group(0)
+        _counter[0] += 1
+        return key
+
+    content = re.sub(r'<link\s[^>]*/?\s*>', _save, content)
+    content = re.sub(r'<meta\s[^>]*/?\s*>', _save, content)
+    content = re.sub(r'<script\s+type="application/ld\+json">.*?</script>', _save, content, flags=re.DOTALL)
+    content = re.sub(r'(?:href|src|srcset|action|poster|data-src|data-href)="[^"]*"', _save, content)
+    content = re.sub(r"(?:href|src|srcset|action|poster|data-src|data-href)='[^']*'", _save, content)
+
     for pattern, replacement in TRANSLATIONS:
         if callable(replacement):
             content = re.sub(pattern, replacement, content)
         else:
             content = re.sub(pattern, replacement, content, flags=re.IGNORECASE if pattern[0].islower() else 0)
+
+    for key, value in _placeholders.items():
+        content = content.replace(key, value)
+
     return content
 
 def replace_description_and_care(content, fish_id):
@@ -530,6 +549,22 @@ def process_fish_page(fish_slug):
 
     # Replace mangled description/care_tips with proper translations
     content = replace_description_and_care(content, fish_slug)
+
+    # Update canonical URL
+    content = content.replace(
+        f'fishfinder.guide/fish/{fish_slug}/',
+        f'fishfinder.guide/fr/poissons/{fish_slug}/'
+    )
+
+    # Strip old hreflang tags and add fresh ones with correct URLs
+    content = re.sub(r'\s*<link\s+rel="alternate"\s+hreflang="[^"]*"\s+href="[^"]*"[^>]*/?\s*>', '', content)
+    hreflang = f'''    <link rel="alternate" hreflang="en" href="https://fishfinder.guide/fish/{fish_slug}/">
+    <link rel="alternate" hreflang="de" href="https://fishfinder.guide/de/fische/{fish_slug}/">
+    <link rel="alternate" hreflang="es" href="https://fishfinder.guide/es/peces/{fish_slug}/">
+    <link rel="alternate" hreflang="fr" href="https://fishfinder.guide/fr/poissons/{fish_slug}/">
+    <link rel="alternate" hreflang="x-default" href="https://fishfinder.guide/fish/{fish_slug}/">
+'''
+    content = content.replace('<link rel="canonical"', hreflang + '    <link rel="canonical"')
 
     # The copied English page carries an English FAQ and tank-mate block that
     # the regex translator can only mangle. enhance_page replaces both with
