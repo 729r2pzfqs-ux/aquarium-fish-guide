@@ -1,2 +1,5 @@
 __pycache__/
 .DS_Store
+*.__bad/
+*.__corrupted_rename/
+*.bak

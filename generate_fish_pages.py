@@ -202,6 +202,8 @@ def generate_html(fish, fish_list=None):
       }},
       "headline": "{name}: Care Guide, Tank Size & Compatibility",
       "image": "https://fishfinder.guide/images/fish/{fish_id}.webp",
+      "datePublished": "2025-09-19",
+      "dateModified": "2026-10-07",
       "description": "{fish['description']}",
       "author": {{
         "@type": "Organization",
